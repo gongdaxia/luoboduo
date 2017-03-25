@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="skillApp">
 <head>
     <meta charset="UTF-8">
+    <meta  http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>萝卜多</title>
+    <script src="bower_components/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular.js"></script>
+    <script src="bower_components/angular-ui-router.js"></script>
+    <script src="bower_components/ocLazyLoad.js"></script>
+    <script src="script/app.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-
+<header>
+    <li ui-sref="home"><a href="">首页</a></li>
+    <li ui-sref="profession"><a href="">找职位</a></li>
+    <li ui-sref="company"><a href="">找精英</a></li>
+    <li ui-sref="about"><a href="">关于我们</a></li>
+</header>
+<div ui-view=""></div>
+<footer>尾部</footer>
 </body>
 </html>
