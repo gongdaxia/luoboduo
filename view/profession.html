@@ -1,9 +1,19 @@
-这是找职位首页
+<div class="container profession-main">
+    <div class="profession-home-bg" ng-repeat="item in vm.list track by $index">
+        <div class="col-lg-5">
+            <div class="prof-home-nav">
+                <div class="prof-home-nav-tittle" >
+                    <img src="../images/profession-home-img1.png" alt="">
+                    <span>{{item.jobType | jobTypeFilter}}</span>
+                    <img class="img-left" src="../images/profession-home-left.png" alt="">
+                </div>
+                <div class="prof-home-nav-content" ng-repeat="itemSecond in item.jobTypeList track by $index">
+                   <span>{{itemSecond.secondType | jobSecondFilter}}</span>
+                </div>
+            </div>
+            <div class="prof-nav-item">
 
-
-
-
-
-
-
-找职位首页
+            </div>
+        </div>
+    </div>
+</div>
