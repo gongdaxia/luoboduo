@@ -64,7 +64,7 @@ function lazyLoadConfig($ocLazyLoadProvider) {
                     'scripts/directives/notFind/notFind.css',
                     'scripts/directives/notFind/notFind.js'
                 ]
-            },
+            }
 
         ]
     });
