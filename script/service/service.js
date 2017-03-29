@@ -8,8 +8,8 @@ app.factory("professionService",function($http,path){
             return $http.get(path.jobListUrl())
         },
         //banner
-        getBanner:function () {
-            return $http.get(path.bannerUrl())
+        getBanner:function (type) {
+            return $http.get(path.bannerUrl(type))
         }
     }
 

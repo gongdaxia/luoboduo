@@ -9,7 +9,7 @@ app.factory("path",function ($http,$state) {
         },
         //banner
         bannerUrl:function (type) {
-            return "carrots-ajax/a/article/search?type"+type
+            return "carrots-ajax/a/article/search?type="+type
         },
         //公司列表
         companyListUrl:function (type) {

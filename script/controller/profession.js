@@ -9,7 +9,15 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
     professionService.getJobList().then(function (res) {
         if(res.data.code==0){
             vm.list = res.data.data;
-            console.log(res);
+        }
+        else{
+            alert(res.data.message)
+        }
+    })
+    professionService.getBanner(1).then(function (res) {
+        if(res.data.code==0){
+            vm.bannerUrl = res.data.data;
+            console.log( res.data)
         }
     })
 })

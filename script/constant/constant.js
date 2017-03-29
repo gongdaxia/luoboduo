@@ -5,7 +5,7 @@ app.constant("jobType",[
     {type:1,name:"用户体验"},
     {type:2,name:"研发"},
     {type:3,name:"大数据"}
-])
+]);
 app.constant('secondType', [
     {type: 1, name: "产品"},
     {type: 2, name: "UI"},

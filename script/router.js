@@ -34,7 +34,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ["style/my/position/profession.css","script/controller/profession.js"]
+                    ["style/my/profession/profession.css","script/controller/profession.js"]
                 )
             }
         })

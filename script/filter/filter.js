@@ -13,10 +13,11 @@ app.filter("jobTypeFilter", function(jobType) {
 })
     .filter("jobSecondFilter",function (secondType) {
         return function (type) {
-            for(var i=0;i<secondType.length;i++){
-                if (type = secondType[i].type){
-                    return secondType[i].type
+            for(var i=0; i<secondType.length; i++){
+                if (type == secondType[i].type){
+                    return secondType[i].name
                 }
             }
         }
     })
+

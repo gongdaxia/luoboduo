@@ -1,8 +1,10 @@
 .profession-main{
     font-size: 0;
 }
-.prof-home-nav{
+.profession-home-bg{
     position: relative;
+}
+.prof-home-nav{
     height: 152px;
     padding:16px 6.7%;
     font-size: 14px;
@@ -39,14 +41,114 @@
 }
 .prof-nav-item{
     position: absolute;
-    left:96%;
+    left:92%;
     top:0;
     display: none;
-    width:100%;
+    width:325%;
     height:456px;
+    padding-left: 20%;
     border: 1px solid #f43851;
+    border-left: none;
+    font-size: 14px;
+    color: #536a82;
+    box-sizing: border-box;
 }
-.prof-home-nav:hover+.prof-nav-item{
+.prof-nav-item .tittle{
+    display: inline-block;
+    font-size: 16px;
+    color: #f43851;
+    width: 12%;
+}
+.prof-nav-item div{
+    line-height: 24px;
+}
+.prof-nav-item .content{
+    display: inline-block;
+    font-size: 14px;
+    width: 12%;
+    padding: 0 2%;
+    text-align: center;
+}
+.prof-home-nav:hover .prof-nav-item{
     display:block;
-    background-color: red;
+    z-index: 999;
+    background-color: #fff;
+}
+.profession-home-bg .col-lg-2{
+    padding-right: 0;
+}
+
+/*banner*/
+.prof-banner,.profession-home-bg{
+    position: relative;
+    padding: 0;
+}
+.prof-banner img{
+}
+/*banner search*/
+.prof-input-search{
+    position: absolute;
+    width: 70%;
+    height: 16%;
+    top: 5.8%;
+    left: 17.4%;
+    padding: 1% 0;
+    background-color: rgba(142,91,100,0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.prof-search-content{
+    position: relative;
+    margin: 0 auto;
+    font-size: 0;
+    width: 95.7%;
+    padding: 2% 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.prof-search-content span{
+    display: inline-block;
+    width:  15%;
+    border-right: 1px solid #f0f0f0;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.prof-search-content input{
+    display: inline-block;
+    width: 70%;
+    font-size: 14px;
+    padding-left: 3%;
+    border:none;
+    outline: none;
+    box-sizing: border-box;
+}
+.prof-search-content button{
+    position: absolute;
+    display: inline-block;
+    width: 15%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #fc2a48;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+}
+/*推荐最新职位*/
+.prof-recommend{
+    padding-top: 3%;
+    font-size: 16px;
+    color:#999;
+}
+.prof-recommend-tittle{
+    overflow: hidden;
+}
+.prof-recommend-more{
+    float: right;
 }
