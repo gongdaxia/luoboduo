@@ -19,3 +19,21 @@ app.constant('secondType', [
     {type: 10, name: "DM"},
     {type: 11, name: "DL"}
 ]);
+app.constant("compensation",{
+    0:"0-8K",
+    1:"8-15K",
+    2:"16-25K",
+    3:"26K及以上"
+    }
+);
+app.constant("subCategory",{
+    1: "产品经理",
+    2: "UI",
+    3: "ANDROID",
+    4: "IOS",
+    5: "CSS",
+    6: "JS",
+    7: "JAVA",
+    8: "QA",
+    9: "OP"
+})

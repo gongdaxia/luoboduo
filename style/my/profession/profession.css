@@ -13,6 +13,8 @@
     overflow: hidden;
     vertical-align: middle;
     box-sizing: border-box;
+    border-top: 1px solid #f43851;
+    border-bottom:1px solid #f43851;
 }
 .prof-home-nav .img-left{
     float: right;
@@ -38,6 +40,7 @@
 }
 .prof-home-nav-content span{
     padding-right: 8.3%;
+    cursor: pointer;
 }
 .prof-nav-item{
     position: absolute;
@@ -68,6 +71,7 @@
     width: 12%;
     padding: 0 2%;
     text-align: center;
+    cursor: pointer;
 }
 .prof-home-nav:hover .prof-nav-item{
     display:block;
@@ -143,7 +147,7 @@
 /*推荐最新职位*/
 .prof-recommend{
     padding-top: 3%;
-    font-size: 16px;
+    font-size: 14px;
     color:#999;
 }
 .prof-recommend-tittle{
@@ -152,3 +156,46 @@
 .prof-recommend-more{
     float: right;
 }
+.recommend-tittle{
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.recommend-job{
+ font-size: 0;
+}
+.recommend-job-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 134px;
+    padding: 4%;
+    margin: 5% auto;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+}
+.recommend-job-box:hover{
+    box-shadow: 1px 1px 1px #999;
+}
+.job-box-img{
+    display: inline-block;
+    width: 40%;
+    height:80%;
+    font-size: 14px;
+    text-align: center;
+    /*border: 1px solid #e8e8e8;*/
+    vertical-align: middle;
+}
+.job-box-img img{
+    width: 100%;
+    height: 100%;
+}
+.job-box-content{
+    display: inline-block;
+    width: 50%;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+

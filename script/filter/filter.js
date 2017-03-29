@@ -20,4 +20,13 @@ app.filter("jobTypeFilter", function(jobType) {
             }
         }
     })
-
+    .filter("compensationFilter",function (compensation) {
+        return function (type) {
+            return compensation[type]
+        }
+    })
+    .filter("subCategoryFilter",function ( subCategory) {
+        return function (type) {
+            return subCategory[type]
+        }
+    })

@@ -42,12 +42,46 @@
                 </div>
             </div>
         </div>
-        //推荐最新职位
+        <!--推荐最新职位-->
         <div class="prof-recommend col-lg-12">
             <div class="prof-recommend-tittle">
-                <span>推荐职位</span>
-                <span>最新职位</span>
+                <span ng-class="{'recommend-tittle':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>
+                <span ng-class="{'recommend-tittle':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)">最新职位</span>
                 <span class="prof-recommend-more">更多</span>
+            </div>
+        </div>
+        <!--推荐职位-->
+        <div class="recommend-job row" ng-if="!vm.isChoose">
+            <div class="recommend-job-list">
+                <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in vm.professionInfo track by $index">
+                    <div class="recommend-job-box">
+                        <div class="job-box-img">
+                            <img src="{{item.logo}}">
+                        </div>
+                        <div class="job-box-content">
+                            <p>{{item.compensation|compensationFilter}}</p>
+                            <p>{{item.category| subCategoryFilter}}</p>
+                            <p>{{item.companyName}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        //最新职位
+        <div class="recommend-job row" ng-if="vm.isChoose">
+            <div class="recommend-job-list">
+                <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in  vm.newProfessionInfo track by $index">
+                    <div class="recommend-job-box">
+                        <div class="job-box-img">
+                            <img src="{{item.logo}}">
+                        </div>
+                        <div class="job-box-content">
+                            <p>{{item.compensation|compensationFilter}}</p>
+                            <p>{{item.category| subCategoryFilter}}</p>
+                            <p>{{item.companyName}}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
