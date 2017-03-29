@@ -13,11 +13,11 @@ app.factory("path",function ($http,$state) {
         },
         //公司列表
         companyListUrl:function (type) {
-            return "carrots-ajax/a/company/search?returnPage"+type
+            return "carrots-ajax/a/company/search?returnPage="+type
         },
         //职位搜索
         professionUrl:function (type) {
             return "carrots-ajax/a/profession/search?recommend="+type
         }
     }
-})
+});

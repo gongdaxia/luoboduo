@@ -41,5 +41,5 @@ $scope.exchangeJob = function(isChoose){
     if(isChoose==undefined||isChoose==false){
         vm.isChoose=!vm.isChoose;
     }
-};
+}
 })
