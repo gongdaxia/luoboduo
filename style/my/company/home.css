@@ -1,0 +1,9 @@
+/*公司主页样式*/
+
+/*轮播图样式*/
+.item{
+    cursor: pointer;
+}
+.carousel-indicators{
+    bottom: 0 !important;;
+}

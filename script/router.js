@@ -20,9 +20,11 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("home", {
             url: "/home",
             templateUrl: "view/home.html",
+            controller:'homeCtrl',
+            controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    []
+                    ['style/my/company/home.css','script/controller/home.js']
                 )
             }
         })

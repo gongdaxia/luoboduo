@@ -11,7 +11,80 @@
     box-shadow: 0 4px 7px #eeeef0;
 }
 
+.header-nav-location {
+    /*导航栏选择地址*/
+    display: inline-block;
+    vertical-align: middle;
+    height: 3rem;
+    line-height: 3rem;
+    padding-left: 15px;
+    font-size: 16px;
+    border-left: 1px solid #e2e2e2;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .header-nav-location {
+        display: none;
+    }
+}
+
+.modal-content {
+    /*地址选择模态框*/
+    margin-top: 150px;
+    height: 245px;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    padding: 35px 55px;
+    font-size: 18px;
+}
+
+.header-nav-modalText {
+    /*模态框点击进入*/
+    float: left;
+    height: 4.5rem;
+    line-height: 4.5rem;
+}
+
+.header-nav-modalBtn, .header-nav-modalBtn2 {
+    /*模态框北京站按钮*/
+    font-size: 18px;
+    float: left;
+    margin: 0 10px 15px 20px;
+    background: white;
+    border-color: #fc2b47;
+}
+
+.header-nav-modalBtn2 {
+    /*模态框全国站按钮*/
+    margin: -20px 0 0 92px;
+}
+
+.header-nav-modalText2 {
+    /*模态框or*/
+    float: left;
+    margin-top: -10px;
+    font-weight: bold;
+}
+
+.header-nav-modalText3 {
+    /*模态框其他正在开发*/
+    clear: both;
+    float: left;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.header-nav-location img {
+    margin-right: 2px;
+    margin-top: -5px;
+}
+
 .header-nav-btn {
+    /*导航栏压缩后的点击按钮*/
     position: absolute;
     top: .1rem;
     right: 0;
@@ -23,8 +96,12 @@
     background-color: white !important;
 }
 
-@media screen and (max-width: 768px) {
-    /*导航栏样式改变：宽度变小*/
+.navbar-brand {
+    height: auto !important;
+}
+
+@media screen and (max-width: 767px) {
+    /*导航栏样式改变：宽度变小，下拉列表绝对定位占满屏幕*/
     .header-nav {
         height: 4.5rem;
         line-height: 4.5rem;
@@ -32,8 +109,14 @@
         box-shadow: none;
     }
 
+    .navbar-header {
+        height: 4.5rem;
+        line-height: 4.5rem;
+    }
+
     .header-nav-left img {
-        margin-top: -.8rem;
+        margin-top: .3rem;
+        padding: 0;
     }
 
     .header-nav-right {
@@ -75,9 +158,12 @@
 .header-nav-left img {
     display: inline-block;
     height: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
 }
 
 .header-nav-right-underline {
+    /*导航栏链接下划线*/
     display: block;
     width: 0;
     margin: 2.05rem auto 0 auto;
@@ -95,7 +181,6 @@
 }
 
 /*底部样式*/
-
 .footer-top {
     width: 100%;
     padding: 22px 0;
@@ -132,7 +217,7 @@
 }
 
 .footer-right {
-    padding-right: 60px
+    padding-right: 60px;
 }
 
 .footer-right-ul {
@@ -158,6 +243,7 @@
 
 .footer-right-text {
     font-size: 14px;
+    text-align: center;
 }
 
 .copyright {
