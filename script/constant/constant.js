@@ -36,4 +36,22 @@ app.constant("subCategory",{
     7: "JAVA",
     8: "QA",
     9: "OP"
+});
+app.constant("industryInfo", {
+    0: "移动互联网",
+    1: "电子商务",
+    2: "企业服务",
+    3: "O2O",
+    4: "教育",
+    5: "金融",
+    6: "游戏"
+});
+app.constant("financingInfo",{
+    0:"无需融资",
+    1:"天使轮",
+    2:"A轮",
+    3:"B轮",
+    4:"C轮",
+    5:"D轮及以上",
+    6:"上市公司"
 })

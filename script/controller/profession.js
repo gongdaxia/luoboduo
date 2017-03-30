@@ -17,7 +17,6 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
     professionService.getBanner(1).then(function (res) {
         if(res.data.code==0){
             vm.bannerUrl = res.data.data;
-            console.log( res.data)
         }
     })
 
@@ -27,14 +26,37 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
     professionService.getProfession(1,vm.params).then(function (res) {
         if (res.data.code==0){
             vm.professionInfo = res.data.data
-            alert(res.data.message)
-            console.log(vm.professionInfo[2].companyName)
+
+
         }
 
     })
     professionService.getProfession(0,vm.params).then(function (res) {
         if (res.data.code==0){
             vm.newProfessionInfo = res.data.data;
+        }
+    })
+    //行业大图
+    professionService.getBanner(3).then(function (res) {
+        if(res.data.code==0){
+            vm.companyImgUrl = res.data.data.articleList[0];
+        }
+    })
+    //优质公司
+    professionService.getCompany({size:4}).then(function (res) {
+        if(res.data.code==0) {
+            vm.companyInfo = res.data.data;
+            angular.forEach(vm.companyInfo,function (value) {
+                professionService.getProfession(0,{size:2,companyId:vm.companyInfo.id}).then(function (resp) {
+                    console.log("sssssssssssssssss")
+                   value.jobList=resp.data.data
+                    console.log( value.jobList)
+                })
+            })
+            console.log(vm.companyInfo)
+        }
+        else{
+            alert(res.data.message)
         }
     })
 $scope.exchangeJob = function(isChoose){

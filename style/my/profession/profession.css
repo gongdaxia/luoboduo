@@ -198,4 +198,33 @@
     text-align: center;
     vertical-align: middle;
 }
+.prof-recommend-tittle span{
+    font-size: 14px;
+}
+
+
+
+.great-company-info{
+    position: relative;
+}
+.company-info-txt{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-size: 14px;
+}
+.company-info-txt p{
+    font-size:14px;
+    z-index: 999;
+}
+.company-info-txt .tittle{
+    font-size: 16px;
+}
+.great-company-list{
+    font-size: 16px;
+}
+
 

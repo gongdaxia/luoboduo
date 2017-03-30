@@ -12,12 +12,20 @@ app.factory("path",function ($http,$state) {
             return "carrots-ajax/a/article/search?type="+type
         },
         //公司列表
-        companyListUrl:function (type) {
-            return "carrots-ajax/a/company/search?returnPage="+type
+        companyListUrl:function () {
+            return "carrots-ajax/a/company/search"
         },
         //职位搜索
         professionUrl:function (type) {
             return "carrots-ajax/a/profession/search?recommend="+type
+        },
+        //公司详情
+        companyInfoUrl: function (id) {
+            return "/carrots-ajax/a/company/" + id
+        },
+        //职位详情
+        professionInfoUrl: function (id) {
+            return "/carrots-ajax/a/profession/" + id
         }
     }
 });

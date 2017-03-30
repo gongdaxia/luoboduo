@@ -84,5 +84,45 @@
                 </div>
             </div>
         </div>
+        <!--优质公司-->
+        <div class="great-company col-lg-12">
+            <div class="prof-recommend-tittle">
+                <span>推荐公司</span>
+                <span class="prof-recommend-more">更多</span>
+            </div>
+            <div class="great-company-info col-lg-4">
+                <img src="{{vm.companyImgUrl.img}}" alt="">
+                <div class="company-info-txt">
+                    <p class="tittle">{{ vm.companyInfo[0].name}}</p>
+                    <p>{{vm.companyInfo[0].slogan}}</p>
+                    <p>
+                        <span>{{vm.companyInfo[0].industryList | industryFilter}}</span>
+                        <span>{{vm.companyInfo[0].financing | financingFilter}}</span>
+                        <span>{{"北京"}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="great-company-list col-lg-12" ng-repeat="list in vm.companyInfo track by $index"x>
+                <div class="col-log-7"  >
+                    <div class="img">
+                        <img src="{{list.logo}}" alt="">
+                    </div>
+                    <div class="company-info">
+                        <p>{{list.name}}</p>
+                        <p>{{list.slogan}}</p>
+                        <p>
+                            <span>{{list.financing| financingFilter}}</span>
+                        </p>
+                    </div>
+                </div>
+                <h4>正在热招</h4>
+                    <div class="col-lg-5" ng-repeat="jobItem in list.jobList track by $index">
+                        <span >{{jobItem.category|subCategoryFilter}}</span>
+                    </div>
+
+
+            </div>
+
+        </div>
     </div>
 </div>

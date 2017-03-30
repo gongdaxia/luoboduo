@@ -30,3 +30,18 @@ app.filter("jobTypeFilter", function(jobType) {
             return subCategory[type]
         }
     })
+    .filter('industryFilter', function (industryInfo) {
+        return function (input) {
+            var arr=[];
+            angular.forEach(input,function (value) {
+                arr.push(industryInfo[value])
+            })
+            return arr.join(' ')
+        }
+    })
+    .filter('financingFilter', function (financingInfo) {
+        return function (input) {
+            return financingInfo[input];
+
+        }
+    })
