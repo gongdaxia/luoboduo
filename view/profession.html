@@ -103,27 +103,86 @@
                     </p>
                 </div>
             </div>
-            <div class="great-company-list col-lg-12" ng-repeat="list in vm.companyInfo track by $index"x>
-                <div class="col-log-7"  >
-                    <div class="img">
-                        <img src="{{list.logo}}" alt="">
-                    </div>
-                    <div class="company-info">
-                        <p>{{list.name}}</p>
-                        <p>{{list.slogan}}</p>
-                        <p>
-                            <span>{{list.financing| financingFilter}}</span>
-                        </p>
+            <div id="profCarousel" class="carousel slide ">
+                <div class="row">
+                <!--轮播项目-->
+                    <div class="col-lg-11 col-md-11">
+                <div class="carousel-inner carousel-innergai prof-carousel">
+
+                    <div class="item great-company-list " ng-class="{'active':$first}" ng-repeat="list in vm.companyInfo track by $index"x>
+                        <div class="row">
+                            <div class="col-lg-7"  >
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="img">
+                                            <img src="{{list.logo}}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-8">
+                                        <div class="company-info">
+                                            <p class="tittle">{{list.name}}</p>
+                                            <p>{{list.slogan}}</p>
+                                            <p>
+                                                <span>{{list.financing| financingFilter}}</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div  class="col-lg-4 prof-info">
+                            <h4>正在热招</h4>
+                                <div ng-repeat="jobItem in list.jobList track by $index">
+                                    <span >{{jobItem.category|subCategoryFilter}}</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <h4>正在热招</h4>
-                    <div class="col-lg-5" ng-repeat="jobItem in list.jobList track by $index">
-                        <span >{{jobItem.category|subCategoryFilter}}</span>
-                    </div>
-
-
+                </div>
+                <!-- 轮播（Carousel）指标 -->
+                <div class="col-lg-1 carousel-indicatorsgai-box">
+                    <ul class="carousel-indicators carousel-indicatorsgai ">
+                        <li data-target="#profCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#profCarousel" data-slide-to="1"></li>
+                        <li data-target="#profCarousel" data-slide-to="2"></li>
+                        <li data-target="#profCarousel" data-slide-to="3"></li>
+                    </ul>
+                </div>
             </div>
+            </div>
+        </div>
+    <!--UI样式区-->
+        <div class="profession-tips col-lg-12">
+            <div class="profession-tips-part row">
+                <div class="part-left col-lg-6 col-md-6 col-sm-6">
+                    <img src="../images/prof-introdus.png" alt="">
+                </div>
+                <div class="part-right col-lg-6 col-md-6 col-sm-6">
+                    <h3>无成本,零风险</h3>
+                    <p class="tittle">无任何隐含复用全程免费</p>
+                    <p>人才从投递到成功入职不需要任何费用，通过测试后还可免费提供从业建议，不浪费每一份天赋</p>
+                </div>
+            </div>
+            <div class="profession-tips-part row">
+                <div class="part-left col-lg-6 col-md-6 col-sm-6">
+                    <h3>高效匹配，高度契合</h3>
+                        <p>1-3天发送首个聘请通知<br>
+                        甄选职位&nbsp;深度匹配&nbsp;发送聘请通知</p>
+                        <p>3-5天安排候选人面试<br>
+                        安排面试&nbsp;协助客户快速入职</p>
+                        <p>平均15天推荐成功<br>
+                        多方洽谈&nbsp;售后安排</p>
 
+                </div>
+                <div class="part-right col-lg-6 col-md-6 col-sm-6">
+                    <img src="../images/prof-information.png" alt="">
+                </div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="prof-footer col-lg-12">
+            <p class="tittle">加入萝卜多人才推荐计划</p>
+            <p>投送简历：kefu@ptteng.com</p>
         </div>
     </div>
 </div>

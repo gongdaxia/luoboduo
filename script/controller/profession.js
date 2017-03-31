@@ -43,13 +43,14 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
         }
     })
     //优质公司
-    professionService.getCompany({size:4}).then(function (res) {
+    professionService.getCompany({size:4,page:2}).then(function (res) {
         if(res.data.code==0) {
             vm.companyInfo = res.data.data;
             angular.forEach(vm.companyInfo,function (value) {
-                professionService.getProfession(0,{size:2,companyId:vm.companyInfo.id}).then(function (resp) {
+                professionService.getProfession(0,{size:2,companyId:value.id}).then(function (resp) {
                     console.log("sssssssssssssssss")
                    value.jobList=resp.data.data
+                    console.log(value.id)
                     console.log( value.jobList)
                 })
             })
@@ -58,6 +59,10 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
         else{
             alert(res.data.message)
         }
+    })
+    $('.carousel').carousel({
+        // 轮播图自动轮播定时器
+        interval: 4000
     })
 $scope.exchangeJob = function(isChoose){
     if(isChoose==undefined||isChoose==false){
