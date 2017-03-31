@@ -1,9 +1,356 @@
 /*公司主页样式*/
+.homePage {
+    width: 100%;
+    padding: 3px 0 0 0 !important;
+    margin: 0 !important;
+}
+
+/*首页的公共样式*/
+.homePage-title {
+    /*首页的标题*/
+    position: relative;
+    text-align: center;
+    color: #22415d;
+}
+
+.homePage-title-i {
+    /*首页标题的红色横线*/
+    position: absolute;
+    top: 30px;
+    left: 48.5%;
+    width: 25px;
+    height: 2px;
+    background-color: #f1706b;
+}
+
+.homePage-titleCh {
+    /*首页标题中文部分*/
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.homePage-titleEn {
+    /*首页标题英文部分*/
+    font-size: 16px;
+}
 
 /*轮播图样式*/
-.item{
+.item {
     cursor: pointer;
 }
-.carousel-indicators{
+
+.carousel-indicators {
     bottom: 0 !important;;
+}
+
+/*首页萝卜多的优势部分*/
+.homePage-advantage {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+.homePage-advantage-part {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.homePage-advantage-part-img {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: url("../../../images/home-advantage.png");
+    background-size: 1200%;
+}
+
+.advImg1 {
+    background-position: 0;
+}
+
+.advImg2 {
+    background-position: 48% 0;
+}
+
+.advImg3 {
+    background-position: 100% 0;
+}
+
+.homePage-advantage-part p {
+    margin: 8px auto;
+    font-size: 16px;
+    font-weight: bold;
+    color: #22415d;
+
+}
+
+.homePage-advantage-part span {
+    color: #456e8d;
+    font-size: 15px;
+}
+
+.homePage-advantage-partNum {
+    text-align: left;
+    margin: 3rem 0;
+    padding-left: 8%;
+    border-left: 1px solid #e5e9eb;
+}
+
+@media screen and (max-width: 991px) {
+    .homePage-advantage-partNum {
+        padding-left: 20%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .homePage-advantage-partNum {
+        border: none;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+.homePage-advantage-partNum-p1 {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #fc2e54;
+    font-weight: bold;
+}
+
+.homePage-advantage-partNum-p2 {
+    font-size: 14px;
+    color: #22415d;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/*首页最新职位部分*/
+.homePage-newProfession {
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem 0;
+    background-color: #f6f7f8;
+}
+
+/*最新职位轮播部分*/
+.homePage-newProfession-ctrl {
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+.homePage-newProfession-ctrl-main {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
+.homePage-newProfession-ctrl-main-more {
+    text-align: right;
+    margin: 15px auto;
+}
+
+.homePage-newProfession-ctrl-main-more a {
+    text-decoration: none;
+    color: #536a82;
+    font-size: 16px;
+}
+
+.homePage-newProfession-ctrl-main-more a:hover {
+    color: #fc2e54;
+    text-decoration: none;
+}
+
+.homePage-newProfession-ctrl-bigBox {
+    padding: 0 10px !important;
+}
+
+.homePage-newProfession-ctrl-listbox {
+    /*最新职位轮播中单个公司部分*/
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.homePage-newProfession-ctrl-listbox:hover {
+    -moz-box-shadow: 0 4px 7px #e7e7e7;
+    -webkit-box-shadow: 0 4px 7px #e7e7e7;
+    box-shadow: 0 5px 10px #e7e7e7;
+}
+
+.homePage-newProfession-ctrl-listbox-img {
+    /*最新职位轮播中单个公司中logo*/
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    margin: 0 auto;
+    border: none;
+}
+
+.homePage-newProfession-ctrl-listbox-img img {
+    width: 75%;
+    height: auto;
+}
+
+.homePage-newProfession-ctrl-font-box {
+    /*最新职位轮播中单个公司的文字部分*/
+    width: 100%;
+    min-height: 0 !important;
+    padding: 10px 10px;
+    border-top: 1px solid rgb(238, 238, 238);
+}
+
+.homePage-newProfession-ctrl-main .item {
+    padding: 0;
+}
+
+.homePage-newProfession-ctrl-font-box-name {
+    /*最新职位轮播中单个公司的文字部分:职位名称*/
+    margin-bottom: 0 !important;
+    font-size: 15px;
+    font-weight: bold;
+    color: #536a82;
+    white-space: nowrap;
+}
+
+.homePage-newProfession-ctrl-font-box-comName {
+    /*最新职位轮播中单个公司的文字部分：公司名称*/
+    margin-bottom: 0 !important;
+    color: #536a82;
+
+}
+
+.homePage-newProfession-ctrl-listbox-line {
+    /*最新职位轮播中单个公司的文字部分:下划线*/
+    height: 1px;
+    width: 20px;
+    margin: 2px auto 5px auto;
+    background-color: #fc2b47;
+}
+
+@media screen and (max-width: 991px) {
+    .homePage-newProfession-ctrl-bigBox {
+        margin-bottom: 5px;
+    }
+
+    .homePage-newProfession-ctrl {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .homePage-newProfession-ctrl-listbox-img {
+        /*最新职位轮播中单个公司中logo*/
+        width: 100%;
+        height: 280px;
+    }
+
+    .homePage-newProfession-ctrl-listbox-img img {
+        width: 60%;
+        height: auto;
+    }
+
+    .homePage-newProfession-banner-left img {
+        display: none;
+    }
+
+    .homePage-newProfession-banner-right img {
+        display: none;
+    }
+
+}
+
+.carousel-control {
+    width: 0;
+}
+
+.homePage-newProfession-banner-left img {
+    position: absolute;
+    top: 8.5rem;
+    left: -3rem;
+}
+
+.homePage-newProfession-banner-right img {
+    position: absolute;
+    top: 8.5rem;
+    right: -3rem;
+}
+
+/*首页服务流程部分*/
+.homePage-service {
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem;
+    background-color: #fff;
+}
+
+.homePage-service .row {
+    margin-top: 3rem;
+}
+
+.homePage-service-part {
+    border: 1px solid #e6eaec;
+    border-radius: 5px;
+    padding: 0 !important;
+}
+
+.homePage-service-part img {
+    width: 100%;
+    height: 100px;
+}
+
+.homePage-service-part p {
+    font-size: 15px;
+    margin: 0;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: #22415d;
+}
+
+.homePage-service-part-i {
+    position: relative;
+    height: 165px;
+}
+
+.homePage-service-part-i-dash {
+    position: absolute;
+    top: 48%;
+    left: 0;
+    width: 100%;
+}
+
+.homePage-service-part-i-img {
+    position: absolute;
+    top: 43.3%;
+    left: 40%;
+}
+
+@media screen and (max-width: 991px) {
+    /*屏幕宽度小于991px时，服务流程样式的改变*/
+    .homePage-service-part {
+        text-align: center;
+        border: none;
+    }
+
+    .homePage-service .row {
+        margin-top: 0;
+    }
+
+    .homePage-service-part img {
+        width: 50%;
+        height: auto;
+    }
+
+    .homePage-service-part-i {
+        display: none;
+    }
+}
+
+/*首页伙伴之言部分*/
+.homePage-partner {
+    width: 100%;
+    overflow: hidden;
+    padding: 4rem 0;
+    background-color: #f6f7f8;
 }

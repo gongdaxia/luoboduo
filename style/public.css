@@ -106,7 +106,6 @@
         height: 4.5rem;
         line-height: 4.5rem;
         padding: 0 2%;
-        box-shadow: none;
     }
 
     .navbar-header {
@@ -181,6 +180,9 @@
 }
 
 /*底部样式*/
+footer{
+    overflow: hidden;
+}
 .footer-top {
     width: 100%;
     padding: 22px 0;
