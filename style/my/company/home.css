@@ -231,7 +231,7 @@
 
 @media screen and (max-width: 991px) {
     .homePage-newProfession-ctrl-bigBox {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .homePage-newProfession-ctrl {
@@ -258,6 +258,16 @@
         display: none;
     }
 
+}
+
+@media screen and (max-width: 500px) {
+    .homePage-newProfession-ctrl-main {
+        width: 100%;
+    }
+
+    .homePage-newProfession-ctrl-listbox-img {
+        height: 140px;
+    }
 }
 
 .carousel-control {
@@ -351,6 +361,76 @@
 .homePage-partner {
     width: 100%;
     overflow: hidden;
-    padding: 4rem 0;
+    padding: 4rem 10%;
     background-color: #f6f7f8;
+}
+
+@media screen and (max-width: 500px) {
+    .homePage-partner {
+        padding: 4rem 0;
+    }
+
+    .friend-banner-pre, .friend-banner-next {
+        display: none;
+    }
+
+    .text-justify {
+        padding: 0 10%;
+    }
+}
+
+.home-friend {
+    color: #999999;
+    background-color: rgb(255, 255, 255);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #F0F0F0;
+    padding: 30px 17px 0 17px;
+    margin: 2px 0;
+    height: 350px;
+}
+
+@media screen and (max-width: 991px) {
+    .text-justify {
+        text-align: center;
+        width: 100%;
+        padding: 5% 10%;
+    }
+
+    .friend-banner-pre, .friend-banner-next {
+        display: none;
+    }
+
+}
+
+.home-friend:hover {
+    -moz-box-shadow: 1px 0 20px #DAE0E3;
+    -webkit-box-shadow: 1px 0 20px #DAE0E3;
+    box-shadow: 1px 0 20px #DAE0E3;
+}
+
+.home-friend-name {
+    color: #294154;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.home-friend-introduce {
+    color: #666666;
+    font-size: 14px;
+    margin: 10px 0 20px 0;
+}
+
+.friend-banner-pre img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.friend-banner-next img {
+    position: absolute;
+    top: 50%;
+    right: 0;
 }

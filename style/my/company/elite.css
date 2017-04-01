@@ -1,0 +1,263 @@
+/*找精英页面样式*/
+.elitePage {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/*萝卜多的特点们*/
+.elitePage-featureWhite, .elitePage-featureGrey {
+    box-sizing: border-box;
+    padding: 5rem 15%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .elitePage-featureWhite, .elitePage-featureGrey {
+        padding: 5rem 6%;
+    }
+}
+
+.elitePage-featureWhite {
+    background-color: #fff;
+}
+
+.elitePage-feature-img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 5%;
+}
+
+.elitePage-featureWhite-text {
+    float: left;
+    text-align: left;
+    color: #2b3d51;
+    width: 28%;
+    margin: 5% 5% 5% 10%;
+}
+
+.elitePage-featureWhite-text2 {
+    width: 32%;
+    margin: 0 5% 0 6%;
+}
+
+.elitePage-featureGrey-text {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    width: 29%;
+    margin: 5% 5% 5% 15%;
+}
+
+@media screen and (max-width: 800px) {
+    .elitePage-featureWhite-text, .elitePage-featureGrey-text {
+        float: none;
+        text-align: center;
+        width: 80%;
+        margin: 5% 10%;
+    }
+}
+
+.elitePage-featureGrey {
+    background-color: #f6f7f8;
+}
+
+.elitePage-feature-p1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b3d51;
+}
+
+.elitePage-feature-p2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2b3d51;
+
+}
+
+.elitePage-feature-p3 {
+    font-size: 14px;
+    word-break: break-all;
+    color: #2b3d51;
+
+}
+
+/*萝卜多的服务流程*/
+.elitePage-step {
+    padding: 5rem 6%;
+    background-color: #f6f7f8;
+    width: 100%;
+}
+
+.elitePage-title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.elitePage-title i {
+    position: absolute;
+    top: 30px;
+    left: 48.5%;
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: #ff5652;
+}
+
+.elitePage-step-content {
+    margin-top: 4rem;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.elitePage-step-content-text1,
+.elitePage-step-content-text2,
+.elitePage-step-content-text3 {
+    position: absolute;
+    color: #2d3e50;
+    font-size: 14px;
+    width: 20%;
+    text-align: left;
+}
+
+.elitePage-step-content-text1 {
+    top: 1.2rem;
+    right: 24%;
+}
+
+.elitePage-step-content-text2 {
+    top: 18rem;
+    left: 25%;
+}
+
+.elitePage-step-content-text3 {
+    top: 35rem;
+    right: 24%;
+}
+
+@media screen and (max-width: 1000px) {
+    .elitePage-step-content-text1 {
+        right: 20%;
+    }
+
+    .elitePage-step-content-text2 {
+        left: 20%;
+    }
+
+    .elitePage-step-content-text3 {
+        right: 20%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .elitePage-step-content-text1 {
+        top: 0;
+        right: 15%;
+    }
+
+    .elitePage-step-content-text2 {
+        left: 15%;
+    }
+
+    .elitePage-step-content-text3 {
+        top: 34rem;
+        right: 15%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .elitePage-step {
+        padding: 5rem 0;
+    }
+
+    .elitePage-step-content-text1,
+    .elitePage-step-content-text2,
+    .elitePage-step-content-text3 {
+        width: 25%;
+    }
+
+    .elitePage-step-content-text1 {
+        top: -1rem;
+        right: 10%;
+    }
+
+    .elitePage-step-content-text2 {
+        top: 17rem;
+        left: 10%;
+    }
+
+    .elitePage-step-content-text3 {
+        top: 34rem;
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .elitePage-step-content-text1 {
+        right: 5%;
+    }
+
+    .elitePage-step-content-text2 {
+        left: 5%;
+    }
+
+    .elitePage-step-content-text3 {
+        top: 33rem;
+        right: 5%;
+    }
+}
+
+/*萝卜多的优势*/
+.elitePage-advantage {
+    padding: 5rem 6%;
+    background-color: #fff;
+    width: 100%;
+}
+
+.elitePage-advantage-part {
+    margin: 2rem 0;
+    text-align: center;
+    padding: 0 10px !important;
+}
+
+.elitePage-advantage-part p {
+    font-size: 15px;
+}
+
+.elitePage-advantage-part-img {
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    background-image: url("../../../images/elite-advantage.png");
+    background-size: 800%;
+    background-repeat: no-repeat;
+}
+
+.eliteImg1 {
+    background-position: 0 0;
+}
+
+.eliteImg2 {
+    background-position: 32% 0;
+}
+
+.eliteImg3 {
+    background-position: 66% 0;
+}
+
+.eliteImg4 {
+    background-position: 100% 0;
+}
+
+/*萝卜多的成功案例*/
+.elitePage-example {
+    padding: 5rem 6%;
+    background-color: #f6f7f8;
+    width: 100%;
+}
