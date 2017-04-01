@@ -2,16 +2,16 @@
  * Created by Administrator on 2017/3/25.
  */
 //懒加载模块
-function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvider,$locationProvider) {
+function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $locationProvider) {
     var _lazyLoad = function (loaded) {
         return function ($ocLazyLoad) {
             return $ocLazyLoad.load(loaded, {serie: true});
         }
     };
-   $ocLazyLoadProvider.config({
-    debug: false,
-    events: true
-});
+    $ocLazyLoadProvider.config({
+        debug: false,
+        events: true
+    });
 
 //ui路由模块
     $urlRouterProvider.when('', "/home");
@@ -20,11 +20,14 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("home", {
             url: "/home",
             templateUrl: "view/home.html",
-            controller:'homeCtrl',
+            controller: 'homeCtrl',
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ['style/my/company/home.css','script/controller/home.js']
+                    ['style/my/company/home.css', 'script/controller/home.js',
+                        'script/directive/jqbootstrap-carouse/jqbootstrap-carouse.css',
+                        'script/directive/jqbootstrap-carouse/jqbootstrap-carouse.html',
+                        'script/directive/jqbootstrap-carouse/jqbootstrap-carouse.js']
                 )
             }
         })
@@ -32,11 +35,11 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("profession", {
             url: "/profession",
             templateUrl: "view/profession.html",
-            controller:'professionCtrl',
+            controller: 'professionCtrl',
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ["style/my/profession/profession.css","script/controller/profession.js"]
+                    ["style/my/profession/profession.css", "script/controller/profession.js"]
                 )
             }
         })
@@ -44,9 +47,11 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("elite", {
             url: "/elite",
             templateUrl: "view/elite.html",
+            controller: 'eliteCtrl',
+            controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    []
+                    ['style/my/company/elite.css', 'script/controller/elite.js']
                 )
             }
         })
@@ -159,5 +164,5 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                     []
                 )
             }
-})
+        })
 }
