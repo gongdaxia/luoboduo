@@ -71,30 +71,32 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             templateUrl: "view/profession/searchPage.html",
             resolve: {
                 loadMyFile: _lazyLoad(
+                    ["style/my/profession/searchPage.css"]
+                )
+            }
+        })
+        //公司搜索
+        .state("searchPage.companySearch",{
+            url:"/companySearch",
+            templateUrl:"view/profession/companySearch.html",
+            resolve:{
+                loadMyFile:_lazyLoad(
                     []
                 )
             }
         })
-        // //公司搜索
-        // .state("searchPage.companySearch",{
-        //     url:"/companySearch",
-        //     templateUrl:"view/profession/companySearch.html",
-        //     resole:{
-        //         loadMyFile:_lazyLoad(
-        //             []
-        //         )
-        //     }
-        // })
-        // //职位搜索
-        // .state("searchPage.professionSearch",{
-        //     url:"/professionSearch",
-        //     templateUrl:"view/profession/professionSearch.html",
-        //     resole:{
-        //         loadMyFile:_lazyLoad(
-        //             []
-        //         )
-        //     }
-        // })
+        //职位搜索
+        .state("searchPage.professionSearch",{
+            url:"/professionSearch",
+            templateUrl:"view/profession/professionSearch.html",
+            controller:"searchJobCtrl",
+            controllerAs: 'vm',
+            resolve:{
+                loadMyFile:_lazyLoad(
+                    ["style/my/profession/professionSearch.css","script/controller/professionSearch.js"]
+                )
+            }
+        })
         // //公司详情
         // .state("companyInfo",{
         //     url:"/companyInfo",

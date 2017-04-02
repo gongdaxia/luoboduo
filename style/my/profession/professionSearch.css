@@ -1,0 +1,30 @@
+.search-profession{
+    font-size: 14px;
+}
+.search-prof-project{
+    border-top:3px solid #ff0000;
+    background-color: #fff;
+}
+.search-prof-input{
+    padding: 1.5% 0;
+}
+.search-prof-input .tittle,
+.search-prof-list .tittle{
+    font-size: 16px;
+    font-weight: bold;
+}
+.search-prof-input input{
+    display: inline-block;
+    width: 30%;
+    height: 40px;
+    padding-left:2%;
+    border: 1px solid #e8e8e8;
+}
+.search-prof-list{
+    padding: 1% 0;
+}
+.search-prof-list .item{
+    display: inline-block;
+    padding: 0 1.5%;
+    cursor: pointer;
+}

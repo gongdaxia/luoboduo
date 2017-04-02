@@ -54,4 +54,7 @@ app.constant("financingInfo",{
     4:"C轮",
     5:"D轮及以上",
     6:"上市公司"
+});
+app.constant("city",{
+    1:"北京"
 })

@@ -1,0 +1,51 @@
+<div class="search-profession container">
+    <div class="row">
+        <div class="search-prof-project">
+            <div class="search-prof-input">
+                <span class="tittle">关键词：</span>
+                <input  type="text"  placeholder="输入职位关键词：如 产品经理等" ng-maxlength="38">
+            </div>
+            <div class="search-prof-list">
+                <span class="tittle">所在地区：</span>
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.province)"
+                      ng-repeat="x in vm.option.province track by $index">{{x.name}}</span>
+            </div>
+            <div class="search-prof-list">
+                <span class="tittle">职位类别：</span>
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.category)"
+                      ng-repeat="x in vm.option.category track by $index">{{x.name}}</span>
+            </div>
+            <div class="search-prof-list" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
+                      ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
+            </div>
+            <div class="search-prof-list">
+                <span class="tittle">学历要求：</span>
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.education)"
+                      ng-repeat="x in vm.option.education track by $index">{{x.name}}</span>
+            </div>
+            <div class="search-prof-list">
+                <span class="tittle">工作经验：</span>
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.experience)"
+                      ng-repeat="x in vm.option.experience track by $index">{{x.name}}</span>
+            </div>
+            <div class="search-prof-list">
+                <span class="tittle">薪资水平：</span>
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.compensation)"
+                      ng-repeat="x in vm.option.compensation track by $index">{{x.name}}</span>
+            </div>
+            <div class="search-prof-list">
+                <span class="tittle">发布时间：</span>
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.updateAt)"
+                      ng-repeat="x in vm.option.updateAt track by $index">{{x.name}}</span>
+            </div>
+        </div>
+    </div>
+</div>

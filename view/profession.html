@@ -15,7 +15,7 @@
                     <div class="prof-nav-item" ng-repeat="item in li.jobTypeList track by $index">
                         <div ng-repeat="item in li.jobTypeList track by $index">
                             <span class="tittle">{{item.secondType|jobSecondFilter}}</span>
-                            <span class="content" ng-repeat="itemSecond in item.secondTypeList track by $index">{{itemSecond.jobName}}</span>
+                            <span ui-sref="searchPage" class="content" ng-repeat="itemSecond in item.secondTypeList track by $index">{{itemSecond.jobName}}</span>
                         </div>
                     </div>
                 </div>
@@ -107,8 +107,8 @@
                 <div class="row">
                 <!--轮播项目-->
                     <div class="col-lg-11 col-md-11">
-                <div class="carousel-inner carousel-innergai prof-carousel">
 
+                    <div class="carousel-inner carousel-innergai prof-carousel">
                     <div class="item great-company-list " ng-class="{'active':$first}" ng-repeat="list in vm.companyInfo track by $index"x>
                         <div class="row">
                             <div class="col-lg-7"  >

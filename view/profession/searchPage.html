@@ -1,2 +1,11 @@
-搜索结果页，包含公司搜索和职业搜索
-<div ui-view=""></div>
+<div class="search-page">
+    <div class="container">
+        <div class="row">
+            <div class="search-tittle">
+                <span ui-sref="searchPage.companySearch" ng-class="{'search-btn':currentState.includes('searchPage.companySearch')}">公司</span>
+                <span ui-sref="searchPage.professionSearch" ng-class="{'search-btn':currentState.includes('searchPage.professionSearch')}">职业</span>
+            </div>
+            <div ui-view=""></div>
+        </div>
+    </div>
+</div>
