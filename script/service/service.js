@@ -16,7 +16,7 @@ app.factory("professionService",function($http,path) {
             return $http.get(path.professionUrl(type || 0), {params: data})
         },
         //公司搜索
-        getCompany: function ( data) {
+        getCompany: function (data) {
             return $http.get(path.companyListUrl(), {params: data})
         },
         //公司详情

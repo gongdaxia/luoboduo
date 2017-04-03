@@ -260,4 +260,73 @@
     padding: 5rem 6%;
     background-color: #f6f7f8;
     width: 100%;
+    text-align: center;
+}
+
+.elitePage-example .row {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.elitePage-example-part {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 2%;
+    width: 21%;
+    height: 170px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .elitePage-example-part {
+        width: 47%;
+        margin: 1.5%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .elitePage-example-part {
+        margin: 1.5% auto;
+        width: 90%;
+    }
+}
+
+.elitePage-example-company {
+    box-sizing: border-box;
+    padding: 10%;
+    text-align: center;
+    height: 100%;
+}
+
+.elitePage-example-company img {
+    max-width: 90%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.elitePage-example-company i {
+    /*//用于垂直居中的*/
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.elitePage-example-btn {
+    width: 13rem;
+    height: 4.5rem;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fc2a48;
+}
+
+.elitePage-example-btn:hover {
+    background-color: #d9534f;
 }

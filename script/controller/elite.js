@@ -4,7 +4,7 @@
 app.controller('eliteCtrl', function ($scope, $state, $http, $rootScope, professionService) {
     var vm = this;
     vm.params = $state.params;
-    vm.params.size = 10;
+    vm.params.size = 8;
     professionService.getBanner(2).then(function (res) {
         // 获取banner图
         if (res.data.code == 0) {
@@ -15,9 +15,14 @@ app.controller('eliteCtrl', function ($scope, $state, $http, $rootScope, profess
             console.log($scope.eliteBanner);
         }
     });
-    $('.carousel').carousel({
-        // 轮播图自动轮播定时器
-        interval: 2500
-    });
+    // $('.carousel').carousel({
+    //     // 轮播图自动轮播定时器
+    //     interval: 2500
+    // });
+    professionService.getCompany(vm.params).then(function (res) {
+        if (res.data.code == 0) {
+            $scope.elite = res.data.data;
+        }
+    })
 
 });

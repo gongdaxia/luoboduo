@@ -106,7 +106,18 @@
             <i></i>
         </div>
         <div class="row">
-
+            <!--找精英成功案例展示-->
+            <div class="elitePage-example-part" ng-repeat="item in elite">
+                <div class="elitePage-example-company">
+                    <!--ui-sref链接公司详情-->
+                    <i></i>
+                    <img ng-src="{{item.logo}}">
+                </div>
+            </div>
         </div>
+        <button class="elitePage-example-btn">
+            <!--ui-sref链接到公司展示页面-->
+            更多合作公司
+        </button>
     </div>
 </div>
