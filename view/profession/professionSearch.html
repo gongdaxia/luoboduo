@@ -43,8 +43,12 @@
             <div class="search-prof-list">
                 <span class="tittle">发布时间：</span>
                 <span class="item" ng-class="{true:'search-btn'}[x.choose]"
-                      ng-click="vm.checkboxMulti($index,vm.option.updateAt)"
+                      ng-click="vm.radioType($index,vm.option.updateAt)"
                       ng-repeat="x in vm.option.updateAt track by $index">{{x.name}}</span>
+            </div>
+            <div class="prof-search-btn">
+                <button ng-click="vm.search()">搜索</button>
+                <button ng-click="vm.clear()">清除</button>
             </div>
         </div>
     </div>
