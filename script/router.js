@@ -87,13 +87,13 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //职位搜索
         .state("searchPage.professionSearch",{
-            url:"/professionSearch",
+            url:"/professionSearch?page&size&type&subType&name",
             templateUrl:"view/profession/professionSearch.html",
             controller:"searchJobCtrl",
             controllerAs: 'vm',
             resolve:{
                 loadMyFile:_lazyLoad(
-                    ["style/my/profession/professionSearch.css","script/controller/professionSearch.js"]
+                    ["style/my/profession/professionSearch.css","script/controller/professionSearch.js","notFind"]
                 )
             }
         })

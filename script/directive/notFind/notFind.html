@@ -1,0 +1,25 @@
+<div class="not-find">
+    <div class="not-find-bgImg">
+        <div class="row">
+            <div class="col-sm-5 img404" >
+                <img src="images/404.png" alt="">
+            </div>
+            <div class="col-sm-7 content404">
+                <p>暂时没有符合该搜索条件的内容</p>
+                <p>请重新修改搜索条件后再次进行搜索</p>
+            </div>
+        </div>
+    </div>
+    <div class="not-find-content">
+        <div class="not-find-line"></div>
+        <div class="not-find-prof">
+            <div class="tittle">推荐职位</div>
+            <div class="col-lg-4 col-sm-6 col-xs-12"
+                        ng-repeat="x in elitePosition.data track by $index">
+                <img src="{{x.logo}}" alt="">
+                <span>{{x.name}}</span>
+                <span>{{x.companyName}}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -61,8 +61,8 @@ function lazyLoadConfig($ocLazyLoadProvider) {
             {
                 name: 'notFind',
                 files: [
-                    'scripts/directives/notFind/notFind.css',
-                    'scripts/directives/notFind/notFind.js'
+                    'script/directive/notFind/notFind.css',
+                    'script/directive/notFind/notFind.js'
                 ]
             }
 

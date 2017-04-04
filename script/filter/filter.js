@@ -39,9 +39,52 @@ app.filter("jobTypeFilter", function(jobType) {
             return arr.join(' ')
         }
     })
+    .filter('industryFilter1', function (industryInfo) {
+        return function (input) {
+            var arr=[];
+            angular.forEach(input,function (value) {
+                arr.push(industryInfo[value.industry])
+            })
+            return arr.join(' ')
+        }
+    })
     .filter('financingFilter', function (financingInfo) {
         return function (input) {
             return financingInfo[input];
 
         }
     })
+    .filter('updateAtFilter', function (updateAttype, $filter) {
+        return function (type) {
+            var timestamp = new Date().getTime();
+            timestamp = $filter('date')(timestamp, 'yyyyMMdd');
+            var time = timestamp - $filter('date')(type, 'yyyyMMdd');
+            if (time == 0) {
+                return updateAttype[0].name + $filter('date')(type, 'HH:mm');
+            } else if (time == 1) {
+                return updateAttype[1].name + $filter('date')(type, 'HH:mm');
+            } else {
+                return $filter('date')(type, 'yyyy-MM-dd HH:mm');
+            }
+    }
+})
+    //     学历要求 education
+    .filter('educationFilter', function (educationtype) {
+        return function (type) {
+            for (var i = 0; i < educationtype.length; i++) {
+                if (type == educationtype[i].type) {
+                    return educationtype[i].name;
+                }
+            }
+        }
+    });
+//  工作经验 experience
+app.filter('experienceFilter', function (experiencetype) {
+    return function (type) {
+        for (var i = 0; i < experiencetype.length; i++) {
+            if (type == experiencetype[i].type) {
+                return experiencetype[i].name;
+            }
+        }
+    }
+});

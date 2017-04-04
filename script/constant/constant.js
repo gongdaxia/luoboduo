@@ -57,4 +57,26 @@ app.constant("financingInfo",{
 });
 app.constant("city",{
     1:"北京"
-})
+});
+//发布时间 updateAt
+app.constant('updateAttype', [
+    {type: 0, name: '今天'},
+    {type: 1, name: '昨天'}
+]);
+//  工作经验 experience
+app.constant('experiencetype', [
+    {type: 0, name: '应届'},
+    {type: 1, name: '1~2年'},
+    {type: 2, name: '3~5年'},
+    {type: 3, name: '6～9年'},
+    {type: 4, name: '10年及以上'}
+
+]);
+//     学历要求 education
+app.constant('educationtype', [
+    {type: 0, name: '大专'},
+    {type: 1, name: '本科'},
+    {type: 2, name: '硕士'},
+    {type: 3, name: '博士及以上'}
+
+]);

@@ -48,11 +48,20 @@ app.controller("searchJobCtrl",function ($scope,$rootScope,$state,professionServ
     vm.data.size = $state.params.size;
     vm.data.page = $state.params.page;
     vm.data.returnTags = 1;
-    console.log(vm.recommend)
+    console.log("q"+ vm.data.name)
     professionService. getProfession(0,vm.data).then(function (res) {
         if (res.data.code==0){
             console.log(res.data.data)
-        }
+            vm.profContent = res.data.data;
+            vm.total = res.data.total
+            console.log(vm.total)}
+           else{
+            alert(res.data.message)
+            }
+        // 判断找不到页面或找不到内容
+        vm.isNotFind = commonUtil.judgeNotFind(res.data);
+        // 找不到内容时，是否推荐
+        vm.isShowRecommend = "position"
     })
     vm.search = function () {
         sessionStorage.searchJobOptions = JSON.stringify(vm.option);

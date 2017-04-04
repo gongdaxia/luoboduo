@@ -28,3 +28,41 @@
     padding: 0 1.5%;
     cursor: pointer;
 }
+
+
+
+.search-prof-content{
+    margin: 2% 0;
+    background-color: #fff;
+}
+.prof-content-list{
+    padding: 2% 2%;
+    margin: 1% 0;
+    border: 1px solid #e8e8e8;
+}
+.prof-info .tittle{
+    display: inline-block;
+    padding-right: 2%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.prof-info .cost{
+    color: #f00;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 40px;
+}
+.comp-info{
+    padding: 0 3%;
+    border-left: 1px solid #e8e8e8;
+    line-height: 50px;
+}
+.comp-info-right{
+    text-align: right;
+}
+
+
+
+.search-page{
+    font-size: 14px;
+}

@@ -28,8 +28,12 @@ app.factory('commonUtil',function () {
                 }
             }
         },
-        //搜索单选
-
+        // 判断找不到页面或找不到内容
+        judgeNotFind: function (data) {
+            if (data.code < 0 || data.data.length === 0) {
+                return true;
+            }
+        },
     }
 });
 app.factory('searchUtil',function () {
