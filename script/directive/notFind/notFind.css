@@ -38,3 +38,14 @@
     overflow: hidden;
     border-bottom: 2px solid #e8e8e8;
 }
+
+.not-find-prof-list{
+    width: 95%;
+    margin: 0 auto;
+    padding: 4% 0;
+    border: 1px solid #e8e8e8;
+}
+.list-content .tips{
+    font-size: 16px;
+    color:#f00;
+}

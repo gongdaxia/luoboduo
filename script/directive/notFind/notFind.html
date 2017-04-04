@@ -16,9 +16,16 @@
             <div class="tittle">推荐职位</div>
             <div class="col-lg-4 col-sm-6 col-xs-12"
                         ng-repeat="x in elitePosition.data track by $index">
-                <img src="{{x.logo}}" alt="">
-                <span>{{x.name}}</span>
-                <span>{{x.companyName}}</span>
+                <div class="not-find-prof-list row">
+                    <div class="list-img col-xs-6">
+                        <img src="{{x.logo}}" alt="">
+                    </div>
+                    <div class="list-content col-xs-6">
+                        <p class="tips">{{x.compensation|compensationFilter}}</p>
+                        <p>{{x.name}}</p>
+                        <p>{{x.companyName}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

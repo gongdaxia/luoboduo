@@ -49,7 +49,7 @@ app.controller("searchJobCtrl",function ($scope,$rootScope,$state,professionServ
     vm.data.page = $state.params.page;
     vm.data.returnTags = 1;
     console.log("q"+ vm.data.name)
-    professionService. getProfession(0,vm.data).then(function (res) {
+    professionService.getProfession(0,vm.data).then(function (res) {
         if (res.data.code==0){
             console.log(res.data.data)
             vm.profContent = res.data.data;
