@@ -1,0 +1,112 @@
+/*iconfont引用*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../../../bower_components/iconfont/iconfont.eot');
+    src: url('../../../bower_components/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../../../bower_components/iconfont/iconfont.woff') format('woff'),
+    url('../../../bower_components/iconfont/iconfont.ttf') format('truetype'),
+    url('../../../bower_components/iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.aboutPage i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/*关于我们页面*/
+.aboutPage {
+    width: 100%;
+    margin-top: 2px;
+    padding: 2rem 6.5%;
+    background-color: #f6f7f8;
+}
+
+/*左侧点击切换栏*/
+.aboutPage-slider {
+    overflow: hidden;
+}
+
+.aboutPage-slider ul {
+    padding: 4rem 0;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    background-color: #fff;
+}
+
+.aboutPage-slider ul li {
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.aboutPage-slider ul li:hover {
+    color: #fc2b47;
+}
+
+/*右侧主要的内容展示部分*/
+.aboutPage-content-aboutUs, .aboutPage-content-contactUS {
+    box-sizing: border-box;
+    padding: 2rem 7.5%;
+    background-color: #fff;
+    color: #2b3d51;
+    width: 100%;
+}
+
+.aboutPage-content-aboutUs h3 {
+    margin: 2.6rem 0;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 10px;
+    border-left: 5px solid #fc2b47;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.aboutPage-content-aboutUs p {
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+.aboutPage-content-contactUS h4 {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 340px) {
+    .aboutPage-content-contactUS h4 {
+        font-size: 17px;
+    }
+}
+
+.aboutPage-content-contactUS img {
+    margin: 2rem auto;
+    width: 100%;
+    height: auto;
+}
+
+.aboutPage-content-contactUS span {
+    display: inline-block;
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.aboutPage-content-contactUS-span1 {
+    width: 40%;
+}
+
+@media screen and (max-width: 700px) {
+    .aboutPage-content-contactUS-span1 {
+        width: 100%;
+    }
+}

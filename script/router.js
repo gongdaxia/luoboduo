@@ -61,7 +61,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             templateUrl: "view/about.html",
             resolve: {
                 loadMyFile: _lazyLoad(
-                    []
+                    ['style/my/company/about.css', 'script/controller/about.js']
                 )
             }
         })
