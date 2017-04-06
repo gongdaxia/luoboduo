@@ -2,8 +2,9 @@
     font-size: 14px;
 }
 .search-prof-project{
-    border-top:3px solid #ff0000;
+    border-top:3px solid #fc2b47;
     background-color: #fff;
+    padding: 1rem 4%;
 }
 .search-prof-input{
     padding: 1.5% 0;
@@ -50,7 +51,7 @@
     font-weight: bold;
 }
 .prof-info .cost{
-    color: #f00;
+    color: #fc2b47;
     font-size: 16px;
     font-weight: bold;
     line-height: 40px;

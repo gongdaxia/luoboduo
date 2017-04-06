@@ -49,6 +49,11 @@
     line-height: 3rem;
     font-size: 16px;
     cursor: pointer;
+    padding-left: 5px;
+}
+
+.aboutPage-slider-active {
+    border-left: 5px solid #fc2b47;
 }
 
 .aboutPage-slider ul li:hover {
@@ -58,7 +63,7 @@
 /*右侧主要的内容展示部分*/
 .aboutPage-content-aboutUs, .aboutPage-content-contactUS {
     box-sizing: border-box;
-    padding: 2rem 7.5%;
+    padding: 2rem 7.5% 5rem 7.5%;
     background-color: #fff;
     color: #2b3d51;
     width: 100%;
@@ -80,6 +85,7 @@
 }
 
 .aboutPage-content-contactUS h4 {
+    margin: 2.6rem 0;
     font-weight: bold;
 }
 
@@ -97,8 +103,8 @@
 
 .aboutPage-content-contactUS span {
     display: inline-block;
-    height: 2.5rem;
-    line-height: 2.5rem;
+    height: 3rem;
+    line-height: 3rem;
 }
 
 .aboutPage-content-contactUS-span1 {

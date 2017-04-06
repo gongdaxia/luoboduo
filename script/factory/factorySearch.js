@@ -1,6 +1,9 @@
-
-app.factory('commonUtil',function () {
-    return{
+app.factory('commonUtil', function () {
+    return {
+        //跳转界面位置
+        scrollTo: function (x, y) {
+            window.scrollTo(x, y);
+        },
         judegesessionStorage: function (judge, data) {
             var dataCopy = angular.copy(data);
             if (judge === undefined) {
@@ -14,7 +17,7 @@ app.factory('commonUtil',function () {
         selectNum: function (data) {
             var i = 0;
             data.forEach(function (item) {
-                if(item.choose === true){
+                if (item.choose === true) {
                     i++;
                 }
             });
@@ -36,8 +39,8 @@ app.factory('commonUtil',function () {
         },
     }
 });
-app.factory('searchUtil',function () {
-    return{
+app.factory('searchUtil', function () {
+    return {
         //搜索多选
         checkboxMulti: function (ind, arr) {
             if (ind === 0) {

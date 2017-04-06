@@ -4,17 +4,25 @@
         <div class="aboutPage-slider col-sm-12 col-md-3 col-lg-3">
             <!--左侧点击切换栏-->
             <ul>
-                <li href="#aboutUs">
+                <li href="#aboutUs"
+                    class="showAbout active"
+                    data-toggle="tab"
+                    ng-click="vm.toggle=true"
+                    ng-class="{'aboutPage-slider-active': vm.toggle}">
                     <i class="iconfont">&#xe601;</i>关于我们
                 </li>
-                <li href="#contactUs">
+                <li href="#contactUs"
+                    class="showContact"
+                    data-toggle="tab"
+                    ng-click="vm.toggle=false"
+                    ng-class="{'aboutPage-slider-active': !vm.toggle}">
                     <i class="iconfont">&#xe918;</i>联系我们
                 </li>
             </ul>
         </div>
-        <div class="aboutPage-content col-sm-12 col-md-9 col-lg-9">
+        <div class="aboutPage-content col-sm-12 col-md-9 col-lg-9 tab-content">
             <!--右侧主要的内容展示部分-->
-            <div class="aboutPage-content-aboutUs" id="aboutUs">
+            <div class="aboutPage-content-aboutUs tab-pane fade in active" id="aboutUs">
                 <!--关于我们详情-->
                 <h3>什么是萝卜多</h3>
                 <p>
@@ -28,7 +36,7 @@
                     葡萄藤始终秉持促进中国企业创新与成长为愿景，凭借其团队丰富的行业经验和全球资源网络以及在业界的声誉，不遗余力地帮助创业家和他们的企业突破自我、不断创新、共创事业、共享成功！
                 </p>
             </div>
-            <div class="aboutPage-content-contactUS" id="contactUs">
+            <div class="aboutPage-content-contactUS tab-pane fade" id="contactUs">
                 <!--联系我们详情-->
                 <h4>北京葡萄藤信息技术有限公司</h4>
                 <span class="aboutPage-content-contactUS-span1">

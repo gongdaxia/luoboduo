@@ -5,6 +5,7 @@
     margin:0;
 }
 .search-btn{
+    padding: 5px 15px!important;
     color:#fff;
-    background-color: #fc2a48;
+    background-color: #fc2b47;
 }

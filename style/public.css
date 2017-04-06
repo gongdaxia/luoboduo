@@ -149,10 +149,11 @@
     color: #2d3e50 !important;
 }
 
-.header-nav-right a:hover {
+.header-nav-right a:hover,.navChoice {
     color: #eb5255 !important;
     text-decoration: none;
 }
+
 
 .header-nav-left img {
     display: inline-block;

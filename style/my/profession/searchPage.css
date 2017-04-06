@@ -3,13 +3,13 @@
     background-color: #f6f7f8;
 }
 .search-tittle{
-    margin: 2% 0 0 0;
+    margin: 2% 15px 0 15px;
 }
 .search-tittle span{
     display: inline-block;
-    width: 8%;
+    width: 6rem;
     text-align: center;
     font-size: 16px;
-    padding: .5% 0;
     cursor: pointer;
 }
+

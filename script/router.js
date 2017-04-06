@@ -59,6 +59,8 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("about", {
             url: "/about",
             templateUrl: "view/about.html",
+            controller: 'aboutCtrl',
+            controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
                     ['style/my/company/about.css', 'script/controller/about.js']
@@ -76,50 +78,50 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             }
         })
         //公司搜索
-        .state("searchPage.companySearch",{
-            url:"/companySearch?page&size&name",
-            templateUrl:"view/profession/companySearch.html",
-            controller:"companyCtrl",
+        .state("searchPage.companySearch", {
+            url: "/companySearch?page&size&name",
+            templateUrl: "view/profession/companySearch.html",
+            controller: "companyCtrl",
             controllerAs: 'vm',
-            resolve:{
-                loadMyFile:_lazyLoad(
-                    ["style/my/profession/professionSearch.css","style/my/profession/companySearch.css","script/controller/companySearch.js","notFind"]
+            resolve: {
+                loadMyFile: _lazyLoad(
+                    ["style/my/profession/professionSearch.css", "style/my/profession/companySearch.css", "script/controller/companySearch.js", "notFind"]
                 )
             }
         })
         //职位搜索
-        .state("searchPage.professionSearch",{
-            url:"/professionSearch?page&size&type&subType&name",
-            templateUrl:"view/profession/professionSearch.html",
-            controller:"searchJobCtrl",
+        .state("searchPage.professionSearch", {
+            url: "/professionSearch?page&size&type&subType&name",
+            templateUrl: "view/profession/professionSearch.html",
+            controller: "searchJobCtrl",
             controllerAs: 'vm',
-            resolve:{
-                loadMyFile:_lazyLoad(  ["style/my/profession/professionSearch.css",
-                  "script/controller/professionSearch.js","notFind"]
+            resolve: {
+                loadMyFile: _lazyLoad(["style/my/profession/professionSearch.css",
+                    "script/controller/professionSearch.js", "notFind"]
                 )
             }
         })
         //公司详情
-        .state("companyInfo",{
-            url:"/companyInfo?id",
-            templateUrl:"view/profession/companyInfo.html",
-            controller:"companyInfoCtrl",
+        .state("companyInfo", {
+            url: "/companyInfo?id",
+            templateUrl: "view/profession/companyInfo.html",
+            controller: "companyInfoCtrl",
             controllerAs: 'vm',
-            resolve:{
-                loadMyFile:_lazyLoad(
+            resolve: {
+                loadMyFile: _lazyLoad(
                     ["script/controller/companyInfo.js"]
                 )
             }
         })
         //职位详情
-        .state("professionInfo",{
-            url:"/professionInfo?id",
-            templateUrl:"view/profession/professionInfo.html",
-            controller:"professionInfoCtrl",
+        .state("professionInfo", {
+            url: "/professionInfo?id",
+            templateUrl: "view/profession/professionInfo.html",
+            controller: "professionInfoCtrl",
             controllerAs: 'vm',
-            resolve:{
-                loadMyFile:_lazyLoad(
-                    ["script/controller/pronfessionCtrl.js","style/my/profession/professionInfo.css"]
+            resolve: {
+                loadMyFile: _lazyLoad(
+                    ["script/controller/pronfessionCtrl.js", "style/my/profession/professionInfo.css"]
                 )
             }
         })
@@ -147,9 +149,11 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         .state("companyList", {
             url: "/companyList",
             templateUrl: "view/companyList.html",
+            controller: "companyCtrl",
+            controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    []
+                    ["style/my/profession/professionSearch.css", "style/my/profession/companySearch.css", "script/controller/companySearch.js", "notFind"]
                 )
             }
         })
