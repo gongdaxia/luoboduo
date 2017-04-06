@@ -30,7 +30,7 @@
         </div>
         <div class="search-company-content">
             <div class=" col-lg-4 col-md-4" ng-repeat="x in vm.companyInfo track by $index">
-                <div class="company-list col-xs-12">
+                <div class="company-list col-xs-12" ui-sref="companyInfo({id:x.id})">
                     <div class="company-list-img ">
                         <img src="{{x.logo}}" alt="">
                     </div>
@@ -47,5 +47,10 @@
                 </div>
             </div>
         </div>
+        <div class="search-page col-xs-12">
+            <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+        </div>
+        <!--没有数据时，显示404页面-->
+        <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
     </div>
 </div>

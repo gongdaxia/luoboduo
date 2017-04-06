@@ -1,5 +1,7 @@
 .not-find{
     width:100%;
+    background-color: #fff;
+    margin-bottom: 2%;
 }
 .not-find-bgImg{
     padding: 6% 0 0 0;
@@ -45,7 +47,17 @@
     padding: 4% 0;
     border: 1px solid #e8e8e8;
 }
+.not-find-prof-list:hover{
+    box-shadow: 1px 1px 1px #e8e8e8;
+}
+.list-img{
+    width: 50%;
+}
+.list-img img{
+    width: 70%;
+    height: 80px;
+}
 .list-content .tips{
     font-size: 16px;
-    color:#f00;
+    color: #f00;
 }

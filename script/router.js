@@ -77,13 +77,13 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //公司搜索
         .state("searchPage.companySearch",{
-            url:"/companySearch",
+            url:"/companySearch?page&size&name",
             templateUrl:"view/profession/companySearch.html",
             controller:"companyCtrl",
             controllerAs: 'vm',
             resolve:{
                 loadMyFile:_lazyLoad(
-                    ["style/my/profession/professionSearch.css","style/my/profession/companySearch.css","script/controller/companySearch.js"]
+                    ["style/my/profession/professionSearch.css","style/my/profession/companySearch.css","script/controller/companySearch.js","notFind"]
                 )
             }
         })
@@ -99,26 +99,30 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 )
             }
         })
-        // //公司详情
-        // .state("companyInfo",{
-        //     url:"/companyInfo",
-        //     templateUrl:"view/companyInfo.html",
-        //     resole:{
-        //         loadMyFile:_lazyLoad(
-        //             []
-        //         )
-        //     }
-        // })
-        // //职位详情
-        // .state("professionInfo",{
-        //     url:"/professionInfo",
-        //     templateUrl:"view/profession/professionInfo.html",
-        //     resole:{
-        //         loadMyFile:_lazyLoad(
-        //             []
-        //         )
-        //     }
-        // })
+        //公司详情
+        .state("companyInfo",{
+            url:"/companyInfo?id",
+            templateUrl:"view/profession/companyInfo.html",
+            controller:"companyInfoCtrl",
+            controllerAs: 'vm',
+            resolve:{
+                loadMyFile:_lazyLoad(
+                    ["script/controller/companyInfo.js"]
+                )
+            }
+        })
+        //职位详情
+        .state("professionInfo",{
+            url:"/professionInfo?id",
+            templateUrl:"view/profession/professionInfo.html",
+            controller:"professionInfoCtrl",
+            controllerAs: 'vm',
+            resolve:{
+                loadMyFile:_lazyLoad(
+                    ["script/controller/pronfessionCtrl.js","style/my/profession/professionInfo.css"]
+                )
+            }
+        })
         //推荐职位列表页
         .state("recommendProfession", {
             url: "/recommendPage",

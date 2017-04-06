@@ -40,6 +40,9 @@
     margin: 1% 0;
     border: 1px solid #e8e8e8;
 }
+.prof-content-list:hover{
+    box-shadow: 0 0 10px #e8e8e8;
+}
 .prof-info .tittle{
     display: inline-block;
     padding-right: 2%;

@@ -19,12 +19,14 @@ app.directive('notFind', function ($state, professionService) {
                 professionService. getCompany(data).then(function (res) {
                     if (res.data.code == 0) {
                         scope.eliteCompany = res.data;
+                        console.log(scope.eliteCompany)
                     }
                 });
             } else if (scope.showrecommend === "position") {
                 professionService.getProfession(0,data).then(function (res) {
                     if (res.data.code == 0) {
                         scope.elitePosition = res.data;
+
                     }
                 });
             }
