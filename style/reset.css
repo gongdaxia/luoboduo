@@ -9,3 +9,35 @@
     color:#fff;
     background-color: #fc2b47;
 }
+.font-16-bold{
+    font-size: 16px;
+    font-weight: bold;
+}
+.v-middle{
+    vertical-align: middle;
+}
+.width-20{
+    padding-left: 20px;
+}
+.font-14-bold{
+    font-size: 14px;
+    font-weight: bold;
+}
+.color-black{
+    color: black;
+}
+.p-6{
+    padding: 10% 0;
+}
+.margin-top-6{
+    margin-top: 6%;
+}
+.t-center{
+    text-align: center;
+}
+.bg-color-w{
+    background-color: #fff;
+}
+.margin-left-15{
+    margin-left: -15px;
+}

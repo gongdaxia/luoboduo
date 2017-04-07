@@ -3,7 +3,7 @@
         <div class="search-prof-project">
             <div class="search-prof-input">
                 <span class="tittle">关键词：</span>
-                <input  type="text" ng-model="vm.data.name"  placeholder="输入职位关键词：如 产品经理等" ng-maxlength="38">{{"1"+vm.data.name}}
+                <input  type="text" ng-model="vm.data.name"  placeholder="输入职位关键词：如 产品经理等" ng-maxlength="38">
             </div>
             <div class="search-prof-list">
                 <span class="tittle">所在地区：</span>
@@ -20,7 +20,7 @@
             <div class="search-prof-list" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
                 <span class="item" ng-class="{true:'search-btn'}[x.choose]"
                       ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
-                      ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>{{"a"+vm.selectedNum}}
+                      ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
             </div>
             <div class="search-prof-list">
                 <span class="tittle">学历要求：</span>

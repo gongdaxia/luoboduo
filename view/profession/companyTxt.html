@@ -1,11 +1,17 @@
-<div class="company-txtInfo-content">
-    <div class="tittle">
-
-    </div>
-    <div class="list" ng-repeat="x in vm.companyProfJob track by $index">
-        <span class="name">{{x.name}}</span>
-        <span>{{x.experience|experienceFilter}}</span>
-        <span>{{x.education|educationFilter}}</span>
-        <span>{{x.updateAt|updateAtFilter}}</span>
+<div class="company-info-txt1">
+    <div class="company-txt-content">
+        <div class="tittle">
+            <span></span>
+            <b class="v-middle font-16-bold" >在招职位共{{vm.total}}个</b>
+        </div>
+        <div class="company-info-txt-list" ng-repeat="x in vm.companyProfJob track by $index">
+            <span class="name font-16-bold">{{x.name}}</span>
+            <span class="cost">{{x.compensation|compensationFilter}}</span>
+            <div class="experience">
+                <span>{{x.experience|experienceFilter}}/</span>
+                <span>{{x.education|educationFilter}}/全职</span>
+            </div>
+            <span class="date">{{x.updateAt|updateAtFilter}}</span>
+        </div>
     </div>
 </div>

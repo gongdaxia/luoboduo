@@ -1,0 +1,33 @@
+.company-txt-content{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.company-info-txt-list{
+    margin-top: 2%;
+    padding: 3% 0;
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+}
+.company-info-txt-list .name{
+    display: inline-block;
+    width: 29%;
+    padding: 0 3%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.company-info-txt-list .cost{
+    display: inline-block;
+    width: 15%;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #f00;
+}
+.company-info-txt-list .experience{
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}

@@ -1,4 +1,4 @@
-<div class="company-info">
+<div class="company-info width-20">
     <div class="container ">
         <div class="row">
             <div class="company-info-header row">
@@ -19,19 +19,21 @@
                     <div class="company-info-btn">
                         <span ng-class="{'search-btn':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">公司详情</span>
                         <span ng-class="{'search-btn':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)" ui-sref="companyInfo.companyTxt">在招职位</span>
+                        <p class="line-content"></p>
                     </div>
                     <div class="company-info-txt1 " >
                         <div class="tittle" ng-if="!vm.isChoose">
                             <span></span>
-                            公司介绍
+                            <b class="font-16-bold v-middle">公司介绍</b>
                             <div class="txt">{{vm.companyInfo.company.summary}}</div>
                         </div>
-                        <div ui-view="" ng-if="vm.isChoose" class="company-info-txt1"></div>
+                        <div ui-view="" ng-if="vm.isChoose"></div>
+
                     </div>
                 </div>
                 <div class="col-lg-4 content-right">
                     <div class="content-right-main">
-                        <div class="tittle">
+                        <div class="tittle font-14-bold color-black">
                             公司信息
                             <span class="line"></span>
                         </div>
@@ -48,12 +50,12 @@
                             <span>{{vm.companyInfo.company.province|provinceFilter}}</span>
                         </div>
                     </div>
-                    <div class="content-right-main">
-                        <div class="tittle">
+                    <div class="content-right-main p-6">
+                        <div class="tittle font-14-bold color-black ">
                             公司标签
                             <span class="line"></span>
                         </div>
-                        <span>{{vm.companyInfo.company.financing|financingFilter}}</span>
+                        <span class="margin-top-6">{{vm.companyInfo.company.financing|financingFilter}}</span>
                     </div>
                 </div>
             </div>

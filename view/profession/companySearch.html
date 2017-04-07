@@ -27,14 +27,13 @@
             <button class="prof-search-btn2" ng-click="vm.search()">搜索</button>
         </div>
     </div>
-
-    <div class="search-company-content" ng-if="vm.total!=0">
+    <div class="search-company-content">
         <div class="row">
             <div class="col-lg-4 col-md-4" ng-repeat="x in vm.companyInfo track by $index">
                 <div class="company-list col-xs-12" ui-sref="companyInfo({id:x.id})">
                     <div class="info-part">
                         <div class="company-list-img ">
-                            <img ng-src="{{x.logo}}">
+                            <img src="{{x.logo}}" alt="">
                         </div>
                         <div class="info-part1">
                             <p class="info-part1-name">{{x.name}}</p>

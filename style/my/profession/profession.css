@@ -1,8 +1,20 @@
 .profession-main{
     font-size: 0;
+    background-color: #f6f7f8;
+}
+/*导航栏和banner部分*/
+.profession-home-header{
+    margin-top:2%;
+    background-color: #fff;
+    overflow: hidden;
 }
 .profession-home-bg{
     position: relative;
+}
+@media screen and (max-width:992px){
+    .profession-home-bg{
+        display: none;
+    }
 }
 .prof-home-nav{
     height: 152px;
@@ -50,6 +62,7 @@
     width:325%;
     height:456px;
     padding-left: 20%;
+    padding-top: 10%;
     border: 1px solid #f43851;
     border-left: none;
     font-size: 14px;
@@ -81,13 +94,25 @@
 .profession-home-bg .col-lg-2{
     padding-right: 0;
 }
-
+.prof-nav-item .content:hover{
+    color: #fc2b47;
+}
 /*banner*/
+
+
 .prof-banner,.profession-home-bg{
     position: relative;
     padding: 0;
 }
 .prof-banner img{
+    width: 100%;
+    height: 456px !important;
+}
+@media screen and (max-width:992px){
+    .prof-banner img{
+        width: 100%;
+        height: auto;
+    }
 }
 /*banner search*/
 .prof-input-search{
@@ -146,6 +171,7 @@
 }
 /*推荐最新职位*/
 .prof-recommend{
+    position: relative;
     padding-top: 3%;
     font-size: 14px;
     color:#999;
@@ -162,9 +188,10 @@
     color: black;
     font-weight: bold;
 }
-
+/*推荐职位*/
 .recommend-job{
- font-size: 0;
+    font-size: 0;
+    background-color: #fff;
 }
 .recommend-job-box{
     display: flex;
@@ -175,9 +202,10 @@
     margin: 5% auto;
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
+    cursor: pointer;
 }
 .recommend-job-box:hover{
-    box-shadow: 1px 1px 1px #999;
+    box-shadow: 0 0 10px #999;
 }
 .job-box-img{
     display: inline-block;
@@ -185,7 +213,7 @@
     height:80%;
     font-size: 14px;
     text-align: center;
-    /*border: 1px solid #e8e8e8;*/
+    border: 1px solid #e8e8e8;
     vertical-align: middle;
 }
 .job-box-img img{
@@ -199,20 +227,37 @@
     text-align: center;
     vertical-align: middle;
 }
+.job-box-content .cost{
+    color: #f00;
+    font-size: 16px;
+}
 .prof-recommend-tittle span{
     font-size: 14px;
 }
 
 
-
+/*优质公司*/
+.great-company{
+    /*background-color: #fff;*/
+}
 .prof-carousel{
     margin-top: 20px;
     border: 1px solid #e8e8e8;
     border-radius: 5px;
     overflow: hidden;
+    background-color: #fff;
+    cursor: pointer;
+}
+.prof-carousel:hover{
+    box-shadow: 0 0 10px #999;
 }
 .great-company-info{
     position: relative;
+    z-index: 9999;
+    cursor: pointer;
+}
+.great-company-info img{
+    width: 100%;
 }
 .company-info-txt{
     position: absolute;
@@ -350,8 +395,9 @@
 
 
 
-
+/*ui样式区*/
 .profession-tips{
+    background-color: #fff;
     margin-top: 2%;
     padding: 5% 0%;
     font-size: 14px;

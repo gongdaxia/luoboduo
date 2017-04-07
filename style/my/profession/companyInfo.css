@@ -1,12 +1,15 @@
 .company-info{
     background-color: #f6f7f8;
 }
+/*头部区域*/
 .company-info-header{
-    margin: 2% 0;
+    margin-top: 2%;
+    margin-bottom: 2%;
     height: 200px;
     background-color: #fff;
 
 }
+/*公司logo*/
 .company-info-img{
     float: left;
     width: 200px;
@@ -18,6 +21,7 @@
 .company-info-img img{
     max-width: 100%;
 }
+/*公司信息*/
 .company-info-tittle{
    padding: 4%;
 }
@@ -42,7 +46,7 @@
 }
 
 
-
+/*内容区域*/
 .company-info-content{
     margin-bottom: 2%;
     background-color: #fff;
@@ -51,15 +55,17 @@
 }
 .company-info-btn>span{
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     padding:2%;
+    font-weight: bold;
     cursor: pointer;
 }
+/*公司详情部分*/
 .company-info-txt1{
-    border-top: 1px solid #e8e8e8;
+    border-right: 2px solid #e8e8e8;
 }
 .company-info-txt1 .tittle{
-    padding: 2% 0;
+    padding: 3% 0;
 }
 .company-info-txt1 .tittle>span{
     display: inline-block;
@@ -70,16 +76,19 @@
     vertical-align: middle;
 }
 .company-info-txt1 .txt{
-    height: 160px;
+    display: inline-block;
+    padding:4%;
+    line-height: 30px;
+    color: #999;
 }
-
+/*公司信息部分*/
 .content-right{
-    padding-top: 4.5%;
+    padding-top: 4.2%;
 }
 .content-right-main{
     padding-left: 6%;
-    border-left: 2px solid #e8e8e8;
-    font-size: 16px;
+    /*border-left: 2px solid #e8e8e8;*/
+    font-size: 14px;
     color:#999;
 }
 .content-right-main .line{
@@ -91,7 +100,7 @@
     vertical-align: middle;
 }
 .content-right-main .part{
-    line-height: 60px;
+    line-height: 50px;
 }
 .content-right-main .part span{
     display: inline-block;
@@ -100,4 +109,15 @@
 }
 .content-right-main .part img{
     vertical-align: middle;
+}
+.content-right-main>span{
+    display: inline-block;
+    padding: 0 3%;
+    border: 1px solid #e8e8e8;
+}
+.line-content{
+    display: inline-block;
+    width:98%;
+    height: 2px;
+    background-color: #e8e8e8;
 }

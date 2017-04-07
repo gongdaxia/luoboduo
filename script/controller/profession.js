@@ -6,6 +6,9 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
     var vm = this;
     vm.params = $state.params;
     vm.params.size = 8;
+    delete sessionStorage.searchCompanyOptions;
+    delete sessionStorage.searchJobOptions;
+    delete sessionStorage.searchJobOptions ;
     professionService.getJobList().then(function (res) {
         if(res.data.code==0){
             vm.list = res.data.data;
@@ -26,7 +29,11 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
     professionService.getProfession(1,vm.params).then(function (res) {
         if (res.data.code==0){
             vm.professionInfo = res.data.data
-
+            angular.forEach(vm.professionInfo,function (value) {
+                if(value.logo==""){
+                    value.logo="../images/noInfo.gif"
+                }
+            })
 
         }
 
@@ -34,6 +41,12 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
     professionService.getProfession(0,vm.params).then(function (res) {
         if (res.data.code==0){
             vm.newProfessionInfo = res.data.data;
+            angular.forEach(vm.newProfessionInfo,function (value) {
+                if(value.logo==""){
+                    value.logo="../images/noInfo.gif"
+                }
+            })
+
         }
     })
     //行业大图
@@ -46,6 +59,7 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
     professionService.getCompany({size:4,page:2}).then(function (res) {
         if(res.data.code==0) {
             vm.companyInfo = res.data.data;
+            console.log(vm.companyInfo)
             angular.forEach(vm.companyInfo,function (value) {
                 professionService.getProfession(0,{size:2,companyId:value.id}).then(function (resp) {
                     console.log("sssssssssssssssss")
