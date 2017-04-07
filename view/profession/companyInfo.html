@@ -1,1 +1,62 @@
-hahahhah
+<div class="company-info">
+    <div class="container ">
+        <div class="row">
+            <div class="company-info-header row">
+                    <div class="company-info-img ">
+                        <img src="{{vm.companyInfo.company.logo}}" alt="">
+                    </div>
+                    <div class="company-info-tittle col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                        <span class="name">{{vm.companyInfo.company.name}}</span>
+                        <span ng-if="vm.companyInfo.company.approved" class="approved">
+                            <img src="../../images/company-home-2.png" alt="">
+                            萝卜多认证
+                        </span>
+                        <p>{{vm.companyInfo.company.slogan}}</p>
+                    </div>
+            </div>
+            <div class="company-info-content row">
+                <div class="content-left col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="company-info-btn">
+                        <span ng-class="{'search-btn':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">公司详情</span>
+                        <span ng-class="{'search-btn':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)" ui-sref="companyInfo.companyTxt">在招职位</span>
+                    </div>
+                    <div class="company-info-txt1 " >
+                        <div class="tittle" ng-if="!vm.isChoose">
+                            <span></span>
+                            公司介绍
+                            <div class="txt">{{vm.companyInfo.company.summary}}</div>
+                        </div>
+                        <div ui-view="" ng-if="vm.isChoose" class="company-info-txt1"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 content-right">
+                    <div class="content-right-main">
+                        <div class="tittle">
+                            公司信息
+                            <span class="line"></span>
+                        </div>
+                        <div class="part">
+                            <img src="../../images/people.png" alt="">
+                            <span>{{vm.companyInfo.company.totalNum}}人</span>
+                        </div>
+                        <div class="part">
+                            <img src="../../images/company-home-3.png" alt="">
+                            <span>{{vm.companyInfo.industryList|industryFilter1}}</span>
+                        </div>
+                        <div class="part">
+                            <img src="../../images/location.png" alt="">
+                            <span>{{vm.companyInfo.company.province|provinceFilter}}</span>
+                        </div>
+                    </div>
+                    <div class="content-right-main">
+                        <div class="tittle">
+                            公司标签
+                            <span class="line"></span>
+                        </div>
+                        <span>{{vm.companyInfo.company.financing|financingFilter}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

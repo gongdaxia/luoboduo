@@ -1,0 +1,11 @@
+<div class="company-txtInfo-content">
+    <div class="tittle">
+
+    </div>
+    <div class="list" ng-repeat="x in vm.companyProfJob track by $index">
+        <span class="name">{{x.name}}</span>
+        <span>{{x.experience|experienceFilter}}</span>
+        <span>{{x.education|educationFilter}}</span>
+        <span>{{x.updateAt|updateAtFilter}}</span>
+    </div>
+</div>

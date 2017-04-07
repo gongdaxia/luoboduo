@@ -102,17 +102,40 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             }
         })
         //公司详情
-        .state("companyInfo", {
-            url: "/companyInfo?id",
-            templateUrl: "view/profession/companyInfo.html",
-            controller: "companyInfoCtrl",
+        .state("companyInfo",{
+            url:"/companyInfo?id&companyId",
+            templateUrl:"view/profession/companyInfo.html",
+            controller:"companyInfoCtrl",
             controllerAs: 'vm',
-            resolve: {
-                loadMyFile: _lazyLoad(
-                    ["script/controller/companyInfo.js"]
+            resolve:{
+                loadMyFile:_lazyLoad(
+                    ["script/controller/companyInfo.js","style/my/profession/companyInfo.css"]
                 )
             }
         })
+        //公司详情。在招职位
+        .state("companyInfo.companyTxt",{
+            url:"/companyTxt&companyId",
+            templateUrl:"view/profession/companyTxt.html",
+            controller:"companyTxtCtrl",
+            controllerAs: 'vm',
+            resolve:{
+                loadMyFile:_lazyLoad(
+                    ["script/controller/companyTxt.js","style/my/profession/companyTxt.css"]
+                )
+            }
+        })
+        // .state("companyInfo",{
+        //     url:"/companyInfo?id&companyId",
+        //     templateUrl:"view/profession/companyInfo.html",
+        //     controller:"companyInfoCtrl",
+        //     controllerAs: 'vm',
+        //     resolve:{
+        //         loadMyFile:_lazyLoad(
+        //             ["script/controller/companyInfo.js","style/my/profession/companyInfo.css"]
+        //         )
+        //     }
+        // })
         //职位详情
         .state("professionInfo", {
             url: "/professionInfo?id",
