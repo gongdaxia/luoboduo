@@ -1,30 +1,3 @@
-.companyListPage {
-    background-color: #f6f7f8;
-    padding: 2rem 0;
-    width: 100%;
-}
-
-.companyList-img {
-    display: block;
-    box-sizing: border-box;
-    width: 940px;
-    margin: 0 auto 2rem auto;
-}
-
-@media screen and (max-width: 991px) {
-    .companyList-img {
-        width: 720px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .companyList-img {
-        width: 100%;
-        padding: 0 15px;
-        margin: 0 auto 2% auto;
-    }
-}
-
 /*搜索結果展示*/
 .search-company-content {
     overflow: hidden;
@@ -33,49 +6,111 @@
     padding: 2rem 1rem;
 }
 
+@media screen and (max-width: 767px) {
+    .search-company-content {
+        padding: 2rem 15%;
+    }
+}
+
 .info-part {
-    padding: 4%;
+    padding: 11px;
 }
 
 .company-list {
+    border-radius: 5px;
     box-sizing: border-box;
-    margin: 2% 0;
+    margin: 2% auto;
     padding: 0 !important;
     width: 100%;
     height: 155px;
     border: 1px solid #e8e8e8;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.company-list:hover {
+    -moz-box-shadow: 0 4px 7px #e7e7e7;
+    -webkit-box-shadow: 0 4px 7px #e7e7e7;
+    box-shadow: 0 5px 10px #e7e7e7;
+}
+
+@media screen and (max-width: 991px) {
+    .company-list {
+        height: 180px;
+    }
+
+    .info-part {
+        padding: 24px 20px;
+    }
+
+    .company-list-img {
+        height: 85px !important;
+        line-height: 85px !important;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .info-part {
+        padding: 24px 10px;
+    }
+
+    .company-list-img {
+        height: 90px !important;
+        line-height: 90px !important;
+    }
+
+    .company-list-img img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .company-list-img {
+        height: 80px !important;
+        line-height: 80px !important;
+    }
 }
 
 .company-list-img {
     display: inline-block;
+    max-width: 150px;
     width: 40%;
     height: 100px;
+    line-height: 100px;
     border: 1px solid #e8e8e8;
     text-align: center;
     vertical-align: middle;
+    overflow: hidden;
 }
 
 .company-list-img img {
     display: inline-block;
-    width: 65%;
-    height: 80%;
-    margin-top: 10%;
-    vertical-align: baseline;
+    max-width: 90%;
+    max-height: 100%;
+    vertical-align: middle;
 }
 
-.company-list .info-part1 {
+.info-part1 {
     display: inline-block;
     height: 100px;
     overflow: hidden;
     vertical-align: middle;
     color: #536a82;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-top: 10px;
     width: 55%;
+    text-align: left;
 }
 
 .info-part1-slogan {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.info-part1-num {
     display: block;
     white-space: nowrap;
     overflow: hidden;
@@ -106,15 +141,28 @@
     display: inline-block;
     float: left;
     text-align: center;
+    color: #b4b4b4;
+
 }
 
 .info-part2-span1 {
-    padding-left: 15px;
-    width: 30%;
+    padding-left: 18px;
+    width: 35%;
+    text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+    .info-part2-span1 {
+        padding-left: 10%;
+    }
+}
+
+.info-part2 i {
+    font-size: 14px;
 }
 
 .info-part2-span2, .info-part2-span3 {
-    width: 35%;
+    width: 32.5%;
 }
 
 /*公司搜索下面的兩個按鈕*/

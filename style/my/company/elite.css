@@ -283,6 +283,12 @@
     cursor: pointer;
 }
 
+.elitePage-example-part:hover {
+    -moz-box-shadow: 0 4px 7px #e7e7e7;
+    -webkit-box-shadow: 0 4px 7px #e7e7e7;
+    box-shadow: 0 5px 10px #e7e7e7;
+}
+
 @media screen and (max-width: 767px) {
     .elitePage-example-part {
         width: 47%;
@@ -328,5 +334,7 @@
 }
 
 .elitePage-example-btn:hover {
-    background-color: #d9534f;
+    -moz-box-shadow: 0 4px 7px #e7e7e7;
+    -webkit-box-shadow: 0 4px 7px #e7e7e7;
+    box-shadow: 0 10px 15px #e7e7e7;
 }

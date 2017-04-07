@@ -1,8 +1,8 @@
 <div class="not-find">
     <div class="not-find-bgImg">
         <div class="row">
-            <div class="col-sm-5 img404" >
-                <img src="images/404.png" alt="">
+            <div class="col-sm-5 img404">
+                <img src="../../../images/404.png" alt="">
             </div>
             <div class="col-sm-7 content404">
                 <p>暂时没有符合该搜索条件的内容</p>
@@ -10,15 +10,15 @@
             </div>
         </div>
     </div>
-    <div class="not-find-content"  ng-if="showrecommend==='position'">
+    <div class="not-find-content" ng-if="showrecommend==='position'">
         <div class="not-find-line"></div>
         <div class="not-find-prof">
             <div class="tittle">推荐职位</div>
             <div class="col-lg-4 col-sm-6 col-xs-12"
-                        ng-repeat="x in elitePosition.data track by $index">
+                 ng-repeat="x in elitePosition.data track by $index">
                 <div class="not-find-prof-list row">
                     <div class="list-img col-xs-6">
-                        <img src="{{x.logo}}" alt="">
+                        <img ng-src="{{x.logo}}" alt="">
                     </div>
                     <div class="list-content col-xs-6">
                         <p class="tips">{{x.compensation|compensationFilter}}</p>
@@ -30,24 +30,39 @@
         </div>
     </div>
     <div class="not-find-content" ng-if="showrecommend==='company'">
-        <div class="not-find-line"></div>
+        <!--<div class="not-find-line"></div>-->
         <div class="not-find-prof">
             <div class="tittle">推荐职位</div>
-            <div class="col-lg-4 col-sm-6 col-xs-12"
-                 ng-repeat="x in eliteCompany.data track by $index">
-                <div class="not-find-prof-list row">
-                    <div class="list-img col-xs-6">
-                        <img src="{{x.logo}}" alt="">
-                    </div>
-                    <div class="list-content col-xs-6">
-                        <p>{{x.name}}</p>
-                        <p>{{x.slogan}}</p>
-                        <p>{{x.professionNum}}个在招职位</p>
-                    </div>
-                    <div class="">
-                        <span>{{x.industryList | industryFilter}}</span>
-                        <span>{{x.financing|financingFilter}}</span>
-                        <span>{{x.province|provinceFilter}}</span>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 col-xs-12"
+                     ng-repeat="x in eliteCompany.data track by $index"
+                     style="overflow: hidden;text-align: center">
+                    <div class="company-list">
+                        <!--这里的样式都用的公司列表页的样式-->
+                        <div class="info-part">
+                            <div class="company-list-img">
+                                <img ng-src="{{x.logo}}">
+                            </div>
+                            <div class="info-part1">
+                                <p class="info-part1-name">{{x.name}}</p>
+                                <p class="info-part1-slogan">{{x.slogan}}</p>
+                                <p class="info-part1-num"><span style="color: red">{{x.professionNum}}</span>个在招职位</p>
+                            </div>
+                        </div>
+                        <div class="info-part2">
+                            <span class="info-part2-span1">
+                                <i class="iconfont">&#xe67c;</i>
+                                {{x.industryList | industryFilter}}
+                            </span>
+                            <span class="info-part2-span2">
+                                <i class="iconfont">&#xe62b;</i>
+                                {{x.financing|financingFilter}}
+                            </span>
+                            <span class="info-part2-span3">
+                                <i class="iconfont">&#x3492;</i>
+                                {{x.province|provinceFilter}}
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>

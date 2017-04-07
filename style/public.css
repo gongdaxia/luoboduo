@@ -1,3 +1,22 @@
+/*iconfont引用*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../bower_components/iconfont/iconfont.eot');
+    src: url('../bower_components/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../bower_components/iconfont/iconfont.woff') format('woff'),
+    url('../bower_components/iconfont/iconfont.ttf') format('truetype'),
+    url('../bower_components/iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /*顶部导航栏*/
 .header-nav {
     position: relative;
@@ -121,22 +140,48 @@
     .header-nav-right {
         /*导航栏下拉列表*/
         position: absolute;
+        box-sizing: border-box;
         width: 102% !important;
+        padding: 0 0 1rem 0;
         top: 4.3rem;
         left: 0;
         z-index: 999;
         background-color: #fff;
         border-bottom: 1px solid #000;
-        padding-bottom: 1rem;
     }
 
     .header-nav-right ul {
-        width: 100%;
+        width: 102%;
         text-align: center;
     }
 
+    .header-nav-right ul li {
+        overflow: hidden;
+    }
+
     .header-nav-right ul li a {
-        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-nav-right {
+        /*导航栏下拉列表*/
+        width: 103.1% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header-nav-right {
+        /*导航栏下拉列表*/
+        width: 104.3% !important;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .header-nav-right {
+        /*导航栏下拉列表*/
+        width: 104.8% !important;
     }
 }
 
@@ -146,14 +191,13 @@
     text-align: center;
     font-size: 1.6rem;
     cursor: pointer;
-    color: #2d3e50 !important;
+    color: #2d3e50;
 }
 
-.header-nav-right a:hover,.navChoice {
+.header-nav-right a:hover {
     color: #eb5255 !important;
     text-decoration: none;
 }
-
 
 .header-nav-left img {
     display: inline-block;
@@ -180,10 +224,19 @@
     width: 100%;
 }
 
+.navChoiceA {
+    color: #fc2b47 !important;
+}
+
+.navChoice {
+    width: 100% !important;
+}
+
 /*底部样式*/
-footer{
+footer {
     overflow: hidden;
 }
+
 .footer-top {
     width: 100%;
     padding: 22px 0;

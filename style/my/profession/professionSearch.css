@@ -1,72 +1,81 @@
-.search-profession{
+.search-profession {
     font-size: 14px;
 }
-.search-prof-project{
-    border-top:3px solid #fc2b47;
+
+.search-prof-project {
+    border-top: 3px solid #fc2b47;
     background-color: #fff;
     padding: 1rem 4%;
 }
-.search-prof-input{
+
+.search-prof-input {
     padding: 1.5% 0;
 }
+
 .search-prof-input .tittle,
-.search-prof-list .tittle{
+.search-prof-list .tittle {
     font-size: 16px;
     font-weight: bold;
 }
-.search-prof-input input{
+
+.search-prof-input input {
     display: inline-block;
     width: 30%;
     height: 40px;
-    padding-left:2%;
+    padding-left: 2%;
     border: 1px solid #e8e8e8;
 }
-.search-prof-list{
+
+.search-prof-list {
     padding: 1% 0;
 }
-.search-prof-list .item{
+
+.search-prof-list .item {
     display: inline-block;
     padding: 0 1.5%;
     cursor: pointer;
 }
 
-
-
-.search-prof-content{
+.search-prof-content {
     margin: 2% 0;
     background-color: #fff;
 }
-.prof-content-list{
+
+.prof-content-list {
     padding: 2% 2%;
     margin: 1% 0;
     border: 1px solid #e8e8e8;
 }
-.prof-content-list:hover{
+
+.prof-content-list:hover {
     box-shadow: 0 0 10px #e8e8e8;
 }
-.prof-info .tittle{
+
+.prof-info .tittle {
     display: inline-block;
     padding-right: 2%;
     font-size: 18px;
     font-weight: bold;
 }
-.prof-info .cost{
+
+.prof-info .cost {
     color: #fc2b47;
     font-size: 16px;
     font-weight: bold;
     line-height: 40px;
 }
-.comp-info{
+
+.comp-info {
     padding: 0 3%;
     border-left: 1px solid #e8e8e8;
     line-height: 50px;
 }
-.comp-info-right{
+
+.comp-info-right {
     text-align: right;
 }
 
-
-
-.search-page{
+.search-page {
     font-size: 14px;
+    overflow: hidden!important;
 }

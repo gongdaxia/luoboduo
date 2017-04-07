@@ -102,26 +102,26 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             }
         })
         //公司详情
-        .state("companyInfo",{
-            url:"/companyInfo?id&companyId",
-            templateUrl:"view/profession/companyInfo.html",
-            controller:"companyInfoCtrl",
+        .state("companyInfo", {
+            url: "/companyInfo?id&companyId",
+            templateUrl: "view/profession/companyInfo.html",
+            controller: "companyInfoCtrl",
             controllerAs: 'vm',
-            resolve:{
-                loadMyFile:_lazyLoad(
-                    ["script/controller/companyInfo.js","style/my/profession/companyInfo.css"]
+            resolve: {
+                loadMyFile: _lazyLoad(
+                    ["script/controller/companyInfo.js", "style/my/profession/companyInfo.css"]
                 )
             }
         })
         //公司详情。在招职位
-        .state("companyInfo.companyTxt",{
-            url:"/companyTxt&companyId",
-            templateUrl:"view/profession/companyTxt.html",
-            controller:"companyTxtCtrl",
+        .state("companyInfo.companyTxt", {
+            url: "/companyTxt&companyId",
+            templateUrl: "view/profession/companyTxt.html",
+            controller: "companyTxtCtrl",
             controllerAs: 'vm',
-            resolve:{
-                loadMyFile:_lazyLoad(
-                    ["script/controller/companyTxt.js","style/my/profession/companyTxt.css"]
+            resolve: {
+                loadMyFile: _lazyLoad(
+                    ["script/controller/companyTxt.js", "style/my/profession/companyTxt.css"]
                 )
             }
         })
@@ -176,28 +176,32 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ["style/my/profession/professionSearch.css", "style/my/profession/companySearch.css", "script/controller/companySearch.js", "notFind"]
+                    ["style/my/profession/professionSearch.css",
+                        "style/my/profession/companySearch.css",
+                        "script/controller/companyList.js",
+                        "style/my/company/companyList.css",
+                        "notFind"]
                 )
             }
-        })
-        //关于我们
-        .state("about.aboutOur", {
-            url: "/aboutOur",
-            templateUrl: "view/aboutOur.html",
-            resolve: {
-                loadMyFile: _lazyLoad(
-                    []
-                )
-            }
-        })
-        //联系我们
-        .state("about.contact", {
-            url: "/contact",
-            templateUrl: "view/contact.html",
-            resolve: {
-                loadMyFile: _lazyLoad(
-                    []
-                )
-            }
-        })
+        });
+    // //关于我们
+    // .state("about.aboutOur", {
+    //     url: "/aboutOur",
+    //     templateUrl: "view/aboutOur.html",
+    //     resolve: {
+    //         loadMyFile: _lazyLoad(
+    //             []
+    //         )
+    //     }
+    // })
+    // //联系我们
+    // .state("about.contact", {
+    //     url: "/contact",
+    //     templateUrl: "view/contact.html",
+    //     resolve: {
+    //         loadMyFile: _lazyLoad(
+    //             []
+    //         )
+    //     }
+    // })
 }

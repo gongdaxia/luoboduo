@@ -1,0 +1,41 @@
+.companyListPage {
+    background-color: #f6f7f8;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+.companyList-img {
+    display: block;
+    box-sizing: border-box;
+    width: 940px;
+    margin: 0 auto 2rem auto;
+}
+
+@media screen and (min-width: 1199px) {
+    .companyList-img {
+        width: 1140px !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .companyList-img {
+        width: 940px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .companyList-img {
+        width: 720px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .companyList-img {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto 2% auto;
+    }
+}
+
+/*搜索的结果展示部分*/

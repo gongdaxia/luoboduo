@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style/reset.css">
 </head>
 <body>
-<header ng-controller="indexCtrl">
+<header>
     <!--顶部公共样式-->
     <nav class="navbar navbar-default header-nav" role="navigation">
         <!--顶部导航栏-->
@@ -55,30 +55,50 @@
 
             <div class="collapse navbar-collapse header-nav-right pull-right" id="example-navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li ui-sref="home"
-                        ng-class="{'navChoice': currentState.includes('home')}">
-                        <a href="">
-                            首页<i class="header-nav-right-underline"></i>
+                    <li ui-sref="home">
+                        <a href=""
+                           ng-class="{'navChoiceA': currentState.includes('home')}">
+                            首页
+                            <i class="header-nav-right-underline"
+                               ng-class="{'navChoice': currentState.includes('home')}">
+                            </i>
                         </a>
                     </li>
-                    <li ui-sref="profession"
-                        ng-class="{'navChoice': currentState.includes('profession')||currentState.includes('companySearch')
-                                        ||currentState.includes('searchPage')||currentState.includes('companyInfo')||
-                                        currentState.includes('professionInfo')}">
-                        <a href="">
-                            找职位<i class="header-nav-right-underline"></i>
+                    <li ui-sref="profession">
+                        <a href=""
+                           ng-class="{'navChoiceA': currentState.includes('profession')||
+                                  currentState.includes('companySearch')||
+                                  currentState.includes('searchPage')||
+                                  currentState.includes('companyInfo')||
+                                  currentState.includes('professionInfo')}">
+                            找职位
+                            <i class="header-nav-right-underline"
+                               ng-class="{'navChoice': currentState.includes('profession')||
+                                  currentState.includes('companySearch')||
+                                  currentState.includes('searchPage')||
+                                  currentState.includes('companyInfo')||
+                                  currentState.includes('professionInfo')}">
+                            </i>
                         </a>
                     </li>
-                    <li ui-sref="elite"
-                        ng-class="{'navChoice': currentState.includes('elite')||currentState.includes('companyList')}">
-                        <a href="">
-                            找精英<i class="header-nav-right-underline"></i>
+                    <li ui-sref="elite">
+                        <a href=""
+                           ng-class="{'navChoiceA': currentState.includes('elite')||
+                               currentState.includes('companyList')}">
+                            找精英
+                            <i class="header-nav-right-underline"
+                               ng-class="{'navChoice': currentState.includes('elite')||
+                               currentState.includes('companyList')}">
+                            </i>
                         </a>
                     </li>
-                    <li ui-sref="about"
-                        ng-class="{'navChoice': currentState.includes('about')}">
-                        <a href="">
-                            关于我们<i class="header-nav-right-underline"></i>
+                    <li ui-sref="about">
+                        <a href=""
+                           ng-class="{'navChoiceA': currentState.includes('about')}">
+                            关于我们
+                            <i class="header-nav-right-underline"
+                               ng-class="{'navChoice': currentState.includes('about')}">
+                            </i>
                         </a>
                     </li>
                 </ul>
@@ -150,8 +170,6 @@
 <script src="script/constant/constant.js"></script>
 
 <script src="script/constant/project-constant.js"></script>
-
-<script src="script/controller/index.js"></script>
 
 <script src="script/filter/filter.js"></script>
 <script src="script/factory/factorySearch.js"></script>
