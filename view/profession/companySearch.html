@@ -1,8 +1,9 @@
 <div class="search-profession container">
     <div class="search-prof-project">
         <div class="search-prof-input">
-            <span class="tittle">关键词：</span>
+            <span class="tittle" style="letter-spacing: 5px">关键词：</span>
             <input type="text" ng-model="vm.data.name" placeholder="输入职位关键词：如 产品经理等" ng-maxlength="38">
+            <span class="search-prof-input-span">当前关键词：{{vm.data.name}}</span>
         </div>
         <div class="search-prof-list">
             <span class="tittle">所在地区：</span>
@@ -29,8 +30,10 @@
     </div>
     <div class="search-company-content">
         <div class="row">
-            <div class="col-lg-4 col-md-4" ng-repeat="x in vm.companyInfo track by $index">
-                <div class="company-list col-xs-12" ui-sref="companyInfo({id:x.id})">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"
+                 ng-repeat="x in vm.companyInfo track by $index"
+                 style="overflow: hidden;text-align: center">
+                <div class="company-list" ui-sref="companyInfo({id:x.id})">
                     <div class="info-part">
                         <div class="company-list-img ">
                             <img src="{{x.logo}}" alt="">
@@ -38,13 +41,22 @@
                         <div class="info-part1">
                             <p class="info-part1-name">{{x.name}}</p>
                             <p class="info-part1-slogan">{{x.slogan}}</p>
-                            <p><span style="color: red">{{x.professionNum}}</span>个在招职位</p>
+                            <p class="info-part1-num"><span style="color: red">{{x.professionNum}}</span>个在招职位</p>
                         </div>
                     </div>
                     <div class="info-part2">
-                        <span class="info-part2-span1">{{x.industryList | industryFilter}}</span>
-                        <span class="info-part2-span2">{{x.financing|financingFilter}}</span>
-                        <span class="info-part2-span3">{{x.province|provinceFilter}}</span>
+                        <span class="info-part2-span1">
+                              <i class="iconfont">&#xe67c;</i>
+                            {{x.industryList | industryFilter}}
+                        </span>
+                        <span class="info-part2-span2">
+                            <i class="iconfont">&#xe62b;</i>
+                            {{x.financing|financingFilter}}
+                        </span>
+                        <span class="info-part2-span3">
+                             <i class="iconfont">&#x3492;</i>
+                            {{x.province|provinceFilter}}
+                        </span>
                     </div>
                 </div>
             </div>

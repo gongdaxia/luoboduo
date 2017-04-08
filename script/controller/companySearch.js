@@ -29,17 +29,16 @@ app.controller("companyCtrl",function ($scope,$rootScope,$state,professionServic
         vm.isNotFind = commonUtil.judgeNotFind(res.data);
         // 找不到内容时，是否推荐
         vm.isShowRecommend = "company"
-    })
+    });
     vm.search = function () {
         sessionStorage.searchCompanyOptions = JSON.stringify(vm.option);
         // 刷新当前界面
         $state.go($state.current, {page: 1, size: 9, name:vm.data.name}, {reload: true});
-    }
+    };
     //清除
     vm.clear = function () {
         sessionStorage.removeItem("searchCompanyOptions");
         sessionStorage.searchCompanyOptions = JSON.stringify(searchInfo);
-
         $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
     };
-})
+});

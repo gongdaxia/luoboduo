@@ -5,11 +5,17 @@
 .search-prof-project {
     border-top: 3px solid #fc2b47;
     background-color: #fff;
-    padding: 1rem 4%;
+    padding: 1rem 2.5%;
+    font-size: 15px;
 }
 
 .search-prof-input {
     padding: 1.5% 0;
+}
+
+.search-prof-input-span {
+    color: #999;
+    margin-left: 15px;
 }
 
 .search-prof-input .tittle,
@@ -20,10 +26,48 @@
 
 .search-prof-input input {
     display: inline-block;
-    width: 30%;
+    width: 40%;
     height: 40px;
     padding-left: 2%;
     border: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 662px) {
+    .search-prof-input input {
+        width: 60%;
+    }
+
+    .search-prof-input-span {
+        display: block;
+        margin-top: 10px;
+        margin-left: 90px;
+    }
+
+    .search-prof-list .item {
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .search-prof-input input {
+        width: 70%;
+    }
+
+    .search-prof-list .item {
+        margin: 2%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .search-prof-input input {
+        margin-top: 10px;
+        margin-left: 10%;
+        width: 90%;
+    }
+
+    .search-prof-input-span {
+        margin-left: 10%;
+    }
 }
 
 .search-prof-list {
@@ -38,17 +82,53 @@
 
 .search-prof-content {
     margin: 2% 0;
+    padding: 1rem 2%;
     background-color: #fff;
 }
 
 .prof-content-list {
-    padding: 2% 2%;
-    margin: 1% 0;
+    padding: 2% 4%;
+    margin: 2% 0;
     border: 1px solid #e8e8e8;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .prof-content-list:hover {
     box-shadow: 0 0 10px #e8e8e8;
+}
+
+.prof-info {
+    border-right: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 620px) {
+    .prof-info {
+        box-sizing: border-box;
+        width: 94%;
+        margin: 0 3%;
+        border-right: none;
+        border-bottom: 1px solid #e8e8e8;
+        padding-bottom: 2%;
+    }
+
+    .comp-info {
+        width: 100%;
+        padding: 2% 7% 0 7% !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .prof-info {
+        width: 90%;
+        margin: 0 5%;
+
+    }
+
+    .comp-info {
+        width: 100%;
+        padding: 2% 8% 0 8% !important;
+    }
 }
 
 .prof-info .tittle {
@@ -56,6 +136,15 @@
     padding-right: 2%;
     font-size: 18px;
     font-weight: bold;
+}
+
+.prof-info .time {
+    font-size: 12px;
+    color: #999;
+}
+
+.prof-info .location {
+    color: #536a82;
 }
 
 .prof-info .cost {
@@ -67,7 +156,6 @@
 
 .comp-info {
     padding: 0 3%;
-    border-left: 1px solid #e8e8e8;
     line-height: 50px;
 }
 
@@ -75,7 +163,25 @@
     text-align: right;
 }
 
+.comp-info-right img {
+    width: 85px;
+    height: 85px;
+    border-radius: 5px;
+}
+
 .search-page {
     font-size: 14px;
-    overflow: hidden!important;
+    overflow: hidden !important;
+}
+
+.comp-info-left {
+    margin-top: -15px;
+
+}
+
+.comp-info-left .tittle {
+    display: inline-block;
+    padding-right: 2%;
+    font-size: 18px;
+    font-weight: bold;
 }

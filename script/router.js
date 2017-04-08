@@ -85,7 +85,10 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ["style/my/profession/professionSearch.css", "style/my/profession/companySearch.css", "script/controller/companySearch.js", "notFind"]
+                    ["style/my/profession/professionSearch.css",
+                        "style/my/profession/companySearch.css",
+                        "script/controller/companySearch.js",
+                        "notFind"]
                 )
             }
         })
@@ -96,8 +99,11 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controller: "searchJobCtrl",
             controllerAs: 'vm',
             resolve: {
-                loadMyFile: _lazyLoad(["style/my/profession/professionSearch.css",
-                    "script/controller/professionSearch.js", "notFind"]
+                loadMyFile: _lazyLoad(
+                    ["style/my/profession/professionSearch.css",
+                        "style/my/profession/companySearch.css",
+                        "script/controller/professionSearch.js",
+                        "notFind"]
                 )
             }
         })

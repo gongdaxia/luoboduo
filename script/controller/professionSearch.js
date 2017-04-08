@@ -70,5 +70,11 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
         $state.go($state.current, {
             page: 1, size: 10, name: vm.data.name, type: null, subType: null
         }, {reload: true});
-    }
-})
+    };
+    //清除
+    vm.clear = function () {
+        sessionStorage.removeItem("searchCompanyOptions");
+        sessionStorage.searchCompanyOptions = JSON.stringify(searchInfo);
+        $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
+    };
+});
