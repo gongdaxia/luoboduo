@@ -170,9 +170,6 @@
     overflow: hidden;
 }
 
-.prof-search-btn {
-    float: right;
-}
 
 .prof-search-btn button {
     border: none;
@@ -187,5 +184,8 @@
 .prof-search-btn2 {
     background-color: #fc2b47;
     color: white;
+}
+.prof-search-btn {
+    float: right;
 }
 

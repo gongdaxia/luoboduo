@@ -41,3 +41,9 @@
 .margin-left-15{
     margin-left: -15px;
 }
+.border-none{
+   border: none !important;
+}
+.pt-1{
+    padding-top: 1%;
+}

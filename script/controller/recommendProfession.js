@@ -54,6 +54,11 @@ app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, 
         if (res.data.code == 0) {
             console.log(res.data.data);
             vm.profContent = res.data.data;
+            angular.forEach(vm.profContent,function (value) {
+                if(value.logo==""){
+                    value.logo="../images/noInfo.gif"
+                }
+            })
             vm.total = res.data.total;
             console.log(vm.total)
         }

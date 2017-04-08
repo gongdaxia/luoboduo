@@ -1,7 +1,8 @@
+<div class="recommend-page">
 <div class="search-profession container">
     <div class="row">
-        <p class="now-title" ng-bind="recommendAndNewJob"></p>
-        <div class="search-prof-project">
+        <div class="nowProfession-tittle" ng-bind="recommendAndNewJob"></div>
+        <div class="search-prof-project border-none">
             <div class="search-prof-input">
                 <span class="tittle">关键词：</span>
                 <input  type="text" ng-model="vm.data.name"  placeholder="输入职位关键词：如 产品经理等" ng-maxlength="38">
@@ -47,9 +48,9 @@
                       ng-click="vm.radioType($index,vm.option.updateAt)"
                       ng-repeat="x in vm.option.updateAt track by $index">{{x.name}}</span>
             </div>
-            <div class="prof-search-btn">
-                <button ng-click="vm.search()">搜索</button>
+            <div class="prof-search-btn recommend-job-btn">
                 <button ng-click="vm.clear()">清除</button>
+                <button ng-click="vm.search()">搜索</button>
             </div>
         </div>
         <div class="search-prof-content">
@@ -85,4 +86,5 @@
         </div>
 
     </div>
+</div>
 </div>

@@ -65,7 +65,7 @@
     border-right: 2px solid #e8e8e8;
 }
 .company-info-txt1 .tittle{
-    padding: 3% 0;
+    padding: 3% 0 10% 0;
 }
 .company-info-txt1 .tittle>span{
     display: inline-block;
@@ -76,7 +76,8 @@
     vertical-align: middle;
 }
 .company-info-txt1 .txt{
-    display: inline-block;
+    /*display: inline-block;*/
+    height: 160px;
     padding:4%;
     line-height: 30px;
     color: #999;
@@ -120,4 +121,7 @@
     width:98%;
     height: 2px;
     background-color: #e8e8e8;
+}
+.company-info-btn{
+    font-size: 0;
 }
