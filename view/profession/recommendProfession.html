@@ -1,6 +1,6 @@
 <div class="search-profession container">
     <div class="row">
-        <p>推荐职位</p>
+        <p class="now-title" ng-bind="recommendAndNewJob"></p>
         <div class="search-prof-project">
             <div class="search-prof-input">
                 <span class="tittle">关键词：</span>
@@ -12,17 +12,17 @@
                       ng-click="vm.checkboxMulti($index,vm.option.province)"
                       ng-repeat="x in vm.option.province track by $index">{{x.name}}</span>
             </div>
-            <div class="search-prof-list">
-                <span class="tittle">职位类别：</span>
-                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
-                      ng-click="vm.checkboxMulti($index,vm.option.category);vm.selectSubCategoryFn($index,a.choose)"
-                      ng-repeat="x in vm.option.category track by $index">{{x.name}}</span>
-            </div>
-            <div class="search-prof-list" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
-                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
-                      ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
-                      ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
-            </div>
+            <!--<div class="search-prof-list">-->
+                <!--<span class="tittle">职位类别：</span>-->
+                <!--<span class="item" ng-class="{true:'search-btn'}[x.choose]"-->
+                      <!--ng-click="vm.checkboxMulti($index,vm.option.category);vm.selectSubCategoryFn($index,a.choose)"-->
+                      <!--ng-repeat="x in vm.option.category track by $index">{{x.name}}</span>-->
+            <!--</div>-->
+            <!--<div class="search-prof-list" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">-->
+                <!--<span class="item" ng-class="{true:'search-btn'}[x.choose]"-->
+                      <!--ng-click="vm.checkboxMulti($index,vm.option.subCategory)"-->
+                      <!--ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>-->
+            <!--</div>-->
             <div class="search-prof-list">
                 <span class="tittle">学历要求：</span>
                 <span class="item" ng-class="{true:'search-btn'}[x.choose]"

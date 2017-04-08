@@ -2,10 +2,10 @@
     <div class="container">
         <div class="row">
             <div class="profession-info-content">
-                <div class="profession-introduce col-lg-8 col-md-8 col-sm-8">
+                <div class="profession-introduce width-20 col-lg-8 col-md-8 col-sm-8 col-xs-8">
                     <h4>{{ vm.jobInfo.name}}</h4>
                     <p>{{vm.jobInfo.companyName}}</p>
-                    <div class="info">
+                    <div class="job-informafion">
                         <span class="red">{{vm.jobInfo.compensation|compensationFilter}}</span>
                         <img src="../../images/location-jobdescripe.png" alt="">
                         <span>{{vm.jobInfo.province|provinceFilter}}</span>
@@ -13,13 +13,13 @@
                         <span>{{vm.jobInfo.education|educationFilter}}</span>
                         <img src="../../images/description-1.png" alt="">
                         <span>{{vm.jobInfo.experience|experienceFilter}}</span>
-
-                    </div>
-                    <div class="job-intro">
                         <div class="first">
                             <img src="../../images/date.png" alt="">
                             <span>发布时间：{{vm.jobInfo.updateAt|updateAtFilter}}</span>
                         </div>
+                    </div>
+                    <div class="job-intro">
+
                         <div>
                             <span class="line"></span>
                             <h4>岗位描述</h4>
@@ -33,9 +33,9 @@
                         <p class="content">{{vm.jobInfo.requisite}}</p>
                     </div>
                 </div>
-                <div class="company-introduce col-lg-4 col-md-4 col-sm-4">
+                <div class="company-introduce col-lg-4 col-md-4 col-sm-4 col-xs-4">
                     <div class="part">
-                        <span class="img">
+                        <span class="company-introduce-img">
                             <img src="{{vm.jobInfo.logo}}" alt="">
                         </span>
                         <p class="tittle">{{vm.jobInfo.companyName}}</p>
@@ -54,7 +54,8 @@
                     </div>
                 </div>
             </div>
-            <div class="profession-info-footer">
+            <div class="profession-info-footer width-20">
+                <span></span>
                 <button>我感兴趣</button>
             </div>
         </div>

@@ -2,9 +2,9 @@
 <div class="container ">
     <!--左侧导航栏-->
     <div class="row">
-        <div class="profession-home-header row">
+        <div class="profession-home-header">
             <div class="profession-home-bg margin-left-15">
-                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0">
+                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 ">
                     <div class="prof-home-nav" ng-repeat="li in vm.list track by $index">
                         <div class="prof-home-nav-tittle">
                             <img src="../images/profession-home-img1.png" alt="">
@@ -55,7 +55,7 @@
             </div>
         </div>
         <!--推荐职位-->
-        <div class="recommend-job row" ng-if="!vm.isChoose">
+        <div class="recommend-job" ng-if="!vm.isChoose">
             <div class="recommend-job-list">
                 <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in vm.professionInfo track by $index"
                      ui-sref="professionInfo({id:item.id})">
@@ -73,7 +73,7 @@
             </div>
         </div>
         //最新职位
-        <div class="recommend-job row" ng-if="vm.isChoose">
+        <div class="recommend-job " ng-if="vm.isChoose">
             <div class="recommend-job-list">
                 <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in  vm.newProfessionInfo track by $index">
                     <div class="recommend-job-box">
@@ -90,10 +90,10 @@
             </div>
         </div>
         <!--优质公司-->
-        <div class="great-company row">
+        <div class="great-company">
             <div class="prof-recommend-tittle">
-                <span>推荐公司</span>
-                <span class="prof-recommend-more">更多</span>
+                <span class="great-job-tittle">推荐公司</span>
+                <span class="prof-recommend-more .great-job-more">更多</span>
             </div>
             <div class="great-company-info col-lg-4 col-md-4 bg-color-w" ui-sref="companyInfo({id:vm.companyInfo[1].id})">
                 <img src="{{vm.companyImgUrl.img}}" alt="">
@@ -111,27 +111,22 @@
                 <div class="row">
                 <!--轮播项目-->
                     <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+
                     <div class="carousel-inner carousel-innergai prof-carousel">
                     <div class="item great-company-list " ng-class="{'active':$first}" ng-repeat="list in vm.companyInfo track by $index"
                     ui-sref="companyInfo({id: list.id})">
                         <div class="row">
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"  >
-                                <div class="row">
-                                    <div class="col-xs-4">
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 great-company-list" >
                                         <div class="img">
                                             <img src="{{list.logo}}" alt="">
                                         </div>
-                                    </div>
-                                    <div class="col-xs-8">
                                         <div class="company-info">
                                             <p class="tittle">{{list.name}}</p>
-                                            <p>{{list.slogan}}</p>
+                                            <p class="great-company-list-slogan">{{list.slogan}}</p>
                                             <p>
                                                 <span>{{list.financing| financingFilter}}</span>
                                             </p>
                                         </div>
-                                    </div>
-                                </div>
                             </div>
                             <div  class="col-lg-4 col-md-4 col-sm-4 col-xs-4 prof-info">
                             <h4>正在热招</h4>
@@ -156,19 +151,19 @@
             </div>
         </div>
     <!--UI样式区-->
-        <div class="profession-tips row">
-            <div class="profession-tips-part row">
-                <div class="part-left col-lg-6 col-md-6 col-sm-6">
+        <div class="profession-tips ">
+            <div class="profession-tips-part">
+                <div class="part-left">
                     <img src="../images/prof-introdus.png" alt="">
                 </div>
-                <div class="part-right col-lg-6 col-md-6 col-sm-6">
+                <div class="part-left">
                     <h3>无成本,零风险</h3>
                     <p class="tittle">无任何隐含复用全程免费</p>
                     <p>人才从投递到成功入职不需要任何费用，通过测试后还可免费提供从业建议，不浪费每一份天赋</p>
                 </div>
             </div>
-            <div class="profession-tips-part row">
-                <div class="part-left col-lg-6 col-md-6 col-sm-6">
+            <div class="profession-tips-part">
+                <div class="part-left">
                     <h3>高效匹配，高度契合</h3>
                         <p>1-3天发送首个聘请通知<br>
                         甄选职位&nbsp;深度匹配&nbsp;发送聘请通知</p>
@@ -178,16 +173,16 @@
                         多方洽谈&nbsp;售后安排</p>
 
                 </div>
-                <div class="part-right col-lg-6 col-md-6 col-sm-6">
+                <div class="part-left">
                     <img src="../images/prof-information.png" alt="">
                 </div>
             </div>
         </div>
         <!--底部-->
-        <div class="prof-footer row">
-            <p class="tittle">加入萝卜多人才推荐计划</p>
-            <p>投送简历：kefu@ptteng.com</p>
-        </div>
+            <div class="prof-footer">
+                <p class="tittle">加入萝卜多人才推荐计划</p>
+                <p>投送简历：kefu@ptteng.com</p>
+            </div>
     </div>
 </div>
 </div>

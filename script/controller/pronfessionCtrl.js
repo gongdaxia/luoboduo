@@ -8,6 +8,9 @@ app.controller("professionInfoCtrl",function ($scope, $rootScope, $state,$stateP
     professionService.getProfessionInfo(vm.id).then(function (res) {
         if(res.data.code===0){
             vm.jobInfo = res.data.data;
+            if(vm.jobInfo.logo==""){
+                vm.jobInfo.logo="../images/noInfo.gif"
+            }
         }
         else{
             alert(res.data.message)
