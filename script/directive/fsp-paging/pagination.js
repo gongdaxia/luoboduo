@@ -1,4 +1,4 @@
-angular.module("skillApp",[]).directive('pagination', function ($state) {
+angular.module("skillApp", []).directive('pagination', function ($state) {
     return {
         restrict: 'EA',
         templateUrl: 'script/directive/fsp-paging/pagination.html',
@@ -7,12 +7,12 @@ angular.module("skillApp",[]).directive('pagination', function ($state) {
             total: '@'
         },
         link: function (scope, element, attrs) {
-
             //当前页
             var activePage = parseInt($state.params.page || 1);
             //size
             scope.size = $state.params.size ? parseInt($state.params.size) : 10;
             //总页数
+
             var totalPage = Math.ceil(parseInt(scope.total) / scope.size);
 
             scope.activePage = activePage;
@@ -42,7 +42,6 @@ angular.module("skillApp",[]).directive('pagination', function ($state) {
             //获得pageList
             function getPageList() {
                 var pageList = [];
-
                 //...在两边
                 if (isHavePreDot() && isHaveNextDot()) {
                     for (var i = 0; i < 4; i++) {
@@ -83,6 +82,7 @@ angular.module("skillApp",[]).directive('pagination', function ($state) {
                     }
                 }
 
+                console.log(pageList);
 
                 return pageList;
             }
