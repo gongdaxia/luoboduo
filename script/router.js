@@ -156,7 +156,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //推荐职位列表页
         .state("recommendProfession", {
-            url: "/recommendPage",
+            url: "/recommendPage?n",
             templateUrl: "view/profession/recommendProfession.html",
             controller: "recommendProfessionCtrl",
             controllerAs: 'vm',
@@ -166,16 +166,18 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                 )
             }
         })
-        //最新职位列表页
-        .state("newProfession", {
-            url: "/newProfession",
-            templateUrl: "view/profession/newProfession.html",
-            resolve: {
-                loadMyFile: _lazyLoad(
-                    []
-                )
-            }
-        })
+        // //最新职位列表页
+        // .state("newProfession", {
+        //     url: "/newProfession",
+        //     templateUrl: "view/profession/newProfession.html",
+        //     controller: "newProfessionCtrl",
+        //     controllerAs: 'vm',
+        //     resolve: {
+        //         loadMyFile: _lazyLoad(
+        //             ["script/controller/newProfession.js", "style/my/profession/professionSearch.css"]
+        //         )
+        //     }
+        // })
         //公司列表页
         .state("companyList", {
             url: "/companyList",

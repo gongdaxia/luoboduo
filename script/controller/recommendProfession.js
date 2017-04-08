@@ -3,10 +3,11 @@
  */
 app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, professionService, searchInfo, commonUtil, searchUtil) {
     var vm = this;
-    var searchInfoCopy = angular.copy(searchInfo);
-    vm.option = searchInfoCopy;
-    vm.option = commonUtil.judegesessionStorage(sessionStorage.searchJobOptions, searchInfoCopy);
+    vm.params = $state.params;
+    vm.option = commonUtil.judegesessionStorage(sessionStorage.searchJobOptions, searchInfo);
     vm.selectedNum = commonUtil.selectNum(vm.option.category);
+    //最新/推荐页面
+    commonUtil.judegeJobList(vm);
     //标签多选
     vm.checkboxMulti = searchUtil.checkboxMulti;
     //时间标签单选
@@ -16,20 +17,20 @@ app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, 
     //     vm.option.category[0].choose = false;
     //     vm.option.category[parseInt($state.params.type)].choose = true;
     // }
-    vm.selectSubCategoryFn = function (index) {
-        // 判断选中的数量
-        vm.selectedNum = commonUtil.selectNum(vm.option.category);
-        // 判断需要展开详情的类目
-        vm.showCategoryNum = commonUtil.judgeShowCategoryDetail(vm.option.category);
-        // 展开三级类目
-        if (index > 0 && vm.selectedNum < 2 && vm.showCategoryNum > 0) {
-            vm.option.subCategory = searchInfoCopy.subCategory[vm.showCategoryNum - 1].data;
-        }
-        // 清除三级类目数据
-        else if (index === 0 || vm.showCategoryNum === 0 || vm.selectedNum > 1) {
-            vm.option.subCategory = [];
-        }
-    };
+    // vm.selectSubCategoryFn = function (index) {
+    //     // 判断选中的数量
+    //     vm.selectedNum = commonUtil.selectNum(vm.option.category);
+    //     // 判断需要展开详情的类目
+    //     vm.showCategoryNum = commonUtil.judgeShowCategoryDetail(vm.option.category);
+    //     // 展开三级类目
+    //     if (index > 0 && vm.selectedNum < 2 && vm.showCategoryNum > 0) {
+    //         vm.option.subCategory = searchInfoCopy.subCategory[vm.showCategoryNum - 1].data;
+    //     }
+    //     // 清除三级类目数据
+    //     else if (index === 0 || vm.showCategoryNum === 0 || vm.selectedNum > 1) {
+    //         vm.option.subCategory = [];
+    //     }
+    // };
     // 选中从其他页面传来的三级类目信息
     // vm.selectSubCategoryFn(parseInt($state.params.type) + 1);
     // if ($state.params.subType && vm.option.subCategory.length > 0) {
@@ -49,7 +50,7 @@ app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, 
     vm.data.page = $state.params.page;
     vm.data.returnTags = 1;
     console.log("q" + vm.data.name);
-    professionService.getRecommend(1,vm.data).then(function (res) {
+    professionService.getRecommend(vm.positionType,vm.data).then(function (res) {
         if (res.data.code == 0) {
             console.log(res.data.data);
             vm.profContent = res.data.data;

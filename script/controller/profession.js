@@ -26,7 +26,7 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
 //最新职位、推荐职位切换
 
 //推荐职位请求
-    professionService.getProfession(1,vm.params).then(function (res) {
+    professionService.getRecommend(1,vm.params).then(function (res) {
         if (res.data.code==0){
             vm.professionInfo = res.data.data
             angular.forEach(vm.professionInfo,function (value) {
@@ -38,7 +38,7 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
         }
 
     })
-    professionService.getProfession(0,vm.params).then(function (res) {
+    professionService.getRecommend(0,vm.params).then(function (res) {
         if (res.data.code==0){
             vm.newProfessionInfo = res.data.data;
             angular.forEach(vm.newProfessionInfo,function (value) {
@@ -61,7 +61,7 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
             vm.companyInfo = res.data.data;
             console.log(vm.companyInfo)
             angular.forEach(vm.companyInfo,function (value) {
-                professionService.getProfession(0,{size:2,companyId:value.id}).then(function (resp) {
+                professionService.getProfession({size:2,companyId:value.id}).then(function (resp) {
                     console.log("sssssssssssssssss")
                    value.jobList=resp.data.data
                     console.log(value.id)

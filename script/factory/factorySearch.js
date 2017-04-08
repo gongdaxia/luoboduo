@@ -1,8 +1,21 @@
-app.factory('commonUtil', function () {
+app.factory('commonUtil', function ($rootScope) {
     return {
         //跳转界面位置
         scrollTo: function (x, y) {
             window.scrollTo(x, y);
+        },
+        judegeJobList: function (judegeData) {
+            if (judegeData.params.n === "false") {
+                $rootScope.recommendAndNewJob = "推荐职位";
+                judegeData.params.n = null;
+                judegeData.positionType = 1;
+            }
+            else if (judegeData.params.n === "true") {
+                $rootScope.recommendAndNewJob = "最新职位";
+                judegeData.params.n = null;
+                judegeData.positionType = 0;
+            }
+            return judegeData;
         },
         judegesessionStorage: function (judge, data) {
             var dataCopy = angular.copy(data);
