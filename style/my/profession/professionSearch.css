@@ -71,7 +71,7 @@
 }
 
 .search-prof-list {
-    padding: 1% 0;
+    padding: 1%;
 }
 
 .search-prof-list .item {
@@ -88,7 +88,7 @@
 
 .prof-content-list {
     padding: 2% 4%;
-    margin: 2% 0;
+    margin: 2%;
     border: 1px solid #e8e8e8;
     cursor: pointer;
     border-radius: 5px;
@@ -103,6 +103,10 @@
 }
 
 @media screen and (max-width: 620px) {
+    .prof-content-list {
+        margin: 4%;
+    }
+
     .prof-info {
         box-sizing: border-box;
         width: 94%;
@@ -119,16 +123,20 @@
 }
 
 @media screen and (max-width: 450px) {
+    .prof-content-list {
+        margin: 5% 8%;
+    }
+
     .prof-info {
         width: 90%;
         margin: 0 5%;
-
     }
 
     .comp-info {
         width: 100%;
-        padding: 2% 8% 0 8% !important;
+        padding: 2% 9% 0 9% !important;
     }
+
 }
 
 .prof-info .tittle {
@@ -164,6 +172,7 @@
 }
 
 .comp-info-right img {
+    border: 1px solid #e8e8e8;
     width: 85px;
     height: 85px;
     border-radius: 5px;
@@ -184,4 +193,11 @@
     padding-right: 2%;
     font-size: 18px;
     font-weight: bold;
+}
+
+.comp-info-left span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
