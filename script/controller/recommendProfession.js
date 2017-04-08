@@ -1,7 +1,7 @@
 /**
- * Created by Administrator on 2017/4/1.
+ * Created by Administrator on 2017/4/8.
  */
-app.controller("searchJobCtrl", function ($scope, $rootScope, $state, professionService, searchInfo, commonUtil, searchUtil) {
+app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, professionService, searchInfo, commonUtil, searchUtil) {
     var vm = this;
     var searchInfoCopy = angular.copy(searchInfo);
     vm.option = searchInfoCopy;
@@ -12,10 +12,10 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
     //时间标签单选
     vm.radioType = searchUtil.radioType;
     // 选中从其他页面传来的二级类目信息
-    if ($state.params.type) {
-        vm.option.category[0].choose = false;
-        vm.option.category[parseInt($state.params.type)].choose = true;
-    }
+    // if ($state.params.type) {
+    //     vm.option.category[0].choose = false;
+    //     vm.option.category[parseInt($state.params.type)].choose = true;
+    // }
     vm.selectSubCategoryFn = function (index) {
         // 判断选中的数量
         vm.selectedNum = commonUtil.selectNum(vm.option.category);
@@ -31,12 +31,12 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
         }
     };
     // 选中从其他页面传来的三级类目信息
-    vm.selectSubCategoryFn(parseInt($state.params.type) + 1);
-    if ($state.params.subType && vm.option.subCategory.length > 0) {
-        vm.option.subCategory[0].choose = false;
-        vm.option.subCategory[parseInt($state.params.subType)].choose = true;
-        console.log(vm.option.subCategory);
-    }
+    // vm.selectSubCategoryFn(parseInt($state.params.type) + 1);
+    // if ($state.params.subType && vm.option.subCategory.length > 0) {
+    //     vm.option.subCategory[0].choose = false;
+    //     vm.option.subCategory[parseInt($state.params.subType)].choose = true;
+    //     console.log(vm.option.subCategory);
+    // }
     // 选出tag标签中选中的数据，将数据拼接成数组
     vm.data = searchUtil.dataConvert(vm.option);
     console.log(vm.data);
@@ -49,7 +49,7 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
     vm.data.page = $state.params.page;
     vm.data.returnTags = 1;
     console.log("q" + vm.data.name);
-    professionService.getProfession(vm.data).then(function (res) {
+    professionService.getRecommend(1,vm.data).then(function (res) {
         if (res.data.code == 0) {
             console.log(res.data.data);
             vm.profContent = res.data.data;
@@ -70,11 +70,5 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
         $state.go($state.current, {
             page: 1, size: 10, name: vm.data.name, type: null, subType: null
         }, {reload: true});
-    };
-    //清除
-    vm.clear = function () {
-        sessionStorage.removeItem("searchCompanyOptions");
-        sessionStorage.searchCompanyOptions = JSON.stringify(searchInfo);
-        $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
-    };
-});
+    }
+})

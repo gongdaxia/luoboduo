@@ -203,6 +203,7 @@
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
     cursor: pointer;
+
 }
 .recommend-job-box:hover{
     box-shadow: 0 0 10px #999;
@@ -215,6 +216,7 @@
     text-align: center;
     border: 1px solid #e8e8e8;
     vertical-align: middle;
+    overflow: hidden;
 }
 .job-box-img img{
     width: 100%;
@@ -224,8 +226,16 @@
     display: inline-block;
     width: 50%;
     font-size: 14px;
+    line-height:24px;
     text-align: center;
     vertical-align: middle;
+}
+.job-box-content .name{
+   width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .job-box-content .cost{
     color: #f00;

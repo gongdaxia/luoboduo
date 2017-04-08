@@ -157,10 +157,12 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         //推荐职位列表页
         .state("recommendProfession", {
             url: "/recommendPage",
-            templateUrl: "view/profession/recommendPage.html",
+            templateUrl: "view/profession/recommendProfession.html",
+            controller: "recommendProfessionCtrl",
+            controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    []
+                    ["script/controller/recommendProfession.js", "style/my/profession/professionSearch.css"]
                 )
             }
         })

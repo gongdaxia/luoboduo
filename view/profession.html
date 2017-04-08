@@ -51,7 +51,7 @@
             <div class="prof-recommend-tittle">
                 <span ng-class="{'recommend-tittle':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>
                 <span ng-class="{'recommend-tittle':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)">最新职位</span>
-                <span class="prof-recommend-more">更多</span>
+                <span class="prof-recommend-more" ui-sref="recommendProfession">更多</span>
             </div>
         </div>
         <!--推荐职位-->
@@ -65,7 +65,7 @@
                         </div>
                         <div class="job-box-content">
                             <p class="cost">{{item.compensation|compensationFilter}}</p>
-                            <p>{{item.name}}</p>
+                            <p class="name">{{item.name}}</p>
                             <p>{{item.companyName}}</p>
                         </div>
                     </div>
@@ -81,10 +81,9 @@
                             <img src="{{item.logo}}">
                         </div>
                         <div class="job-box-content">
-                            <p>{{item.compensation|compensationFilter}}</p>
-                            <p>{{item.category| subCategoryFilter}}</p>
+                            <p class="cost">{{item.compensation|compensationFilter}}</p>
+                            <p class="name">{{item.category| subCategoryFilter}}</p>
                             <p>{{item.companyName}}</p>
-                            {{item.logo}}
                         </div>
                     </div>
                 </div>

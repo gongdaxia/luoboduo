@@ -15,9 +15,13 @@ app.factory("path",function ($http,$state) {
         companyListUrl:function () {
             return "carrots-ajax/a/company/search"
         },
-        //职位搜索
-        professionUrl:function (type) {
+        //推荐最新职位职位搜索
+        recommendUrl:function (type) {
             return "carrots-ajax/a/profession/search?recommend="+type
+        },
+        //职位搜索
+        professionUrl:function () {
+            return "carrots-ajax/a/profession/search"
         },
         //公司详情
         companyInfoUrl: function (id) {

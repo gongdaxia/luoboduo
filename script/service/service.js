@@ -11,9 +11,13 @@ app.factory("professionService",function($http,path) {
         getBanner: function (type) {
             return $http.get(path.bannerUrl(type))
         },
+        //推荐最新职位
+        getRecommend:function (type,data) {
+            return $http.get(path.recommendUrl(type || 0),{params: data})
+        },
         //职位搜索
-        getProfession: function (type, data) {
-            return $http.get(path.professionUrl(type || 0), {params: data})
+        getProfession: function ( data) {
+            return $http.get(path.professionUrl(),{params: data})
         },
         //公司搜索
         getCompany: function (data) {
