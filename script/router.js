@@ -88,7 +88,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                     ["style/my/profession/professionSearch.css",
                         "style/my/profession/companySearch.css",
                         "script/controller/companySearch.js",
-                        "notFind"]
+                        "notFind",
+                        'script/directive/fsp-paging/pagination.html',
+                        'script/directive/fsp-paging/pagination.js']
                 )
             }
         })
@@ -103,7 +105,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                     ["style/my/profession/professionSearch.css",
                         "style/my/profession/companySearch.css",
                         "script/controller/professionSearch.js",
-                        "notFind"]
+                        "notFind",
+                        'script/directive/fsp-paging/pagination.html',
+                        'script/directive/fsp-paging/pagination.js']
                 )
             }
         })

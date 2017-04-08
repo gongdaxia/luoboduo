@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="search-prof-content" ng-if="vm.total!=0">
+    <div class="search-prof-content" ng-if="vm.total">
         <div class="row">
             <div class="prof-content-list"
                  ng-repeat="n in vm.profContent track by $index">
@@ -80,11 +80,13 @@
                 </div>
             </div>
             <!--页码-->
+            <div class="col-xs-12">
+                <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="search-page col-xs-12">
-            <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
             <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
         </div>
         <!--没有数据时，显示404页面-->

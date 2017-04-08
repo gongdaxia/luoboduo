@@ -28,7 +28,7 @@
             <button class="prof-search-btn2" ng-click="vm.search()">搜索</button>
         </div>
     </div>
-    <div class="search-company-content" ng-if="vm.total!=0">
+    <div class="search-company-content" ng-if="vm.total">
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"
                  ng-repeat="x in vm.companyInfo track by $index"
@@ -36,7 +36,7 @@
                 <div class="company-list" ui-sref="companyInfo({id:x.id})">
                     <div class="info-part">
                         <div class="company-list-img ">
-                            <img src="{{x.logo}}" alt="">
+                            <img ng-src="{{x.logo}}">
                         </div>
                         <div class="info-part1">
                             <p class="info-part1-name">{{x.name}}</p>
@@ -60,12 +60,15 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xs-12">
+                <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+            </div>
         </div>
     </div>
 
     <div class="row">
         <div class="search-page col-xs-12">
-            <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+
             <!--没有数据时，显示404页面-->
             <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
         </div>
