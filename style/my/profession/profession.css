@@ -3,64 +3,73 @@
     background-color: #f6f7f8;
 }
 /*导航栏和banner部分*/
-.profession-home-header{
-    margin-top:2%;
+.profession-home-header {
+    margin-top: 2%;
     background-color: #fff;
     overflow: hidden;
 }
-.profession-home-bg{
+
+.profession-home-bg {
     position: relative;
 }
-@media screen and (max-width:992px){
-    .profession-home-bg{
+
+@media screen and (max-width: 992px) {
+    .profession-home-bg {
         display: none;
     }
 }
-.prof-home-nav{
+
+.prof-home-nav {
     height: 152px;
-    padding:16px 6.7%;
+    padding: 16px 6.7%;
     font-size: 14px;
-    color:#fff;
+    color: #fff;
     background-color: #f43851;
     overflow: hidden;
     vertical-align: middle;
     box-sizing: border-box;
     border-top: 1px solid #f43851;
-    border-bottom:1px solid #f43851;
+    border-bottom: 1px solid #f43851;
 }
-.prof-home-nav .img-left{
+
+.prof-home-nav .img-left {
     float: right;
     width: auto;
     padding-right: 12.5%;
     vertical-align: middle;
 }
-.prof-home-nav span{
+
+.prof-home-nav span {
     font-size: 18px;
     display: inline-block;
     padding-left: 3.3%;
 }
-.prof-home-nav:hover{
-    color:#f43851;
+
+.prof-home-nav:hover {
+    color: #f43851;
     background-color: #fff;
 }
-.prof-home-nav-content{
+
+.prof-home-nav-content {
     display: flex;
     height: 102px;
     padding: 8px 0;
-    align-content:space-around;
-    flex-wrap:wrap;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
-.prof-home-nav-content span{
+
+.prof-home-nav-content span {
     padding-right: 8.3%;
     cursor: pointer;
 }
-.prof-nav-item{
+
+.prof-nav-item {
     position: absolute;
-    left:92%;
-    top:0;
+    left: 92%;
+    top: 0;
     display: none;
-    width:325%;
-    height:456px;
+    width: 325%;
+    height: 456px;
     padding-left: 20%;
     padding-top: 10%;
     border: 1px solid #f43851;
@@ -69,16 +78,19 @@
     color: #536a82;
     box-sizing: border-box;
 }
-.prof-nav-item .tittle{
+
+.prof-nav-item .tittle {
     display: inline-block;
     font-size: 16px;
     color: #f43851;
     width: 12%;
 }
-.prof-nav-item div{
+
+.prof-nav-item div {
     line-height: 24px;
 }
-.prof-nav-item .content{
+
+.prof-nav-item .content {
     display: inline-block;
     font-size: 14px;
     width: 12%;
@@ -86,47 +98,54 @@
     text-align: center;
     cursor: pointer;
 }
-.prof-home-nav:hover .prof-nav-item{
-    display:block;
+
+.prof-home-nav:hover .prof-nav-item {
+    display: block;
     z-index: 999;
     background-color: #fff;
 }
-.profession-home-bg .col-lg-2{
+
+.profession-home-bg .col-lg-2 {
     padding-right: 0;
 }
-.prof-nav-item .content:hover{
+
+.prof-nav-item .content:hover {
     color: #fc2b47;
 }
+
 /*banner*/
 
-
-.prof-banner,.profession-home-bg{
+.prof-banner, .profession-home-bg {
     position: relative;
     padding: 0;
 }
-.prof-banner img{
+
+.prof-banner img {
     width: 100%;
     height: 456px !important;
 }
-@media screen and (max-width:992px){
-    .prof-banner img{
+
+@media screen and (max-width: 992px) {
+    .prof-banner img {
         width: 100%;
         height: auto;
     }
 }
+
 /*banner search*/
-.prof-input-search{
+.prof-input-search {
     position: absolute;
     width: 70%;
     height: 16%;
     top: 5.8%;
     left: 17.4%;
     padding: 1% 0;
-    background-color: rgba(142,91,100,0.3);
+    background-color: rgba(142, 91, 100, 0.3);
     border-radius: 10px;
     box-sizing: border-box;
 }
-.prof-search-content{
+
+.prof-search-content {
     position: relative;
     margin: 0 auto;
     font-size: 0;
@@ -137,24 +156,27 @@
     overflow: hidden;
     border-radius: 10px;
 }
-.prof-search-content span{
+
+.prof-search-content span {
     display: inline-block;
-    width:  15%;
+    width: 15%;
     border-right: 1px solid #f0f0f0;
     text-align: center;
     font-size: 16px;
     box-sizing: border-box;
 }
-.prof-search-content input{
+
+.prof-search-content input {
     display: inline-block;
     width: 70%;
     font-size: 14px;
     padding-left: 3%;
-    border:none;
+    border: none;
     outline: none;
     box-sizing: border-box;
 }
-.prof-search-content button{
+
+.prof-search-content button {
     position: absolute;
     display: inline-block;
     width: 15%;
@@ -169,6 +191,7 @@
     outline: none;
     border-radius: 0 10px 10px 0;
 }
+
 /*推荐最新职位*/
 .prof-recommend{
     position: relative;
@@ -176,24 +199,39 @@
     font-size: 14px;
     color:#999;
 }
-.prof-recommend-tittle{
+
+.prof-recommend-tittle {
     padding: 1% 0;
     overflow: hidden;
 }
-.prof-recommend-more{
-    float: right;
+
+.prof-recommend-tittle span {
+    cursor: pointer;
 }
-.recommend-tittle{
+
+.prof-recommend-more {
+    float: right;
+    cursor: pointer;
+}
+
+.prof-recommend-more:hover {
+    color: #fc2a48;
+
+}
+
+.recommend-tittle {
     font-size: 16px;
     color: black;
     font-weight: bold;
 }
+
 /*推荐职位*/
-.recommend-job{
+.recommend-job {
     font-size: 0;
     background-color: #fff;
 }
-.recommend-job-box{
+
+.recommend-job-box {
     display: flex;
     align-items: center;
     width: 100%;
@@ -203,30 +241,31 @@
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
     cursor: pointer;
-
 }
-.recommend-job-box:hover{
+
+.recommend-job-box:hover {
     box-shadow: 0 0 10px #999;
 }
-.job-box-img{
+
+.job-box-img {
     display: inline-block;
     width: 40%;
-    height:80%;
+    height: 80%;
     font-size: 14px;
     text-align: center;
     border: 1px solid #e8e8e8;
     vertical-align: middle;
-    overflow: hidden;
 }
-.job-box-img img{
+
+.job-box-img img {
     width: 100%;
     height: 100%;
 }
-.job-box-content{
+
+.job-box-content {
     display: inline-block;
     width: 50%;
     font-size: 14px;
-    line-height:24px;
     text-align: center;
     vertical-align: middle;
 }
@@ -238,19 +277,23 @@
     white-space: nowrap;
 }
 .job-box-content .cost{
+
+.job-box-content .cost {
     color: #f00;
     font-size: 16px;
 }
-.prof-recommend-tittle span{
+
+.prof-recommend-tittle span {
     font-size: 14px;
 }
 
 
 /*优质公司*/
-.great-company{
+.great-company {
     /*background-color: #fff;*/
 }
-.prof-carousel{
+
+.prof-carousel {
     margin-top: 20px;
     border: 1px solid #e8e8e8;
     border-radius: 5px;
@@ -258,69 +301,80 @@
     background-color: #fff;
     cursor: pointer;
 }
-.prof-carousel:hover{
+
+.prof-carousel:hover {
     box-shadow: 0 0 10px #999;
 }
-.great-company-info{
+
+.great-company-info {
     position: relative;
     z-index: 9999;
     cursor: pointer;
 }
-.great-company-info img{
+
+.great-company-info img {
     width: 100%;
 }
-.company-info-txt{
+
+.company-info-txt {
     position: absolute;
     bottom: 0;
     left: 0;
-    width:100%;
+    width: 100%;
     text-align: center;
-    color:#fff;
+    color: #fff;
     font-size: 14px;
 }
-.company-info-txt p{
-    font-size:14px;
+
+.company-info-txt p {
+    font-size: 14px;
     z-index: 999;
 }
-.company-info-txt .tittle{
+
+.company-info-txt .tittle {
     font-size: 16px;
 }
-.great-company-list{
+
+.great-company-list {
     font-size: 14px;
     height: 160px;
-    padding:1.5% 0;
+    padding: 1.5% 0;
     /*border: 1px solid #999;*/
     box-sizing: border-box;
 }
-.great-company-list .img{
+
+.great-company-list .img {
     width: 90%;
     margin: 0 auto;
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
 }
-.great-company-list .img img{
+
+.great-company-list .img img {
     width: 100%;
     height: 120px;
 }
-.great-company-list .company-info{
+
+.great-company-list .company-info {
     padding-left: 5%;
     line-height: 26px;
     border-right: 1px solid #e8e8e8;
 }
-.great-company-list .company-info .tittle{
+
+.great-company-list .company-info .tittle {
     font-size: 16px;
     font-weight: bold;
 }
 
-.company-info p span{
+.company-info p span {
     display: inline-block;
     padding: .2% 1%;
     border: 1px solid #e8e8e8;
 }
-.great-company-list .prof-info{
+
+.great-company-list .prof-info {
     line-height: 50px;
 }
-
 
 /*轮播区域*/
 @media all and (transform-3d), (-webkit-transform-3d) {
@@ -357,6 +411,7 @@
         transform: translate3d(0, 0, 0);
     }
 }
+
 .carousel-innergai > .nextgai,
 .carousel-innergai > .prevgai {
     position: absolute;
@@ -403,35 +458,36 @@
     border: none !important;
 }
 
-
-
 /*ui样式区*/
-.profession-tips{
+.profession-tips {
     background-color: #fff;
     margin-top: 2%;
     padding: 5% 0%;
     font-size: 14px;
 }
-.profession-tips-part{
+
+.profession-tips-part {
     width: 100%;
     padding: 7% 0;
 }
-.part-left{
+
+.part-left {
     padding-left: 15%;
 }
-.part-right{
+
+.part-right {
     padding-right: 15%;
 }
-.part-right .tittle{
+
+.part-right .tittle {
     font-size: 18px;
 }
-.profession-tips p{
+
+.profession-tips p {
     color: #999;
 }
 
-
-
-.prof-footer{
+.prof-footer {
     margin: 2% 0;
     width: 100%;
     padding: 12% 0;
@@ -441,7 +497,8 @@
     opacity: 1.2;
     background-image: url("../../../images/prof-footer-img.png");
 }
-.prof-footer .tittle{
+
+.prof-footer .tittle {
     font-size: 24px;
     font-weight: bold;
 }
