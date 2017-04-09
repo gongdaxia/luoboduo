@@ -5,11 +5,13 @@
     /*margin: 0 !important;*/
     overflow: hidden;
 }
-.elitePage .container{
-    margin: 0!important;
-    padding: 0!important;
+
+.elitePage .container {
+    margin: 0 !important;
+    padding: 0 !important;
     width: 100%;
 }
+
 /*萝卜多的特点们*/
 .elitePage-featureWhite, .elitePage-featureGrey {
     box-sizing: border-box;
@@ -233,6 +235,10 @@
 
 .elitePage-advantage-part p {
     font-size: 15px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .elitePage-advantage-part-img {
