@@ -2,10 +2,10 @@
     <div class="container ">
         <div class="row">
             <div class="company-info-header row">
-                    <div class="company-info-img ">
-                        <img src="{{vm.companyInfo.company.logo}}" alt="">
+                    <div class="company-info-img col-lg-48 col-md-4 col-sm-4 col-xs-4">
+                        <img ng-src="{{vm.companyInfo.company.logo}}">
                     </div>
-                    <div class="company-info-tittle col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <div class="company-info-tittle col-lg-8 col-md-8 col-sm-8 col-xs-6">
                         <span class="name">{{vm.companyInfo.company.name}}</span>
                         <span ng-if="vm.companyInfo.company.approved" class="approved">
                             <img src="../../images/company-home-2.png" alt="">
@@ -15,7 +15,7 @@
                     </div>
             </div>
             <div class="company-info-content row">
-                <div class="content-left col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                <div class="content-left col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <div class="company-info-btn">
                         <span ng-class="{'company-btn':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">公司详情</span>
                         <span ng-class="{'company-btn':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)" ui-sref="companyInfo.companyTxt">在招职位</span>
@@ -31,7 +31,7 @@
 
                     </div>
                 </div>
-                <div class="col-lg-4 content-right">
+                <div class="col-lg-4 content-right col-xs-12 col-sm-4">
                     <div class="content-right-main">
                         <div class="tittle font-14-bold color-black">
                             公司信息
@@ -55,7 +55,9 @@
                             公司标签
                             <span class="line"></span>
                         </div>
-                        <span class="margin-top-6">{{vm.companyInfo.company.financing|financingFilter}}</span>
+                        <span class="margin-top-6" style="margin-left: 10%">
+                            {{vm.companyInfo.company.financing|financingFilter}}
+                        </span>
                     </div>
                 </div>
             </div>

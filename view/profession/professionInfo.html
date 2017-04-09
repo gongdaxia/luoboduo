@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="profession-info-content">
-                <div class="profession-introduce width-20 col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                    <h4>{{ vm.jobInfo.name}}</h4>
+                <div class="profession-introduce width-20 col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <h4 class="fontBold">{{ vm.jobInfo.name}}</h4>
                     <p>{{vm.jobInfo.companyName}}</p>
                     <div class="job-informafion">
                         <span class="red">{{vm.jobInfo.compensation|compensationFilter}}</span>
@@ -19,29 +19,28 @@
                         </div>
                     </div>
                     <div class="job-intro">
-
                         <div>
                             <span class="line"></span>
-                            <h4>岗位描述</h4>
+                            <h4>职位描述</h4>
                         </div>
 
-                        <p class="tittle">岗位职责</p>
+                        <p class="tittle">岗位职责&nbsp;:</p>
                         <p class="content">{{vm.jobInfo.responsibility}}</p>
-                        <p class="tittle">公司福利</p>
+                        <p class="tittle">公司福利&nbsp;:</p>
                         <p class="content">{{vm.jobInfo.boon}}</p>
-                        <p class="tittle">必要条件</p>
+                        <p class="tittle">必要条件&nbsp;:</p>
                         <p class="content">{{vm.jobInfo.requisite}}</p>
                     </div>
                 </div>
-                <div class="company-introduce col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                <div class="company-introduce col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="part">
                         <span class="company-introduce-img">
-                            <img src="{{vm.jobInfo.logo}}" alt="">
+                            <img ng-src="{{vm.jobInfo.logo}}" alt="">
                         </span>
-                        <p class="tittle">{{vm.jobInfo.companyName}}</p>
+                        <p class="tittle fontBold">{{vm.jobInfo.companyName}}</p>
                     </div>
                     <div class="tips">
-                        <span class="info">基本信息</span>
+                        <span class="info fontBold">基本信息</span>
                         <span class="line"></span>
                     </div>
                     <div class="part1">

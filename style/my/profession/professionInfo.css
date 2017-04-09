@@ -1,48 +1,91 @@
-.profession-info{
+.fontBold {
+    font-weight: bold;
+}
+
+.profession-info {
     width: 100%;
-    background-color:  #f6f7f8;
+    background-color: #f6f7f8;
     font-size: 14px;
 }
-.profession-info-content{
-    margin: 2%  0 0 0;
+
+.profession-info-content {
+    margin: 2% 0 0 0;
     padding: 4% 0 1% 0;
     background-color: #fff;
     overflow: hidden;
 }
-.profession-info-content p{
-    color: #999;
+@media screen and (max-width: 767px){
+    .profession-info-content{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .company-introduce{
+        padding: 2% 0;
+        border-bottom: 1px solid #e8e8e8;
+    }
+    .profession-introduce{
+        border-right: none!important;
+    }
+   .profession-info-footer span{
+       width: 80%!important;
+       margin: 0 auto;
+   }
 }
-.profession-introduce{
+.profession-info-content p {
+    color: #536a82;
+}
+
+.profession-introduce {
     border-right: 2px solid #e8e8e8;
 }
+
 .job-informafion {
     width: 100%;
     border-bottom: 1px solid #e8e8e8;
 }
-.job-informafion .red{
+
+.job-informafion .red {
     color: #f00;
 }
-.job-informafion>span{
+
+.job-informafion > span {
     display: inline-block;
-    width: 10%;
+    /*width: 10%;*/
+    margin-right:10px;
     color: #999;
     font-size: 14px;
     vertical-align: middle;
 }
-.job-informafion .first{
+
+.job-informafion .first {
     width: 100%;
-    padding: 1% 0 4% 0;
+    padding: .5rem 0 1rem 0;
     color: #999;
 }
-.profession-introduce .job-intro .line{
 
+.job-informafion .first img {
+    margin-top: -5px;
+}
+
+.job-informafion .first span {
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.job-intro {
+    /*职位描述*/
+    padding: 1rem 0;
+}
+
+.profession-introduce .job-intro .line {
     display: inline-block;
-    width: 3px;
-    height: 16px;
+    width: 4px;
+    height: 18px;
     background-color: #f00;
     vertical-align: middle;
 }
-.profession-introduce .job-intro h4{
+
+.profession-introduce .job-intro h4 {
     display: inline-block;
     padding-left: 1%;
     font-size: 16px;
@@ -50,22 +93,27 @@
     color: black;
     vertical-align: middle;
 }
-.profession-introduce .job-intro .tittle{
+
+.profession-introduce .job-intro .tittle {
     font-size: 16px;
     line-height: 30px;
 }
-.profession-introduce .job-intro .content{
-    height: 120px;
+
+.profession-introduce .job-intro .content {
+    min-height: 100px;
     vertical-align: middle;
 }
-.company-introduce{
+
+.company-introduce {
     font-size: 16px;
-    color: #999;
+    color: #536a82;
 }
-.company-introduce .part{
+
+.company-introduce .part {
     text-align: center;
 }
-.company-introduce-img{
+
+.company-introduce-img {
     display: inline-block;
     width: 120px;
     height: 120px;
@@ -73,53 +121,63 @@
     box-sizing: border-box;
     border: 1px solid #e8e8e8;
 }
-.company-introduce .part img{
+
+.company-introduce .part img {
     width: 100%;
     height: 100%;
 }
-.company-introduce .part .tittle{
+
+.company-introduce .part .tittle {
     line-height: 40px;
     color: black;
+    /*margin-bottom: 2rem;*/
 }
-.company-introduce .tips{
+
+.company-introduce .tips {
     text-align: center;
- }
-.company-introduce .tips .line{
+    margin: 2rem 0;
+}
+
+.company-introduce .tips .line {
     display: inline-block;
-    width: 40%;
+    width: 50%;
     height: 2px;
-    padding-left: 8%;
+    margin-left: 5%;
     background-color: #e8e8e8;
     vertical-align: middle;
 }
+
 .company-introduce .part1,
-.company-introduce .part2{
+.company-introduce .part2 {
     padding-left: 24%;
     line-height: 50px;
 }
-.profession-info-footer{
+
+.profession-info-footer {
     margin-bottom: 2%;
     padding: 0 0 4% 20px;
     text-align: center;
     background-color: #fff;
 }
-.profession-info-footer button{
-    margin: 2% 0;
-    padding: 1% 2%;
-    border:none;
+
+.profession-info-footer button {
+    margin: 3% 0;
+    height: 3.5rem;
+    width: 10rem;
+    border: none;
     background-color: #fc2b47;
     color: #fff;
     font-size: 16px;
     outline: none;
     border-radius: 5px;
 }
-.profession-info-footer>span{
+
+.profession-info-footer > span {
     display: block;
     width: 60%;
-    height: 2px;
+    height: 1px;
     background-color: #e8e8e8;
 }
-
 
 .modal-header-style {
     background-color: #FC2A48;
@@ -129,47 +187,55 @@
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
-.modal-content{
+
+.modal-content {
     margin-top: 280px;
     height: 245px;
     width: 400px;
     position: absolute;
-    left:50% ;
+    left: 50%;
     margin-left: -200px;
     padding: 35px 55px;
     font-size: 18px;
 }
-div.model-main{
-    margin-top:0;
+
+div.model-main {
+    margin-top: 0;
     width: auto;
-    height:auto;
+    height: auto;
 }
-.modal-header{
-    background:#fc2b47 ;
+
+.modal-header {
+    background: #fc2b47;
     text-align: center;
     margin-top: -35px;
     margin-left: -55px;
     margin-right: -55px;
     color: white;
 }
+
 .modal-close-style {
     color: white;
     opacity: 1;
     margin-top: 0 !important;
 }
+
 .modal-body-title {
     color: #333333;
     font-size: 16px;
 }
-.modal-content p.modal-title{
+
+.modal-content p.modal-title {
     font-size: 18px;
     line-height: 1.428;
 }
+
 .modal-body-content {
     color: #666666;
     font-size: 14px;
     text-align: justify;
 }
+
 .modal-btn-style, .modal-btn-style:focus {
     background-color: #fc2b47;
     color: white;
