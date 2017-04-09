@@ -88,8 +88,8 @@ app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, 
     };
     //清除
     vm.clear = function () {
-        sessionStorage.removeItem("searchCompanyOptions");
-        sessionStorage.searchCompanyOptions = JSON.stringify(searchInfo);
+        sessionStorage.removeItem("searchJobOptions");
+        sessionStorage.searchJobOptions = JSON.stringify(searchInfo);
         $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
     };
 });

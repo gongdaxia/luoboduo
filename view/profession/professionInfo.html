@@ -25,16 +25,16 @@
                         </div>
 
                         <p class="tittle">岗位职责&nbsp;:</p>
-                        <p class="content">{{vm.jobInfo.responsibility}}</p>
+                        <pre class="content">{{vm.jobInfo.responsibility}}</pre>
                         <p class="tittle">公司福利&nbsp;:</p>
-                        <p class="content">{{vm.jobInfo.boon}}</p>
+                        <pre class="content">{{vm.jobInfo.boon}}</pre>
                         <p class="tittle">必要条件&nbsp;:</p>
-                        <p class="content">{{vm.jobInfo.requisite}}</p>
+                        <pre class="content">{{vm.jobInfo.requisite}}</pre>
                     </div>
                 </div>
                 <div class="company-introduce col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="part">
-                        <span class="company-introduce-img">
+                        <span class="company-introduce-img" ui-sref="companyInfo({id:vm.jobInfo.companyId})">
                             <img ng-src="{{vm.jobInfo.logo}}" alt="">
                         </span>
                         <p class="tittle fontBold">{{vm.jobInfo.companyName}}</p>

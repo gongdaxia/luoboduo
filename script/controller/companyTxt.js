@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/4/6.
  */
-app.controller("companyTxtCtrl",function ($scope, $rootScope, $state,$stateParams,professionService) {
+app.controller("companyTxtCtrl",function ($scope, $rootScope, $state,$stateParams,professionService,commonUtil) {
     var vm = this;
     vm.companyId = $stateParams.id;
     console.log($stateParams);
@@ -23,5 +23,9 @@ app.controller("companyTxtCtrl",function ($scope, $rootScope, $state,$stateParam
                 title: "提示"
             });
         }
+        // 判断找不到页面或找不到内容
+        vm.isNotFind = commonUtil.judgeNotFind(res.data);
+        // 找不到内容时，是否推荐
+        vm.isShowRecommend = "position"
     })
 })

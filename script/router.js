@@ -131,7 +131,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ["script/controller/companyTxt.js", "style/my/profession/companyTxt.css"]
+                    ["script/controller/companyTxt.js", "style/my/profession/companyTxt.css",'script/directive/fsp-paging/pagination.html',
+                        'script/directive/fsp-paging/pagination.js',
+                        'notFind']
                 )
             }
         })

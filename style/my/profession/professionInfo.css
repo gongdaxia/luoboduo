@@ -100,8 +100,15 @@
 }
 
 .profession-introduce .job-intro .content {
+    border: none;
     min-height: 100px;
+    line-height: 24px;
+    color: #999;
+    background-color: #fff;
     vertical-align: middle;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: "Microsoft Yahei";
 }
 
 .company-introduce {
@@ -120,11 +127,13 @@
     margin-bottom: 2%;
     box-sizing: border-box;
     border: 1px solid #e8e8e8;
+    cursor: pointer;
 }
 
 .company-introduce .part img {
     width: 100%;
     height: 100%;
+
 }
 
 .company-introduce .part .tittle {

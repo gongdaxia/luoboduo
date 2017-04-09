@@ -8,6 +8,10 @@
     padding: 3% 0;
     border: 1px solid #e8e8e8;
     overflow: hidden;
+    cursor: pointer;
+}
+.company-info-txt-list:hover{
+    box-shadow: 0 0  10px #e8e8e8;
 }
 .company-info-txt-list .name{
     display: inline-block;
