@@ -299,7 +299,7 @@
 .homePage-service {
     width: 100%;
     overflow: hidden;
-    padding: 4rem;
+    padding: 4rem 0;
     background-color: #fff;
 }
 
@@ -374,7 +374,7 @@
 .homePage-partner {
     width: 100%;
     overflow: hidden;
-    padding: 4rem 10%;
+    padding: 4rem 0;
     background-color: #f6f7f8;
 }
 
