@@ -5,33 +5,39 @@
             <div class="profession-home-header">
                 <div class="profession-home-bg margin-left-15">
                     <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 ">
-                        <div class="prof-home-nav" ng-repeat="li in vm.list track by $index">
+                        <div class="prof-home-nav"
+                             ng-repeat="li in vm.list track by $index">
                             <div class="prof-home-nav-tittle">
                                 <img src="../images/profession-home-img1.png" alt="">
                                 <span>{{li.jobType|jobTypeFilter}}</span>
-                                <img class="img-left" src="../images/profession-home-left.png" alt="">
+                                <img class="img-left"
+                                     src="../images/profession-home-left.png">
                             </div>
                             <div class="prof-home-nav-content">
                                 <span ng-repeat="item in li.jobTypeList track by $index"
-                                      ui-sref="searchPage.professionSearch({type:item.secondType})">{{item.secondType|jobSecondFilter}}</span>
+                                      ui-sref="searchPage.professionSearch({type:item.secondType})">{{item.secondType|jobSecondFilter}}
+                                </span>
                             </div>
                             <div class="prof-nav-item" ng-repeat="item in li.jobTypeList track by $index">
                                 <div ng-repeat="item in li.jobTypeList track by $index">
                                     <span class="tittle">{{item.secondType|jobSecondFilter}}</span>
                                     <span ui-sref="searchPage.professionSearch({type:item.secondType,subType:itemSecond.thirdType})"
-                                          class="content" ng-repeat="itemSecond in item.secondTypeList track by $index">{{itemSecond.jobName}}</span>
+                                          class="content"
+                                          ng-repeat="itemSecond in item.secondTypeList track by $index">{{itemSecond.jobName}}
+                                    </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--banner-->
-                <div class="prof-banner col-lg-10 col-md-10 col-sm-12 col-xs-12" id="myCarousel">
+                <div class="prof-banner col-lg-10 col-md-10 col-sm-12 col-xs-12"
+                     id="myCarousel">
                     <div class="carousel-inner">
                         <div class="item" ng-repeat="num in  vm.bannerUrl.articleList track by $index"
                              ng-class="{'active':$first}">
                             {{num.img}}
-                            <img src="{{num.img}}" alt="" href="{{num.url}}">
+                            <img ng-src="{{num.img}}" alt="" href="{{num.url}}">
                         </div>
                     </div>
                     <!-- 轮播（Carousel）项目-->
@@ -49,17 +55,24 @@
                 </div>
             </div>
             <!--推荐最新职位-->
+        </div>
+        <div class="row">
             <div class="prof-recommend">
                 <div class="prof-recommend-tittle">
-                    <span class="width-20" ng-class="{'recommend-tittle':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>
-                    <span ng-class="{'recommend-tittle':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)">最新职位</span>
-                    <span class="prof-recommend-more" ui-sref="recommendProfession({n:vm.isChoose||false})">更多</span>
+                    <span class="width-20"
+                          ng-class="{'recommend-tittle':!vm.isChoose}"
+                          ng-click="exchangeJob(!vm.isChoose)">推荐职位</span>
+                    <span ng-class="{'recommend-tittle':vm.isChoose}"
+                          ng-click="exchangeJob(vm.isChoose)">最新职位</span>
+                    <span class="prof-recommend-more"
+                          ui-sref="recommendProfession({n:vm.isChoose||false})">查看更多></span>
                 </div>
             </div>
             <!--推荐职位-->
             <div class="recommend-job" ng-if="!vm.isChoose">
                 <div class="recommend-job-list">
-                    <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in vm.professionInfo track by $index"
+                    <div class="col-lg-3 col-md-6 col-sm-12"
+                         ng-repeat="item in vm.professionInfo track by $index"
                          ui-sref="professionInfo({id:item.id})">
                         <div class="recommend-job-box">
                             <div class="job-box-img">
@@ -74,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <!--//最新职位-->
+            <!--最新职位-->
             <div class="recommend-job " ng-if="vm.isChoose">
                 <div class="recommend-job-list">
                     <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in  vm.newProfessionInfo track by $index">
@@ -91,38 +104,44 @@
                     </div>
                 </div>
             </div>
-            <!--优质公司-->
+            <!--推荐公司-->
             <div class="great-company">
                 <div class="prof-recommend-tittle">
                     <span class="great-job-tittle width-20">推荐公司</span>
-                    <span class="prof-recommend-more .great-job-more pt-1" ui-sref="searchPage.companySearch">更多</span>
+                    <span class="prof-recommend-more .great-job-more pt-1"
+                          ui-sref="searchPage.companySearch">查看更多></span>
                 </div>
                 <div class="great-company-info col-lg-4 col-md-4 bg-color-w"
                      ui-sref="companyInfo({id:vm.companyInfo[1].id})">
-                    <img ng-src="{{vm.companyImgUrl.img}}" alt="">
+                    <img ng-src="{{vm.companyImgUrl.img}}">
                     <div class="company-info-txt">
                         <p class="tittle">{{ vm.companyInfo[1].name}}</p>
                         <p>{{vm.companyInfo[1].slogan}}</p>
                         <p>
-                            <span>{{vm.companyInfo[1].industryList | industryFilter}}</span>
-                            <span>{{vm.companyInfo[1].financing | financingFilter}}</span>
-                            <span>{{"北京"}}</span>
+                            <span class="info-part2-span1">
+                                <i class="iconfont">&#xe67c;</i>
+                                {{vm.companyInfo[1].industryList | industryFilter}}</span>
+                            <span class="info-part2-span2">
+                                 <i class="iconfont">&#xe62b;</i>
+                                {{vm.companyInfo[1].financing | financingFilter}}</span>
+                            <span class="info-part2-span3">
+                                   <i class="iconfont">&#x3492;</i>
+                                {{"北京"}}</span>
                         </p>
                     </div>
                 </div>
                 <div id="profCarousel" class="carousel slide bg-color-w">
                     <div class="row">
                         <!--轮播项目-->
-                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
-
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 profCarousel-content">
                             <div class="carousel-inner carousel-innergai prof-carousel">
                                 <div class="item great-company-list " ng-class="{'active':$first}"
                                      ng-repeat="list in vm.companyInfo track by $index"
                                      ui-sref="companyInfo({id: list.id})">
                                     <div class="row">
-                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 great-company-list">
+                                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-10 great-company-list">
                                             <div class="img">
-                                                <img src="{{list.logo}}" alt="">
+                                                <img ng-src="{{list.logo}}">
                                             </div>
                                             <div class="company-info">
                                                 <p class="tittle">{{list.name}}</p>
@@ -132,7 +151,7 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 prof-info">
+                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 prof-info">
                                             <h4>正在热招</h4>
                                             <div ng-repeat="jobItem in list.jobList track by $index">
                                                 <span>{{jobItem.category|subCategoryFilter}}</span>
@@ -175,7 +194,6 @@
                             安排面试&nbsp;协助客户快速入职</p>
                         <p>平均15天推荐成功<br>
                             多方洽谈&nbsp;售后安排</p>
-
                     </div>
                     <div class="part-left">
                         <img src="../images/prof-information.png" alt="">

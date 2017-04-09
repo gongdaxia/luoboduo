@@ -1,52 +1,61 @@
-.profession-main{
+.profession-main {
     font-size: 0;
+    overflow: hidden;
 }
-.prof-home-nav{
+
+.prof-home-nav {
     position: relative;
     height: 152px;
-    padding:16px 6.7%;
+    padding: 16px 6.7%;
     font-size: 14px;
-    color:#fff;
+    color: #fff;
     background-color: #f43851;
     overflow: hidden;
     vertical-align: middle;
     box-sizing: border-box;
 }
-.prof-home-nav .img-left{
+
+.prof-home-nav .img-left {
     float: right;
     width: auto;
     padding-right: 12.5%;
     vertical-align: middle;
 }
-.prof-home-nav span{
+
+.prof-home-nav span {
     font-size: 18px;
     display: inline-block;
     padding-left: 3.3%;
 }
-.prof-home-nav:hover{
-    color:#f43851;
+
+.prof-home-nav:hover {
+    color: #f43851;
     background-color: #fff;
 }
-.prof-home-nav-content{
+
+.prof-home-nav-content {
     display: flex;
     height: 102px;
     padding: 8px 0;
-    align-content:space-around;
-    flex-wrap:wrap;
+    align-content: space-around;
+    flex-wrap: wrap;
 }
-.prof-home-nav-content span{
+
+.prof-home-nav-content span {
     padding-right: 8.3%;
 }
-.prof-nav-item{
+
+.prof-nav-item {
     position: absolute;
-    left:96%;
-    top:0;
+    left: 96%;
+    top: 0;
     display: none;
-    width:100%;
-    height:456px;
+    width: 100%;
+    height: 456px;
     border: 1px solid #f43851;
 }
-.prof-home-nav:hover+.prof-nav-item{
-    display:block;
+
+.prof-home-nav:hover + .prof-nav-item {
+    display: block;
     background-color: red;
 }
