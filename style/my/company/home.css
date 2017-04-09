@@ -6,11 +6,13 @@
     overflow: hidden;
 
 }
-.homePage .container{
-    padding: 0!important;
-    margin: 0!important;
+
+.homePage .container {
+    padding: 0 !important;
+    margin: 0 !important;
     width: 100%;
 }
+
 /*首页的公共样式*/
 .homePage-title {
     /*首页的标题*/
@@ -23,7 +25,7 @@
     /*首页标题的红色横线*/
     position: absolute;
     top: 30px;
-    left: 48.5%;
+    left: 49%;
     width: 25px;
     height: 2px;
     background-color: #f1706b;
@@ -283,14 +285,14 @@
 
 .homePage-newProfession-banner-left img {
     position: absolute;
-    top: 8.5rem;
-    left: -3rem;
+    top: 100px;
+    left: -40px;
 }
 
 .homePage-newProfession-banner-right img {
     position: absolute;
-    top: 8.5rem;
-    right: -3rem;
+    top: 100px;
+    right: -40px;
 }
 
 /*首页服务流程部分*/
@@ -395,7 +397,7 @@
     border: 1px solid #F0F0F0;
     padding: 30px 17px 0 17px;
     margin: 2px 0;
-    height: 350px;
+    height: 370px;
 }
 
 @media screen and (max-width: 991px) {
@@ -428,8 +430,15 @@
     color: #666666;
     font-size: 14px;
     margin: 10px 0 20px 0;
-}
+    display: block;
 
+}
+.text-justify{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    overflow: hidden;
+}
 .friend-banner-pre img {
     position: absolute;
     left: 0;

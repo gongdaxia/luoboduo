@@ -48,7 +48,7 @@ div > ul.pagination > li > a {
     color: #666666;
 }
 
-div > ul.pagination > .active > a{
+div > ul.pagination > .active > a {
     background-color: #fc2b47;
     border-color: #fc2b47;
 }
@@ -59,26 +59,31 @@ div > ul.pagination > .active > a{
     margin: 0;
     padding: 0 5%;
     width: 100%;
-    height: 6.5rem;
-    line-height: 6.5rem;
+    height: 80px;
+    line-height: 80px;
     border-radius: 0;
     background-color: #fff;
     box-shadow: 0 4px 7px #eeeef0;
+}
+
+.header-nav-left img {
+    margin-top: 0;
+    /*padding: 0;*/
 }
 
 .header-nav-location {
     /*导航栏选择地址*/
     display: inline-block;
     vertical-align: middle;
-    height: 3rem;
-    line-height: 3rem;
+    height: 36px;
+    line-height: 36px;
     padding-left: 15px;
     font-size: 16px;
     border-left: 1px solid #e2e2e2;
     cursor: pointer;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     .header-nav-location {
         display: none;
     }
@@ -141,7 +146,7 @@ div > ul.pagination > .active > a{
 .header-nav-btn {
     /*导航栏压缩后的点击按钮*/
     position: absolute;
-    top: .1rem;
+    top: 2px;
     right: 0;
     background-color: rgba(252, 43, 71, .8) !important;
     border: none
@@ -158,18 +163,18 @@ div > ul.pagination > .active > a{
 @media screen and (max-width: 767px) {
     /*导航栏样式改变：宽度变小，下拉列表绝对定位占满屏幕*/
     .header-nav {
-        height: 4.5rem;
-        line-height: 4.5rem;
+        height: 54px;
+        line-height: 54px;
         padding: 0 2%;
     }
 
     .navbar-header {
-        height: 4.5rem;
-        line-height: 4.5rem;
+        height: 54px;
+        line-height: 54px;
     }
 
     .header-nav-left img {
-        margin-top: .3rem;
+        margin-top: 4px;
         padding: 0;
     }
 
@@ -178,8 +183,8 @@ div > ul.pagination > .active > a{
         position: absolute;
         box-sizing: border-box;
         width: 102% !important;
-        padding: 0 0 1rem 0;
-        top: 4.3rem;
+        padding: 0 0 12px 0;
+        top: 52px;
         left: 0;
         z-index: 999;
         background-color: #fff;
@@ -222,10 +227,10 @@ div > ul.pagination > .active > a{
 }
 
 .header-nav-right ul li a {
-    margin-left: 2rem;
-    padding: 2.4rem 0 0 0;
+    margin-left: 24px;
+    padding: 32px 0 0 0;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 17px;
     cursor: pointer;
     color: #2d3e50;
 }
@@ -246,7 +251,7 @@ div > ul.pagination > .active > a{
     /*导航栏链接下划线*/
     display: block;
     width: 0;
-    margin: 2.05rem auto 0 auto;
+    margin: 23px auto 0 auto;
     height: 3px;
     background-color: #fc2b47;
     border-bottom: 0 solid #fc2b47;
