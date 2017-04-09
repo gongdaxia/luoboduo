@@ -7,11 +7,11 @@
 
 }
 
-.homePage .container {
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100%;
-}
+/*.homePage .container {*/
+    /*padding: 0 !important;*/
+    /*margin: 0 !important;*/
+    /*width: 100%;*/
+/*}*/
 
 /*首页的公共样式*/
 .homePage-title {
