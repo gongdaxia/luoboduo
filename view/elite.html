@@ -1,4 +1,5 @@
-<div class="elitePage container" ng-controller="eliteCtrl">
+<div class="elitePage" ng-controller="eliteCtrl">
+    <!--<div class="container">-->
     <!--找精英页面-->
     <div class="carousel slide"
          id="carousel-example-generic"
@@ -74,50 +75,58 @@
             </span>
         </div>
     </div>
-    <div class="elitePage-advantage">
-        <!--萝卜多的优势-->
-        <div class="elitePage-title">
-            我们的优势
-            <i></i>
-        </div>
-        <div class="row" style="margin-top: 2rem">
-            <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="elitePage-advantage-part-img eliteImg1"></div>
-                <p>30%的行业标准收费水平</p>
+    <div class="container">
+        <div class="elitePage-advantage">
+            <!--萝卜多的优势-->
+            <div class="elitePage-title">
+                我们的优势
+                <i></i>
             </div>
-            <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="elitePage-advantage-part-img eliteImg2"></div>
-                <p>一半一半无风险的收费模式</p>
-            </div>
-            <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="elitePage-advantage-part-img eliteImg3"></div>
-                <p>试用期内不满重推的推荐制度</p>
-            </div>
-            <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="elitePage-advantage-part-img eliteImg4"></div>
-                <p>高价值高数量的人才储备机制</p>
-            </div>
-        </div>
-    </div>
-    <div class="elitePage-example">
-        <!--成功案例-->
-        <div class="elitePage-title">
-            成功案例
-            <i></i>
-        </div>
-        <div class="row">
-            <!--找精英成功案例展示-->
-            <div class="elitePage-example-part" ng-repeat="item in elite">
-                <div class="elitePage-example-company" ui-sref="companyInfo({id:item.id})">
-                    <!--ui-sref链接公司详情-->
-                    <i></i>
-                    <img ng-src="{{item.logo}}">
+            <!--<div class="container">-->
+            <div class="row" style="margin-top: 2rem">
+                <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="elitePage-advantage-part-img eliteImg1"></div>
+                    <p>30%的行业标准收费水平</p>
+                </div>
+                <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="elitePage-advantage-part-img eliteImg2"></div>
+                    <p>一半一半无风险的收费模式</p>
+                </div>
+                <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="elitePage-advantage-part-img eliteImg3"></div>
+                    <p>试用期内不满重推的推荐制度</p>
+                </div>
+                <div class="elitePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="elitePage-advantage-part-img eliteImg4"></div>
+                    <p>高价值高数量的人才储备机制</p>
                 </div>
             </div>
+            <!--</div>-->
+
         </div>
-        <button class="elitePage-example-btn" ui-sref="companyList">
-            <!--ui-sref链接到公司展示页面-->
-            更多合作公司
-        </button>
+        <div class="elitePage-example">
+            <!--成功案例-->
+            <div class="elitePage-title">
+                成功案例
+                <i></i>
+            </div>
+            <!--<div class="container">-->
+            <div class="row">
+                <!--找精英成功案例展示-->
+                <div class="elitePage-example-part" ng-repeat="item in elite">
+                    <div class="elitePage-example-company" ui-sref="companyInfo({id:item.id})">
+                        <!--ui-sref链接公司详情-->
+                        <i></i>
+                        <img ng-src="{{item.logo}}">
+                    </div>
+                </div>
+            </div>
+            <!--</div>-->
+            <button class="elitePage-example-btn" ui-sref="companyList">
+                <!--ui-sref链接到公司展示页面-->
+                更多合作公司
+            </button>
+        </div>
     </div>
+    <!--</div>-->
 </div>

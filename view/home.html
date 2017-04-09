@@ -1,4 +1,5 @@
-<div class="homePage container" ng-controller="homeCtrl">
+<div class="homePage" ng-controller="homeCtrl">
+    <!--<div class="container">-->
     <!--萝卜多首页页面-->
     <div class="carousel slide"
          id="carousel-example-generic"
@@ -17,156 +18,166 @@
             </div>
         </div>
     </div>
-    <div class="homePage-advantage">
-        <!--首页萝卜多的优势部分-->
-        <!--<div class="container">-->
-        <div class="row">
-            <div class="homePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="homePage-advantage-part-img advImg1"></div>
-                <p>超短响应时间</p>
-                <span>48小时高效推荐</span>
+    <div class="container">
+        <div class="homePage-advantage">
+            <!--首页萝卜多的优势部分-->
+            <!--<div class="container">-->
+            <div class="row">
+                <div class="homePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="homePage-advantage-part-img advImg1"></div>
+                    <p>超短响应时间</p>
+                    <span>48小时高效推荐</span>
+                </div>
+                <div class="homePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="homePage-advantage-part-img advImg2"></div>
+                    <p>行业1/3的价格</p>
+                    <span>成功推荐仅收费1月工资</span>
+                </div>
+                <div class="homePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="homePage-advantage-part-img advImg3"></div>
+                    <p>三维的人才评测</p>
+                    <span>技术人事背景三维评定</span>
+                </div>
+                <div class="homePage-advantage-partNum col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <p class="homePage-advantage-partNum-p1">500+</p>
+                    <p class="homePage-advantage-partNum-p2">人才入职</p>
+                    <p class="homePage-advantage-partNum-p1">498人</p>
+                    <p class="homePage-advantage-partNum-p2">成功转正</p>
+                    <p class="homePage-advantage-partNum-p1">98%</p>
+                    <p class="homePage-advantage-partNum-p2">成功率</p>
+                </div>
             </div>
-            <div class="homePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="homePage-advantage-part-img advImg2"></div>
-                <p>行业1/3的价格</p>
-                <span>成功推荐仅收费1月工资</span>
-            </div>
-            <div class="homePage-advantage-part col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <div class="homePage-advantage-part-img advImg3"></div>
-                <p>三维的人才评测</p>
-                <span>技术人事背景三维评定</span>
-            </div>
-            <div class="homePage-advantage-partNum col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                <p class="homePage-advantage-partNum-p1">500+</p>
-                <p class="homePage-advantage-partNum-p2">人才入职</p>
-                <p class="homePage-advantage-partNum-p1">498人</p>
-                <p class="homePage-advantage-partNum-p2">成功转正</p>
-                <p class="homePage-advantage-partNum-p1">98%</p>
-                <p class="homePage-advantage-partNum-p2">成功率</p>
-            </div>
+            <!--</div>-->
         </div>
-        <!--</div>-->
-    </div>
-    <div class="homePage-newProfession">
-        <!--首页最新职位部分-->
-        <div class="homePage-title">
-            <p class="homePage-titleCh">最新职位</p>
-            <i class="homePage-title-i"></i>
-            <p class="homePage-titleEn">NEW POSITION</p>
-        </div>
-        <div class="row">
-            <!--最新职位轮播部分-->
-            <div class="homePage-newProfession-ctrl">
-                <!--<div class="container">-->
-                <div class="homePage-newProfession-ctrl-main">
-                    <p class="homePage-newProfession-ctrl-main-more">
-                        <a href="#" ng-class="" ui-sref="recommendProfession({n:true})">更多&nbsp;>
-                            <!--ui-sref点击跳转到更多职位页面-->
-                        </a>
-                    </p>
-                    <div id="success-case" class="carousel slide" data-ride="carousel">
-                        <div class="position-carousel-inner">
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item" ng-class="{'active':$first}"
-                                     ng-repeat="indexbanner in homeProsBanner track by $index">
-                                    <div ng-repeat="indexone in homeProsBanner[$index] track by $index"
-                                         class="col-lg-3 col-md-3 col-sm-12 homePage-newProfession-ctrl-bigBox">
-                                        <div class="homePage-newProfession-ctrl-listbox" ui-sref="professionInfo({id:indexone.id})">
-                                            <!--ui-sref点击跳转到相应职位详情页面-->
-                                            <div class="homePage-newProfession-ctrl-listbox-img">
-                                                <!--<span></span>-->
-                                                <img src="{{indexone.logo}}">
-                                            </div>
-                                            <div class="homePage-newProfession-ctrl-font-box" style="min-height:130px;">
-                                                <p class="homePage-newProfession-ctrl-font-box-name">
-                                                    {{indexone.name}}</p>
-                                                <div class="homePage-newProfession-ctrl-listbox-line"></div>
-                                                <p class="homePage-newProfession-ctrl-font-box-comName">
-                                                    {{indexone.companyName}}
-                                                </p>
+        <div class="homePage-newProfession">
+            <!--首页最新职位部分-->
+            <div class="homePage-title">
+                <p class="homePage-titleCh">最新职位</p>
+                <i class="homePage-title-i"></i>
+                <p class="homePage-titleEn">NEW POSITION</p>
+            </div>
+
+            <!--<div class="container">-->
+            <div class="row">
+                <!--最新职位轮播部分-->
+                <div class="homePage-newProfession-ctrl">
+                    <!--<div class="container">-->
+                    <div class="homePage-newProfession-ctrl-main">
+                        <p class="homePage-newProfession-ctrl-main-more">
+                            <a href="#" ng-class="" ui-sref="recommendProfession({n:true})">更多&nbsp;>
+                                <!--ui-sref点击跳转到更多职位页面-->
+                            </a>
+                        </p>
+                        <div id="success-case" class="carousel slide" data-ride="carousel">
+                            <div class="position-carousel-inner">
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item" ng-class="{'active':$first}"
+                                         ng-repeat="indexbanner in homeProsBanner track by $index">
+                                        <div ng-repeat="indexone in homeProsBanner[$index] track by $index"
+                                             class="col-lg-3 col-md-3 col-sm-12 homePage-newProfession-ctrl-bigBox">
+                                            <div class="homePage-newProfession-ctrl-listbox"
+                                                 ui-sref="professionInfo({id:indexone.id})">
+                                                <!--ui-sref点击跳转到相应职位详情页面-->
+                                                <div class="homePage-newProfession-ctrl-listbox-img">
+                                                    <!--<span></span>-->
+                                                    <img src="{{indexone.logo}}">
+                                                </div>
+                                                <div class="homePage-newProfession-ctrl-font-box"
+                                                     style="min-height:130px;">
+                                                    <p class="homePage-newProfession-ctrl-font-box-name">
+                                                        {{indexone.name}}</p>
+                                                    <div class="homePage-newProfession-ctrl-listbox-line"></div>
+                                                    <p class="homePage-newProfession-ctrl-font-box-comName">
+                                                        {{indexone.companyName}}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <a class="carousel-control  left homePage-newProfession-banner-left" href="/#success-case"
+                               data-slide="prev"><img src="../images/home-position-left.png"></a>
+                            <a class="carousel-control right homePage-newProfession-banner-right" href="/#success-case"
+                               data-slide="next"><img src="../images/home-position-right.png"></a>
                         </div>
-                        <a class="carousel-control  left homePage-newProfession-banner-left" href="/#success-case"
-                           data-slide="prev"><img src="../images/home-position-left.png"></a>
-                        <a class="carousel-control right homePage-newProfession-banner-right" href="/#success-case"
-                           data-slide="next"><img src="../images/home-position-right.png"></a>
                     </div>
                 </div>
             </div>
-        </div>
+            <!--</div>-->
 
-        <div class="homePage-service">
-            <!--首页服务流程部分-->
-            <div class="homePage-title">
-                <p class="homePage-titleCh">服务流程</p>
-                <i class="homePage-title-i"></i>
-                <p class="homePage-titleEn">SERVICE FLOW</p>
+            <div class="homePage-service">
+                <!--首页服务流程部分-->
+                <div class="homePage-title">
+                    <p class="homePage-titleCh">服务流程</p>
+                    <i class="homePage-title-i"></i>
+                    <p class="homePage-titleEn">SERVICE FLOW</p>
+                </div>
+                <!--<div class="container">-->
+                <div class="row">
+                    <div class="homePage-service-part col-md-offset-1 col-md-2 col-xs-12">
+                        <img src="../images/home-step1.png">
+                        <p>1.意向洽谈，深入评审</p>
+                    </div>
+                    <div class="homePage-service-part-i col-md-2">
+                        <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
+                        <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
+                    </div>
+                    <div class="homePage-service-part col-md-2 col-xs-12">
+                        <img src="../images/home-step2.png">
+                        <p>2.确认合作，签订合同</p>
+                    </div>
+                    <div class="homePage-service-part-i col-md-2">
+                        <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
+                        <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
+                    </div>
+                    <div class="homePage-service-part col-md-2 col-xs-12">
+                        <img src="../images/home-step3.png">
+                        <p>3.提出需求，提供jd</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="homePage-service-part col-md-offset-1 col-md-2 col-xs-12">
+                        <img src="../images/home-step4.png">
+                        <p>4.开始招聘，人才海选</p>
+                    </div>
+                    <div class="homePage-service-part-i col-md-2">
+                        <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
+                        <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
+                    </div>
+                    <div class="homePage-service-part col-md-2 col-xs-12">
+                        <img src="../images/home-step5.png">
+                        <p>5.人才评测，简历脱水</p>
+                    </div>
+                    <div class="homePage-service-part-i col-md-2">
+                        <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
+                        <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
+                    </div>
+                    <div class="homePage-service-part col-md-2 col-xs-12">
+                        <img src="../images/home-step6.png">
+                        <p>6.上岗，转入售后</p>
+                    </div>
+                </div>
+                <!--</div>-->
             </div>
-            <div class="row">
-                <div class="homePage-service-part col-md-offset-1 col-md-2 col-xs-12">
-                    <img src="../images/home-step1.png">
-                    <p>1.意向洽谈，深入评审</p>
-                </div>
-                <div class="homePage-service-part-i col-md-2">
-                    <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
-                    <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
-                </div>
-                <div class="homePage-service-part col-md-2 col-xs-12">
-                    <img src="../images/home-step2.png">
-                    <p>2.确认合作，签订合同</p>
-                </div>
-                <div class="homePage-service-part-i col-md-2">
-                    <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
-                    <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
-                </div>
-                <div class="homePage-service-part col-md-2 col-xs-12">
-                    <img src="../images/home-step3.png">
-                    <p>3.提出需求，提供jd</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="homePage-service-part col-md-offset-1 col-md-2 col-xs-12">
-                    <img src="../images/home-step4.png">
-                    <p>4.开始招聘，人才海选</p>
-                </div>
-                <div class="homePage-service-part-i col-md-2">
-                    <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
-                    <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
-                </div>
-                <div class="homePage-service-part col-md-2 col-xs-12">
-                    <img src="../images/home-step5.png">
-                    <p>5.人才评测，简历脱水</p>
-                </div>
-                <div class="homePage-service-part-i col-md-2">
-                    <img src="../images/home-step-dash.png" class="homePage-service-part-i-dash">
-                    <img src="../images/home-i-step.png" class="homePage-service-part-i-img">
-                </div>
-                <div class="homePage-service-part col-md-2 col-xs-12">
-                    <img src="../images/home-step6.png">
-                    <p>6.上岗，转入售后</p>
-                </div>
-            </div>
-        </div>
 
-        <div class="homePage-partner">
-            <!--首页伙伴之言部分-->
-            <div class="homePage-title">
-                <p class="homePage-titleCh">伙伴之言</p>
-                <i class="homePage-title-i"></i>
-                <p class="homePage-titleEn">PARTNER ADVICE</p>
-            </div>
-            <div class="row">
-                <!--伙伴之言轮播部分-->
-                <div class="friend-box">
-                    <div class="partner-carousel">
-                        <jqcarouse></jqcarouse>
+            <div class="homePage-partner">
+                <!--首页伙伴之言部分-->
+                <div class="homePage-title">
+                    <p class="homePage-titleCh">伙伴之言</p>
+                    <i class="homePage-title-i"></i>
+                    <p class="homePage-titleEn">PARTNER ADVICE</p>
+                </div>
+                <div class="row">
+                    <!--伙伴之言轮播部分-->
+                    <div class="friend-box">
+                        <div class="partner-carousel">
+                            <jqcarouse></jqcarouse>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!--</div>-->

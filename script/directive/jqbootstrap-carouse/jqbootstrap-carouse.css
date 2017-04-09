@@ -1,7 +1,9 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
+.jqcarouse-style .item{
+    cursor: default;
+}
 *, *:focus, *:active, *:focus:active, *:before, *:before:focus, *:before:active, *:before:focus:active, *:after, *:after:focus, *:after:active, *:after:focus:active {
     outline: none;
 }
