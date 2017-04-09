@@ -23,6 +23,18 @@ app.controller('eliteCtrl', function ($scope, $state, $http, $rootScope, profess
         if (res.data.code == 0) {
             $scope.elite = res.data.data;
         }
+        else{
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
+        }
     })
 
 });

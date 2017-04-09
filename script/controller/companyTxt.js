@@ -11,5 +11,17 @@ app.controller("companyTxtCtrl",function ($scope, $rootScope, $state,$stateParam
             vm.total=res.data.total;
             console.log(vm.companyProfJob)
         }
+        else{
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
+        }
     })
 })

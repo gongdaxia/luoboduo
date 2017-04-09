@@ -63,7 +63,16 @@ app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, 
             console.log(vm.total)
         }
         else {
-            alert(res.data.message)
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
         }
         // 判断找不到页面或找不到内容
         vm.isNotFind = commonUtil.judgeNotFind(res.data);

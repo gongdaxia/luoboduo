@@ -31,5 +31,17 @@ app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professi
                 interval: 2500
             })
         }
+        else{
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
+        }
     })
 });

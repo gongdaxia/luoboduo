@@ -21,9 +21,23 @@ app.controller("companyCtrl",function ($scope,$rootScope,$state,professionServic
             // console.log("++++++++++++++++++++++++")
             console.log(res.data.total)
             vm.total = res.data.total;
+            angular.forEach( vm.companyInfo,function (value) {
+                if(value.logo==""){
+                    value.logo="../images/noInfo.gif"
+                }
+            })
         }
         else{
-            alert(res.code.message)
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
         }
         // 判断找不到页面或找不到内容
         vm.isNotFind = commonUtil.judgeNotFind(res.data);

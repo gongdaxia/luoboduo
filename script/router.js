@@ -57,7 +57,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //关于我们
         .state("about", {
-            url: "/about",
+            url: "/about?status",
             templateUrl: "view/about.html",
             controller: 'aboutCtrl',
             controllerAs: 'vm',

@@ -13,7 +13,16 @@ app.controller("professionInfoCtrl",function ($scope, $rootScope, $state,$stateP
             }
         }
         else{
-            alert(res.data.message)
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
         }
     })
 })

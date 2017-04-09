@@ -14,12 +14,33 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
             vm.list = res.data.data;
         }
         else{
-            alert(res.data.message)
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
         }
     })
     professionService.getBanner(1).then(function (res) {
         if(res.data.code==0){
             vm.bannerUrl = res.data.data;
+        }
+        else{
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
         }
     })
 
@@ -36,6 +57,18 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
             })
 
         }
+        else{
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
+        }
 
     })
     professionService.getRecommend(0,vm.params).then(function (res) {
@@ -47,6 +80,18 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
                 }
             })
 
+        }
+        else{
+        bootbox.alert({
+            buttons: {
+                ok: {
+                    label: '关闭',
+                    className: 'btn-danger'
+                }
+            },
+            message: '公司搜索：'+res.data.message,
+            title: "提示"
+        });
         }
     })
     //行业大图
@@ -71,7 +116,16 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
             console.log(vm.companyInfo)
         }
         else{
-            alert(res.data.message)
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：'+res.data.message,
+                title: "提示"
+            });
         }
     })
     $('.carousel').carousel({
