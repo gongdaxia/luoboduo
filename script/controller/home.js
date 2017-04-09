@@ -20,6 +20,11 @@ app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professi
         // 获取最新职位信息
         if (res.data.code == 0) {
             vm.professionInfo = res.data.data;
+            angular.forEach(vm.professionInfo,function (value) {
+                if(value.logo==""){
+                    value.logo="../images/noInfo.gif"
+                }
+            })
             var bannerArr = [];
             for (i = 0; i < 2; i++) {
                 bannerArr[i] = vm.professionInfo.slice(0, 4);
@@ -30,6 +35,7 @@ app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professi
             $('.carousel').carousel({
                 interval: 2500
             })
+
         }
         else{
             bootbox.alert({

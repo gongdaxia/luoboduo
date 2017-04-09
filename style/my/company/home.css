@@ -183,6 +183,7 @@
     /*最新职位轮播中单个公司中logo*/
     width: 100%;
     height: 180px;
+    line-height: 180px;
     overflow: hidden;
     margin: 0 auto;
     border: none;
@@ -190,7 +191,7 @@
 
 .homePage-newProfession-ctrl-listbox-img img {
     width: 75%;
-    height: auto;
+    height: 120px;
 }
 
 .homePage-newProfession-ctrl-font-box {

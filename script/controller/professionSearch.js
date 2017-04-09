@@ -35,12 +35,12 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
     if ($state.params.subType && vm.option.subCategory.length > 0) {
         vm.option.subCategory[0].choose = false;
         vm.option.subCategory[parseInt($state.params.subType)].choose = true;
-        console.log(vm.option.subCategory);
+        // console.log(vm.option.subCategory);
     }
     // 选出tag标签中选中的数据，将数据拼接成数组
     vm.data = searchUtil.dataConvert(vm.option);
-    console.log(vm.data);
-    console.log(vm.option);
+    // console.log(vm.data);
+    // console.log(vm.option);
     // 将选出的数据存入本地
     sessionStorage.searchJobOptions = JSON.stringify(vm.option);
     // 拼凑字段
@@ -49,35 +49,8 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
     vm.data.page = $state.params.page;
     vm.data.returnTags = 1;
     console.log("q" + vm.data.name);
-    professionService.getProfession(vm.data).then(function (res) {
-        if (res.data.code == 0) {
-            console.log(res.data.data);
-            vm.profContent = res.data.data;
-            vm.total = res.data.total;
-            console.log(vm.total)
-            angular.forEach(vm.profContent,function (value) {
-                if(value.logo==""){
-                    value.logo="../images/noInfo.gif"
-                }
-            })
-        }
-        else {
-            bootbox.alert({
-                buttons: {
-                    ok: {
-                        label: '关闭',
-                        className: 'btn-danger'
-                    }
-                },
-                message: '公司搜索：'+res.data.message,
-                title: "提示"
-            });
-        }
-        // 判断找不到页面或找不到内容
-        vm.isNotFind = commonUtil.judgeNotFind(res.data);
-        // 找不到内容时，是否推荐
-        vm.isShowRecommend = "position"
-    });
+    console.log(vm.data)
+
     vm.search = function () {
         sessionStorage.searchJobOptions = JSON.stringify(vm.option);
         // 刷新当前界面
@@ -87,8 +60,38 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
     };
     //清除
     vm.clear = function () {
-        sessionStorage.removeItem("searchCompanyOptions");
-        sessionStorage.searchCompanyOptions = JSON.stringify(searchInfo);
+        sessionStorage.removeItem("searchJobOptions");
+        sessionStorage.searchJobOptions = JSON.stringify(searchInfo);
         $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
     };
+
+professionService.getProfession(vm.data).then(function (res) {
+    if (res.data.code == 0) {
+        console.log(res.data.data);
+        vm.profContent = res.data.data;
+        vm.total = res.data.total;
+        console.log(vm.total)
+        angular.forEach(vm.profContent,function (value) {
+            if(value.logo==""){
+                value.logo="../images/noInfo.gif"
+            }
+        })
+    }
+    else {
+        bootbox.alert({
+            buttons: {
+                ok: {
+                    label: '关闭',
+                    className: 'btn-danger'
+                }
+            },
+            message: '公司搜索：'+res.data.message,
+            title: "提示"
+        });
+    }
+    // 判断找不到页面或找不到内容
+    vm.isNotFind = commonUtil.judgeNotFind(res.data);
+    // 找不到内容时，是否推荐
+    vm.isShowRecommend = "position"
+});
 });

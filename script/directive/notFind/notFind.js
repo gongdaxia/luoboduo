@@ -23,10 +23,26 @@ app.directive('notFind', function ($state, professionService) {
                     }
                 });
             } else if (scope.showrecommend === "position") {
-                professionService.getProfession(0,data).then(function (res) {
+                professionService.getRecommend(1,data).then(function (res) {
                     if (res.data.code == 0) {
                         scope.elitePosition = res.data;
-
+                        angular.forEach(scope.elitePosition.data,function (value) {
+                            if(value.logo==""){
+                                value.logo="../images/noInfo.gif"
+                            }
+                        })
+                    }
+                    else {
+                        bootbox.alert({
+                            buttons: {
+                                ok: {
+                                    label: '关闭',
+                                    className: 'btn-danger'
+                                }
+                            },
+                            message: '公司搜索：'+res.data.message,
+                            title: "提示"
+                        });
                     }
                 });
             }
