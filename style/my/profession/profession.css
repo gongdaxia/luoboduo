@@ -12,6 +12,8 @@
 }
 
 .profession-home-bg {
+    float: left;
+    width: 240px;
     position: relative;
 }
 
@@ -60,9 +62,10 @@
     flex-wrap: wrap;
 }
 
-.prof-home-nav-content span {
+.prof-home-nav-content>span {
     padding-right: 8.3%;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .prof-nav-item {
@@ -70,7 +73,7 @@
     left: 92%;
     top: 0;
     display: none;
-    width: 325%;
+    width: 280%;
     height: 456px;
     padding-left: 20%;
     padding-top: 10%;
@@ -117,9 +120,11 @@
 
 /*banner*/
 
-.prof-banner, .profession-home-bg {
+.prof-banner {
+    float: left;
     position: relative;
     padding: 0;
+    width: calc(100% - 240px);
 }
 
 .prof-banner img {

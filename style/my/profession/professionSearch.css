@@ -10,7 +10,7 @@
 }
 
 .search-prof-input {
-    padding: 1.5% 0;
+    padding: 1.5% 1%;
 }
 
 .search-prof-input-span {
@@ -77,6 +77,7 @@
 .search-prof-list .item {
     display: inline-block;
     padding: 0 1.5%;
+    margin: 0 5px;
     cursor: pointer;
 }
 

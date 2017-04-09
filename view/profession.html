@@ -3,8 +3,8 @@
         <!--左侧导航栏-->
         <div class="row">
             <div class="profession-home-header">
-                <div class="profession-home-bg margin-left-15">
-                    <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 ">
+                <div class="profession-home-bg ">
+                    <div class="">
                         <div class="prof-home-nav"
                              ng-repeat="li in vm.list track by $index">
                             <div class="prof-home-nav-tittle">
@@ -31,10 +31,10 @@
                     </div>
                 </div>
                 <!--banner-->
-                <div class="prof-banner col-lg-10 col-md-10 col-sm-12 col-xs-12"
+                <div class="prof-banner"
                      id="myCarousel">
                     <div class="carousel-inner">
-                        <div class="item" ng-repeat="num in  vm.bannerUrl.articleList track by $index"
+                        <div  ng-repeat="num in  vm.bannerUrl.articleList track by $index"
                              ng-class="{'active':$first}">
                             {{num.img}}
                             <img ng-src="{{num.img}}" alt="" href="{{num.url}}">
@@ -90,7 +90,8 @@
             <!--最新职位-->
             <div class="recommend-job " ng-if="vm.isChoose">
                 <div class="recommend-job-list">
-                    <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in  vm.newProfessionInfo track by $index">
+                    <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="item in  vm.newProfessionInfo track by $index"
+                         ui-sref="professionInfo({id:item.id})">
                         <div class="recommend-job-box">
                             <div class="job-box-img">
                                 <img ng-src="{{item.logo}}">

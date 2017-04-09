@@ -26,6 +26,6 @@ app.controller("companyTxtCtrl",function ($scope, $rootScope, $state,$stateParam
         // 判断找不到页面或找不到内容
         vm.isNotFind = commonUtil.judgeNotFind(res.data);
         // 找不到内容时，是否推荐
-        vm.isShowRecommend = "position"
+        vm.isShowRecommend = "none"
     })
 })

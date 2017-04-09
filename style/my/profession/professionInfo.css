@@ -169,7 +169,7 @@
     background-color: #fff;
 }
 
-.profession-info-footer button {
+.profession-info-footer .button{
     margin: 3% 0;
     height: 3.5rem;
     width: 10rem;

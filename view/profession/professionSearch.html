@@ -17,7 +17,7 @@
                   ng-click="vm.checkboxMulti($index,vm.option.category);vm.selectSubCategoryFn($index,a.choose)"
                   ng-repeat="x in vm.option.category track by $index">{{x.name}}</span>
         </div>
-        <div class="search-prof-list" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
+        <div class="search-prof-list padding-l-10" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
                 <span class="item" ng-class="{true:'search-btn'}[x.choose]"
                       ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
                       ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
