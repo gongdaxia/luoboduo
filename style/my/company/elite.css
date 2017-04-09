@@ -132,17 +132,17 @@
 }
 
 .elitePage-step-content-text1 {
-    top: 1.2rem;
+    top: 16px;
     right: 24%;
 }
 
 .elitePage-step-content-text2 {
-    top: 18rem;
+    top: 219px;
     left: 25%;
 }
 
 .elitePage-step-content-text3 {
-    top: 35rem;
+    top: 415px;
     right: 24%;
 }
 
@@ -171,7 +171,7 @@
     }
 
     .elitePage-step-content-text3 {
-        top: 34rem;
+        top: 400px;
         right: 15%;
     }
 }
@@ -188,17 +188,17 @@
     }
 
     .elitePage-step-content-text1 {
-        top: -1rem;
+        top: -10px;
         right: 10%;
     }
 
     .elitePage-step-content-text2 {
-        top: 17rem;
+        top: 200px;
         left: 10%;
     }
 
     .elitePage-step-content-text3 {
-        top: 34rem;
+        top: 400px;
         right: 10%;
     }
 }
@@ -213,7 +213,7 @@
     }
 
     .elitePage-step-content-text3 {
-        top: 33rem;
+        top: 394px;
         right: 5%;
     }
 }
