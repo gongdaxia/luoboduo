@@ -321,10 +321,14 @@
 .homePage-service-part p {
     font-size: 15px;
     margin: 0;
-    height: 4.5rem;
-    line-height: 4.5rem;
+    height: 54px;
+    line-height: 54px;
     text-align: center;
     color: #22415d;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .homePage-service-part-i {
@@ -433,12 +437,14 @@
     display: block;
 
 }
-.text-justify{
+
+.text-justify {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 7;
     overflow: hidden;
 }
+
 .friend-banner-pre img {
     position: absolute;
     left: 0;
