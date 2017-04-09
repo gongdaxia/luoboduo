@@ -10,6 +10,7 @@
                     ng-click="vm.toggle=true"
                     ng-class="{'aboutPage-slider-active': vm.toggle}">
                     <i class="iconfont">&#xe601;</i>关于我们
+                    <span ng-class="{'aboutPage-slider-span-active': vm.toggle}"></span>
                 </li>
                 <li href="#contactUs"
                     class="showContact"
@@ -17,6 +18,7 @@
                     ng-click="vm.toggle=false"
                     ng-class="{'aboutPage-slider-active': !vm.toggle}">
                     <i class="iconfont">&#xe918;</i>联系我们
+                    <span ng-class="{'aboutPage-slider-span-active': !vm.toggle}"></span>
                 </li>
             </ul>
         </div>
