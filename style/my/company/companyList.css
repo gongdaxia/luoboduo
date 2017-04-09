@@ -2,6 +2,7 @@
     background-color: #f6f7f8;
     padding: 2rem 0;
     width: 100%;
+    overflow: hidden;
 }
 
 .companyList-img {

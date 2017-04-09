@@ -154,7 +154,8 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ["script/controller/pronfessionCtrl.js", "style/my/profession/professionInfo.css"]
+                    ["script/controller/pronfessionCtrl.js",
+                        "style/my/profession/professionInfo.css"]
                 )
             }
         })
@@ -166,10 +167,12 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
             controllerAs: 'vm',
             resolve: {
                 loadMyFile: _lazyLoad(
-                    ["script/controller/recommendProfession.js", "style/my/profession/professionSearch.css",
+                    ["script/controller/recommendProfession.js",
+                        "style/my/profession/professionSearch.css",
                         "style/my/profession/recommendProfession.css",
                         'script/directive/fsp-paging/pagination.html',
-                        'script/directive/fsp-paging/pagination.js']
+                        'script/directive/fsp-paging/pagination.js',
+                        'notFind']
                 )
             }
         })
@@ -197,7 +200,9 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
                         "style/my/profession/companySearch.css",
                         "script/controller/companyList.js",
                         "style/my/company/companyList.css",
-                        "notFind"]
+                        'script/directive/fsp-paging/pagination.html',
+                        'script/directive/fsp-paging/pagination.js',
+                        'notFind']
                 )
             }
         });
