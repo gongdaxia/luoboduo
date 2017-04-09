@@ -20,7 +20,7 @@
         <div class="search-prof-list" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
                 <span class="item" ng-class="{true:'search-btn'}[x.choose]"
                       ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
-                      ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>{{"a"+vm.selectedNum}}
+                      ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
         </div>
         <div class="search-prof-list">
             <span class="tittle">学历要求：</span>

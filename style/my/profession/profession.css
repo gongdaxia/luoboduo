@@ -160,7 +160,8 @@
 
 .prof-search-content span {
     display: inline-block;
-    width: 15%;
+    padding-left: 1%;
+    padding-right: 1%;
     border-right: 1px solid #f0f0f0;
     text-align: center;
     font-size: 16px;
@@ -169,7 +170,7 @@
 
 .prof-search-content input {
     display: inline-block;
-    width: 70%;
+    width: auto;
     font-size: 14px;
     padding-left: 3%;
     border: none;
@@ -180,7 +181,8 @@
 .prof-search-content button {
     position: absolute;
     display: inline-block;
-    width: 15%;
+    padding-left: 2%;
+    padding-right: 2%;
     height: 100%;
     right: 0;
     top: 0;
@@ -243,7 +245,7 @@
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
     cursor: pointer;
-
+    border-radius: 5px;
 }
 
 .recommend-job-box:hover {

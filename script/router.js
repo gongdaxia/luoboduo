@@ -161,7 +161,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         })
         //推荐职位列表页
         .state("recommendProfession", {
-            url: "/recommendPage?n&size&page",
+            url: "/recommendPage?n&s?page&size&type&subType&name",
             templateUrl: "view/profession/recommendProfession.html",
             controller: "recommendProfessionCtrl",
             controllerAs: 'vm',
