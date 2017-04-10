@@ -190,7 +190,7 @@
 
 @media screen and (max-width: 992px) {
     .prof-banner {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
