@@ -39,19 +39,21 @@
 .prof-home-nav .img-left {
     float: right;
     width: auto;
-    padding:10px;
+    padding: 10px;
     margin-right: 15px;
     background: url(../../../images/profession-home-left.png) no-repeat center center;
     vertical-align: middle;
 }
-.prof-home-nav:hover .img-left{
+
+.prof-home-nav:hover .img-left {
     float: right;
     width: auto;
-    padding:10px;
+    padding: 10px;
     margin-right: 15px;
     background: url(../../../images/findJobArrowRed.png) no-repeat center center;
     vertical-align: middle;
 }
+
 .prof-home-nav span {
     font-size: 18px;
     display: inline-block;
@@ -63,43 +65,50 @@
     color: #f43851;
     background-color: #fff;
 }
+
 /*.prof-home-nav-tittle .imgOne{*/
-    /*display: inline-block;*/
-    /*padding: 10px;*/
-    /*vertical-align: middle;*/
+/*display: inline-block;*/
+/*padding: 10px;*/
+/*vertical-align: middle;*/
 /*}*/
 /*左侧导航栏图片*/
-.prof-home-nav:nth-child(1) .imgSelect{
+.prof-home-nav:nth-child(1) .imgSelect {
     background: url(../../../images/profession-home-img1.png) no-repeat center center;
 }
-.prof-home-nav:hover:nth-child(1) .imgSelect{
+
+.prof-home-nav:hover:nth-child(1) .imgSelect {
     background: url(../../../images/productRed.png) no-repeat center center;
 }
-.prof-home-nav:nth-child(2) .imgSelect{
+
+.prof-home-nav:nth-child(2) .imgSelect {
     background: url(../../../images/research.png) no-repeat center center;
 }
-.prof-home-nav:hover:nth-child(2) .imgSelect{
+
+.prof-home-nav:hover:nth-child(2) .imgSelect {
     background: url(../../../images/researchRed.png) no-repeat center center;
 }
-.prof-home-nav:nth-child(3) .imgSelect{
+
+.prof-home-nav:nth-child(3) .imgSelect {
     background: url(../../../images/bigData.png) no-repeat center center;
 }
-.prof-home-nav:hover:nth-child(3) .imgSelect{
+
+.prof-home-nav:hover:nth-child(3) .imgSelect {
     background: url(../../../images/bigDataRed.png) no-repeat center center;
 }
+
 /*.profession-home-bg .imgSelect:nth-child(1){*/
-    /*background: url(../../../images/profession-home-img1.png) no-repeat center center;*/
+/*background: url(../../../images/profession-home-img1.png) no-repeat center center;*/
 /*}*/
 /*.profession-home-bg .imgSelect:nth-child(2){*/
-    /*background: url(../../../images/research.png) no-repeat center center;*/
+/*background: url(../../../images/research.png) no-repeat center center;*/
 /*}*/
 /*.profession-home-bg:hover .imgSelect:nth-child(2){*/
-    /*background: url(../../../images/researchRed.png) no-repeat center center;*/
+/*background: url(../../../images/researchRed.png) no-repeat center center;*/
 /*}*/
 /*.profession-home-bg:hover .imgSelect:nth-child(1){*/
-    /*background: url(../../../images/productRed.png) no-repeat center center;*/
+/*background: url(../../../images/productRed.png) no-repeat center center;*/
 /*}*/
-.profession-home-bg .imgOne{
+.profession-home-bg .imgOne {
     display: inline-block;
     padding: 10px;
     vertical-align: middle;
@@ -113,11 +122,12 @@
     flex-wrap: wrap;
 }
 
-.prof-home-nav-content>span {
+.prof-home-nav-content > span {
     padding-right: 8.3%;
     cursor: pointer;
     font-size: 14px;
 }
+
 /*三级菜单页面*/
 .prof-nav-item {
     position: absolute;
@@ -176,6 +186,12 @@
     position: relative;
     padding: 0;
     width: calc(100% - 240px);
+}
+
+@media screen and (max-width: 992px) {
+    .prof-banner {
+        width: 100%;
+    }
 }
 
 .prof-banner img {
@@ -495,6 +511,7 @@
     }
 
 }
+
 /*优质公司*/
 .company-info p {
     overflow: hidden;
