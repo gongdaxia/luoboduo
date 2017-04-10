@@ -3,6 +3,7 @@
  */
 app.controller("searchJobCtrl", function ($scope, $rootScope, $state, professionService, searchInfo, commonUtil, searchUtil) {
     var vm = this;
+    commonUtil.scrollTo(0, 0);
     var searchInfoCopy = angular.copy(searchInfo);
     vm.option = searchInfoCopy;
     vm.option = commonUtil.judegesessionStorage(sessionStorage.searchJobOptions, searchInfoCopy);

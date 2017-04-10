@@ -4,6 +4,8 @@
 app.controller("companyCtrl",function ($scope,$rootScope,$state,professionService,searchInfo,commonUtil,searchUtil) {
     var vm=this;
     // 读取本地记录
+    //跳转到本页面保持顶部
+    commonUtil.scrollTo(0, 0);
     vm.option = commonUtil.judegesessionStorage(sessionStorage.searchCompanyOptions, searchInfo);
     vm.checkboxMulti = searchUtil.checkboxMulti;
     // 选出tag标签中选中的数据，将数据拼接成数组

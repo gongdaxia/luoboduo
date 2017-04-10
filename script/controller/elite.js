@@ -1,8 +1,9 @@
 /**
  * Created by wanwn on 2017/4/1.
  */
-app.controller('eliteCtrl', function ($scope, $state, $http, $rootScope, professionService) {
+app.controller('eliteCtrl', function ($scope, $state, $http, $rootScope, professionService,commonUtil) {
     var vm = this;
+    commonUtil.scrollTo(0, 0);
     vm.params = $state.params;
     vm.params.size = 8;
     professionService.getBanner(2).then(function (res) {

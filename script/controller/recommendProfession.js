@@ -3,6 +3,7 @@
  */
 app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, professionService, searchInfo, commonUtil, searchUtil) {
     var vm = this;
+    commonUtil.scrollTo(0, 0);
     vm.params = $state.params;
     vm.option = commonUtil.judegesessionStorage(sessionStorage.searchJobOptions, searchInfo);
     vm.selectedNum = commonUtil.selectNum(vm.option.category);

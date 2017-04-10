@@ -1,8 +1,9 @@
 /**
  * Created by Administrator on 2017/4/5.
  */
-app.controller("companyInfoCtrl",function ($scope, $rootScope, $state,$stateParams,professionService) {
+app.controller("companyInfoCtrl",function ($scope, $rootScope, $state,$stateParams,commonUtil,professionService) {
     var vm = this;
+    commonUtil.scrollTo(0, 0);
     vm.id = $stateParams.id;
     vm.companyId = $stateParams.id;
     // console.log($stateParams);

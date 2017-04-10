@@ -1,8 +1,9 @@
 /**
  * Created by wanwn on 2017/3/30.
  */
-app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professionService) {
+app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professionService,commonUtil) {
     var vm = this;
+    commonUtil.scrollTo(0, 0);
     vm.params = $state.params;
     vm.params.size = 10;
     professionService.getBanner(0).then(function (res) {

@@ -4,6 +4,7 @@
 
 app.controller("companyCtrl", function ($scope, $rootScope, $state, professionService, searchInfo, commonUtil, searchUtil) {
     var vm = this;
+    commonUtil.scrollTo(0, 0);
     // 读取本地记录
     vm.option = commonUtil.judegesessionStorage(sessionStorage.searchCompanyOptions, searchInfo);
     vm.checkboxMulti = function (index, arry) {

@@ -1,5 +1,6 @@
 app.factory('commonUtil', function ($rootScope) {
     return {
+        pageDefault: {page: 1, size: 10, next: true},
         //跳转界面位置
         scrollTo: function (x, y) {
             window.scrollTo(x, y);

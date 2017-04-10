@@ -1,19 +1,20 @@
 /**
  * Created by Administrator on 2017/3/27.
  */
-app.controller("professionCtrl",function ($scope,$state,$rootScope,professionService) {
+app.controller("professionCtrl", function ($scope, $state, $rootScope, professionService, commonUtil) {
     // console.log("+++++++++++++++++++++++++")
     var vm = this;
+    commonUtil.scrollTo(0, 0);
     vm.params = $state.params;
     vm.params.size = 8;
     delete sessionStorage.searchCompanyOptions;
     delete sessionStorage.searchJobOptions;
-    delete sessionStorage.searchJobOptions ;
+    delete sessionStorage.searchJobOptions;
     professionService.getJobList().then(function (res) {
-        if(res.data.code==0){
+        if (res.data.code == 0) {
             vm.list = res.data.data;
         }
-        else{
+        else {
             bootbox.alert({
                 buttons: {
                     ok: {
@@ -21,16 +22,16 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
                         className: 'btn-danger'
                     }
                 },
-                message: '公司搜索：'+res.data.message,
+                message: '公司搜索：' + res.data.message,
                 title: "提示"
             });
         }
     })
     professionService.getBanner(1).then(function (res) {
-        if(res.data.code==0){
+        if (res.data.code == 0) {
             vm.bannerUrl = res.data.data;
         }
-        else{
+        else {
             bootbox.alert({
                 buttons: {
                     ok: {
@@ -38,7 +39,7 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
                         className: 'btn-danger'
                     }
                 },
-                message: '公司搜索：'+res.data.message,
+                message: '公司搜索：' + res.data.message,
                 title: "提示"
             });
         }
@@ -47,17 +48,17 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
 //最新职位、推荐职位切换
 
 //推荐职位请求
-    professionService.getRecommend(1,vm.params).then(function (res) {
-        if (res.data.code==0){
+    professionService.getRecommend(1, vm.params).then(function (res) {
+        if (res.data.code == 0) {
             vm.professionInfo = res.data.data
-            angular.forEach(vm.professionInfo,function (value) {
-                if(value.logo==""){
-                    value.logo="../images/noInfo.gif"
+            angular.forEach(vm.professionInfo, function (value) {
+                if (value.logo == "") {
+                    value.logo = "../images/noInfo.gif"
                 }
             })
 
         }
-        else{
+        else {
             bootbox.alert({
                 buttons: {
                     ok: {
@@ -65,58 +66,24 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
                         className: 'btn-danger'
                     }
                 },
-                message: '公司搜索：'+res.data.message,
+                message: '公司搜索：' + res.data.message,
                 title: "提示"
             });
         }
 
     })
     //最新职位
-    professionService.getRecommend(0,vm.params).then(function (res) {
-        if (res.data.code==0){
+    professionService.getRecommend(0, vm.params).then(function (res) {
+        if (res.data.code == 0) {
             vm.newProfessionInfo = res.data.data;
-            angular.forEach(vm.newProfessionInfo,function (value) {
-                if(value.logo==""){
-                    value.logo="../images/noInfo.gif"
+            angular.forEach(vm.newProfessionInfo, function (value) {
+                if (value.logo == "") {
+                    value.logo = "../images/noInfo.gif"
                 }
             })
 
         }
-        else{
-        bootbox.alert({
-            buttons: {
-                ok: {
-                    label: '关闭',
-                    className: 'btn-danger'
-                }
-            },
-            message: '公司搜索：'+res.data.message,
-            title: "提示"
-        });
-        }
-    })
-    //行业大图
-    professionService.getBanner(3).then(function (res) {
-        if(res.data.code==0){
-            vm.companyImgUrl = res.data.data.articleList[0];
-        }
-    })
-    //优质公司
-    professionService.getCompany({size:4,page:2}).then(function (res) {
-        if(res.data.code==0) {
-            vm.companyInfo = res.data.data;
-            console.log(vm.companyInfo)
-            angular.forEach(vm.companyInfo,function (value) {
-                professionService.getProfession({size:2,companyId:value.id}).then(function (resp) {
-                    // console.log("sssssssssssssssss")
-                   value.jobList=resp.data.data
-                    // console.log(value.id)
-                    // console.log( value.jobList)
-                })
-            })
-            console.log(vm.companyInfo)
-        }
-        else{
+        else {
             bootbox.alert({
                 buttons: {
                     ok: {
@@ -124,7 +91,41 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
                         className: 'btn-danger'
                     }
                 },
-                message: '公司搜索：'+res.data.message,
+                message: '公司搜索：' + res.data.message,
+                title: "提示"
+            });
+        }
+    })
+    //行业大图
+    professionService.getBanner(3).then(function (res) {
+        if (res.data.code == 0) {
+            vm.companyImgUrl = res.data.data.articleList[0];
+        }
+    })
+    //优质公司
+    professionService.getCompany({size: 4, page: 2}).then(function (res) {
+        if (res.data.code == 0) {
+            vm.companyInfo = res.data.data;
+            console.log(vm.companyInfo)
+            angular.forEach(vm.companyInfo, function (value) {
+                professionService.getProfession({size: 2, companyId: value.id}).then(function (resp) {
+                    // console.log("sssssssssssssssss")
+                    value.jobList = resp.data.data
+                    // console.log(value.id)
+                    // console.log( value.jobList)
+                })
+            })
+            console.log(vm.companyInfo)
+        }
+        else {
+            bootbox.alert({
+                buttons: {
+                    ok: {
+                        label: '关闭',
+                        className: 'btn-danger'
+                    }
+                },
+                message: '公司搜索：' + res.data.message,
                 title: "提示"
             });
         }
@@ -133,9 +134,9 @@ app.controller("professionCtrl",function ($scope,$state,$rootScope,professionSer
         // 轮播图自动轮播定时器
         interval: 4000
     })
-$scope.exchangeJob = function(isChoose){
-    if(isChoose==undefined||isChoose==false){
-        vm.isChoose=!vm.isChoose;
+    $scope.exchangeJob = function (isChoose) {
+        if (isChoose == undefined || isChoose == false) {
+            vm.isChoose = !vm.isChoose;
+        }
     }
-}
 })
