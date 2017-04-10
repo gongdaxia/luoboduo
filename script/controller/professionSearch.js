@@ -48,8 +48,8 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
     vm.data.size = $state.params.size;
     vm.data.page = $state.params.page;
     vm.data.returnTags = 1;
-    console.log("q" + vm.data.name);
-    console.log(vm.data)
+    // console.log("q" + vm.data.name);
+    // console.log(vm.data)
 
     vm.search = function () {
         sessionStorage.searchJobOptions = JSON.stringify(vm.option);
@@ -67,10 +67,10 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
 
 professionService.getProfession(vm.data).then(function (res) {
     if (res.data.code == 0) {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         vm.profContent = res.data.data;
         vm.total = res.data.total;
-        console.log(vm.total)
+        // console.log(vm.total)
         angular.forEach(vm.profContent,function (value) {
             if(value.logo==""){
                 value.logo="../images/noInfo.gif"

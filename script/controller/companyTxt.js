@@ -4,12 +4,12 @@
 app.controller("companyTxtCtrl",function ($scope, $rootScope, $state,$stateParams,professionService,commonUtil) {
     var vm = this;
     vm.companyId = $stateParams.id;
-    console.log($stateParams);
+    // console.log($stateParams);
     professionService.getProfession({companyId:vm.companyId}).then(function (res) {
         if (res.data.code==0){
             vm.companyProfJob = res.data.data;
             vm.total=res.data.total;
-            console.log(vm.companyProfJob)
+            // console.log(vm.companyProfJob)
         }
         else{
             bootbox.alert({

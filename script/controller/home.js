@@ -9,7 +9,7 @@ app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professi
         // 获取banner图
         if (res.data.code == 0) {
             vm.bannerUrl = res.data.data;
-            console.log(res.data)
+            // console.log(res.data)
         }
     });
     $('.carousel').carousel({
@@ -30,7 +30,7 @@ app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professi
                 bannerArr[i] = vm.professionInfo.slice(0, 4);
                 vm.professionInfo.splice(0, 4)
             }
-            console.log(bannerArr);
+            // console.log(bannerArr);
             $scope.homeProsBanner = bannerArr;
             $('.carousel').carousel({
                 interval: 2500

@@ -19,7 +19,7 @@ app.controller("companyCtrl",function ($scope,$rootScope,$state,professionServic
         if (res.data.code==0){
             vm.companyInfo = res.data.data;
             // console.log("++++++++++++++++++++++++")
-            console.log(res.data.total)
+            // console.log(res.data.total)
             vm.total = res.data.total;
             angular.forEach( vm.companyInfo,function (value) {
                 if(value.logo==""){

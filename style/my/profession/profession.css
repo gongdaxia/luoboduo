@@ -68,6 +68,7 @@
     /*padding: 10px;*/
     /*vertical-align: middle;*/
 /*}*/
+/*左侧导航栏图片*/
 .prof-home-nav:nth-child(1) .imgSelect{
     background: url(../../../images/profession-home-img1.png) no-repeat center center;
 }
@@ -117,7 +118,7 @@
     cursor: pointer;
     font-size: 14px;
 }
-
+/*三级菜单页面*/
 .prof-nav-item {
     position: absolute;
     left: 92%;
@@ -494,7 +495,7 @@
     }
 
 }
-
+/*优质公司*/
 .company-info p {
     overflow: hidden;
     text-overflow: ellipsis;

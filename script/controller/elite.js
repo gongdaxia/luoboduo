@@ -9,10 +9,10 @@ app.controller('eliteCtrl', function ($scope, $state, $http, $rootScope, profess
         // 获取banner图
         if (res.data.code == 0) {
             vm.bannerUrl = res.data.data;
-            console.log(res.data);
+            // console.log(res.data);
             $scope.eliteBanner = vm.bannerUrl.articleList[0];
             //由于第二张图是坏的，就先取第一张
-            console.log($scope.eliteBanner);
+            // console.log($scope.eliteBanner);
         }
     });
     // $('.carousel').carousel({

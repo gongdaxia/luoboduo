@@ -52,7 +52,7 @@ app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, 
     console.log("q" + vm.data.name);
     professionService.getRecommend(vm.positionType,vm.data).then(function (res) {
         if (res.data.code == 0) {
-            console.log(res.data.data);
+            // console.log(res.data.data);
             vm.profContent = res.data.data;
             angular.forEach(vm.profContent,function (value) {
                 if(value.logo==""){
@@ -60,7 +60,7 @@ app.controller("recommendProfessionCtrl", function ($scope, $rootScope, $state, 
                 }
             });
             vm.total = res.data.total;
-            console.log(vm.total)
+            // console.log(vm.total)
         }
         else {
             bootbox.alert({

@@ -5,11 +5,11 @@ app.controller("companyInfoCtrl",function ($scope, $rootScope, $state,$statePara
     var vm = this;
     vm.id = $stateParams.id;
     vm.companyId = $stateParams.id;
-    console.log($stateParams);
+    // console.log($stateParams);
     professionService.getCompanyInfo(vm.id).then(function (res) {
         if(res.data.code===0){
             vm.companyInfo = res.data.data;
-            console.log( vm.companyInfo)
+            // console.log( vm.companyInfo)
         }
         else{
             bootbox.alert({

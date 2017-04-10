@@ -9,10 +9,10 @@ app.controller('aboutCtrl', ['$scope', '$rootScope', '$state', 'commonUtil',
             // 关于我们和联系我们切换
             if ($state.params.status === 'false' || undefined) {
                 $('.showContact').tab('show');
-                console.log($state.params.status)
+                // console.log($state.params.status)
             } else {
                 $('.showAbout').tab('show');
-                console.log($state.params.status)
+                // console.log($state.params.status)
             }
         }
     ]

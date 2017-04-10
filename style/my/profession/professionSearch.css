@@ -1,7 +1,7 @@
 .search-profession {
     font-size: 14px;
 }
-
+/*搜索面板*/
 .search-prof-project {
     border-top: 3px solid #fc2b47;
     background-color: #fff;
@@ -80,7 +80,7 @@
     margin: 0 5px;
     cursor: pointer;
 }
-
+/*搜索获取内容区域*/
 .search-prof-content {
     margin: 2% 0;
     padding: 1rem 2%;
@@ -99,7 +99,7 @@
 .prof-content-list:hover {
     box-shadow: 0 0 10px #e8e8e8;
 }
-
+/*左侧职位信息*/
 .prof-info {
     border-right: 1px solid #e8e8e8;
 }
@@ -163,7 +163,7 @@
     font-weight: bold;
     line-height: 40px;
 }
-
+/*右侧公司信息*/
 .comp-info {
     padding: 0 3%;
     line-height: 50px;

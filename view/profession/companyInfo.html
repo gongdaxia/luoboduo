@@ -1,6 +1,7 @@
 <div class="company-info width-20">
     <div class="container ">
         <div class="row">
+            <!--公司详情页头部-->
             <div class="company-info-header row">
                     <div class="company-info-img col-lg-48 col-md-4 col-sm-4 col-xs-4">
                         <img ng-src="{{vm.companyInfo.company.logo}}">
@@ -14,23 +15,28 @@
                         <p>{{vm.companyInfo.company.slogan}}</p>
                     </div>
             </div>
+            <!--公司详情页内容区域-->
             <div class="company-info-content row">
                 <div class="content-left col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <!--切换按钮-->
                     <div class="company-info-btn">
                         <span ng-class="{'company-btn':!vm.isChoose}" ng-click="exchangeJob(!vm.isChoose)">公司详情</span>
                         <span ng-class="{'company-btn':vm.isChoose}" ng-click="exchangeJob(vm.isChoose)" ui-sref="companyInfo.companyTxt">在招职位</span>
                         <p class="line-content"></p>
                     </div>
+                    <!--左侧公司详情区域-->
                     <div class="company-info-txt1 " >
                         <div class="tittle" ng-if="!vm.isChoose">
                             <span></span>
                             <b class="font-16-bold v-middle">公司介绍</b>
                             <div class="txt">{{vm.companyInfo.company.summary}}</div>
                         </div>
+                        <!--找职位区域-->
                         <div ui-view="" ng-if="vm.isChoose"></div>
 
                     </div>
                 </div>
+                <!--右侧公司其他信息-->
                 <div class="col-lg-4 content-right col-xs-12 col-sm-4">
                     <div class="content-right-main">
                         <div class="tittle font-14-bold color-black">

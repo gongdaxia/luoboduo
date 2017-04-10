@@ -4,6 +4,7 @@ app.factory('commonUtil', function ($rootScope) {
         scrollTo: function (x, y) {
             window.scrollTo(x, y);
         },
+        //推荐职位和最新职位切换
         judegeJobList: function (judegeData) {
             if (judegeData.params.n === "false") {
                 $rootScope.recommendAndNewJob = "推荐职位";
@@ -17,6 +18,7 @@ app.factory('commonUtil', function ($rootScope) {
             }
             return judegeData;
         },
+        //此函数判断进入页面是否有参数，没有为默认值，有获取参数
         judegesessionStorage: function (judge, data) {
             var dataCopy = angular.copy(data);
             if (judge === undefined) {
@@ -71,6 +73,7 @@ app.factory('searchUtil', function () {
                 }
             }
         },
+        //判断单选
         radioType: function (ind, arr) {
             arr[ind].choose = !arr[ind].choose;
             arr.forEach(function (item, index) {

@@ -11,6 +11,7 @@ app.filter("jobTypeFilter", function(jobType) {
         }
     }
 })
+    //二级职位类别
     .filter("jobSecondFilter",function (secondType) {
         return function (type) {
             for(var i=0; i<secondType.length; i++){
@@ -20,16 +21,19 @@ app.filter("jobTypeFilter", function(jobType) {
             }
         }
     })
+    //薪资水平
     .filter("compensationFilter",function (compensation) {
         return function (type) {
             return compensation[type]
         }
     })
+    //职位子类
     .filter("subCategoryFilter",function ( subCategory) {
         return function (type) {
             return subCategory[type]
         }
     })
+    //公司行业
     .filter('industryFilter', function (industryInfo) {
         return function (input) {
             var arr=[];
@@ -39,6 +43,7 @@ app.filter("jobTypeFilter", function(jobType) {
             return arr.join(' ')
         }
     })
+    //数组内包含对象的公司行业
     .filter('industryFilter1', function (industryInfo) {
         return function (input) {
             var arr=[];
@@ -48,12 +53,14 @@ app.filter("jobTypeFilter", function(jobType) {
             return arr.join(' ')
         }
     })
+    //融资规模
     .filter('financingFilter', function (financingInfo) {
         return function (input) {
             return financingInfo[input];
 
         }
     })
+    //时间
     .filter('updateAtFilter', function (updateAttype, $filter) {
         return function (type) {
             var timestamp = new Date().getTime();

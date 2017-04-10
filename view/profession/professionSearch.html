@@ -1,4 +1,5 @@
 <div class="search-profession container">
+    <!--搜索面板-->
     <div class="search-prof-project">
         <div class="search-prof-input">
             <span class="tittle" style="letter-spacing: 5px">关键词：</span>
@@ -17,6 +18,7 @@
                   ng-click="vm.checkboxMulti($index,vm.option.category);vm.selectSubCategoryFn($index,a.choose)"
                   ng-repeat="x in vm.option.category track by $index">{{x.name}}</span>
         </div>
+        <!--职位类别子栏-->
         <div class="search-prof-list padding-l-10" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
                 <span class="item" ng-class="{true:'search-btn'}[x.choose]"
                       ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
@@ -51,13 +53,15 @@
             <button class="prof-search-btn2" ng-click="vm.search()">搜索</button>
         </div>
     </div>
-
+<!--获取内容区域-->
     <div class="search-prof-content" ng-if="vm.total">
         <div class="row">
             <div class="prof-content-list"
                  ng-repeat="n in vm.profContent track by $index">
                 <div class="row"
                      ui-sref="professionInfo({id:n.id})">
+                    <!--ui-sref跳转-->
+                    <!--左侧职位信息-->
                     <div class="prof-info col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <span class="tittle">{{n.name}}</span>
                         <span class="time">发布时间：{{n.updateAt| updateAtFilter}}</span><br>
@@ -66,6 +70,7 @@
                         <span class="location">{{n.education|educationFilter}}&nbsp;/&nbsp;</span>
                         <span class="location">{{n.experience|experienceFilter}}</span>
                     </div>
+                    <!--右侧公司信息-->
                     <div class="comp-info col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <div class="row">
                             <div class="comp-info-left col-xs-6">
@@ -85,10 +90,11 @@
             </div>
         </div>
     </div>
+    <!--没有数据时，显示404页面-->
     <div class="row">
         <div class="search-page col-xs-12">
             <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
         </div>
-        <!--没有数据时，显示404页面-->
+
     </div>
 </div>
