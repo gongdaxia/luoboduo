@@ -21,7 +21,7 @@ app.controller("companyCtrl", function ($scope, $rootScope, $state, professionSe
         if (res.data.code == 0) {
             vm.companyInfo = res.data.data;
             vm.total = res.data.total;
-            // console.log(vm.total)
+            console.log(vm.total)
         }
         else {
             bootbox.alert({

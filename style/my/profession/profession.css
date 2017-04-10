@@ -1,7 +1,7 @@
 .profession-main {
     font-size: 0;
     background-color: #f6f7f8;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 /*导航栏和banner部分*/
@@ -295,7 +295,7 @@
 }
 
 .prof-recommend-tittle {
-    padding: 1% 0 0 0;
+    padding: 1% 0 5px 0;
     overflow: hidden;
 }
 
@@ -364,6 +364,7 @@
     display: inline-block;
     width: 110px;
     height: 110px;
+    line-height: 110px;
     font-size: 14px;
     text-align: center;
     border: 1px solid #e8e8e8;
@@ -373,7 +374,7 @@
 
 .job-box-img img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .job-box-content {
@@ -400,6 +401,7 @@
 
 /*推荐公司*/
 .great-company {
+    overflow: hidden;
 }
 
 .great-job-tittle {
@@ -431,7 +433,7 @@
 
 .great-company-info {
     position: relative;
-    z-index: 9999;
+    z-index: 999;
     cursor: pointer;
     overflow: hidden;
     padding: 1rem;
@@ -465,7 +467,7 @@
 .great-company-list {
     font-size: 14px;
     height: 160px;
-    padding: 15px 20px;
+    padding: 15px 10px;
     /*border: 1px solid #999;*/
     box-sizing: border-box;
 }
@@ -534,30 +536,52 @@
     line-height: 50px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 665px) {
     .great-company-list .prof-info {
         margin-left: -5%;
         width: auto;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 530px) {
     .great-company-list .prof-info {
         margin-left: -10%;
         width: auto;
     }
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 435px) {
     .great-company-list .prof-info {
-        margin-left: -15%;
+        margin-left: -12%;
         width: auto;
     }
 }
 
-@media screen and (max-width: 355px) {
+@media screen and (max-width: 405px) {
     .great-company-list .prof-info {
         padding-right: 0;
+    }
+
+    .great-company-list .prof-info {
+        margin-left: -13%;
+        width: auto;
+    }
+
+    .great-company-list .prof-info h4 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .great-company-list {
+        padding: 15px 1px !important;
+    }
+    .great-company-list .prof-info {
+        margin-left: -11%;
+    }
+
+    .great-company-list .prof-info h4 {
+        font-size: 15px;
     }
 }
 
@@ -628,7 +652,9 @@
     }
 
     .profCarousel-content {
-        margin: 0 !important;
+        /*margin: 0 !important;*/
+        width: 98%;
+        margin: auto 1%;
     }
 
 }

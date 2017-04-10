@@ -88,7 +88,7 @@
 
 /*公司详情部分*/
 .company-info-txt1 {
-    border-right: 2px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
 }
 
 @media screen and (max-width: 767px) {
@@ -103,7 +103,7 @@
 }
 
 .company-info-txt1 .tittle {
-    padding: 3% 0 10% 0;
+    padding: 3% 0;
 }
 
 .company-info-txt1 .tittle > span {
@@ -121,6 +121,10 @@
     padding: 4%;
     line-height: 30px;
     color: #999;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
 }
 
 /*公司信息部分*/
@@ -148,6 +152,24 @@
     padding-left: 4%;
     background-color: #e8e8e8;
     vertical-align: middle;
+}
+
+@media screen and (max-width: 767px) {
+    .content-right-main .line {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .content-right-main .line {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .content-right-main .line {
+        width: 73%;
+    }
 }
 
 .content-right-main .part {

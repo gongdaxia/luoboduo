@@ -15,7 +15,7 @@
 /*萝卜多的特点们*/
 .elitePage-featureWhite, .elitePage-featureGrey {
     box-sizing: border-box;
-    padding: 5rem 15%;
+    padding: 5rem 0;
     width: 100%;
     overflow: hidden;
     text-align: center;
@@ -23,7 +23,7 @@
 
 @media screen and (max-width: 1000px) {
     .elitePage-featureWhite, .elitePage-featureGrey {
-        padding: 5rem 6%;
+        padding: 5rem 0;
     }
 }
 
@@ -222,7 +222,7 @@
 
 /*萝卜多的优势*/
 .elitePage-advantage {
-    padding: 5rem 6%;
+    padding: 5rem 0;
     background-color: #fff;
     width: 100%;
 }
@@ -268,7 +268,7 @@
 
 /*萝卜多的成功案例*/
 .elitePage-example {
-    padding: 5rem 6%;
+    padding: 5rem 0;
     background-color: #f6f7f8;
     width: 100%;
     text-align: center;

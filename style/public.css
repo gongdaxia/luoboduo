@@ -252,7 +252,7 @@ div > ul.pagination > .active > a {
     /*导航栏链接下划线*/
     display: block;
     width: 0;
-    margin: 23px auto 0 auto;
+    margin: 24px auto 0 auto;
     height: 3px;
     background-color: #fc2b47;
     border-bottom: 0 solid #fc2b47;

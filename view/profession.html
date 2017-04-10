@@ -138,7 +138,7 @@
                                 <div class="item great-company-list " ng-class="{'active':$first}"
                                      ng-repeat="list in vm.companyInfo track by $index"
                                      ui-sref="companyInfo({id: list.id})">
-                                    <div class="row">
+                                    <!--<div class="row">-->
                                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-10 great-company-list">
                                             <div class="img">
                                                 <img ng-src="{{list.logo}}">
@@ -157,7 +157,7 @@
                                                 <span>{{jobItem.category|subCategoryFilter}}</span>
                                             </div>
                                         </div>
-                                    </div>
+                                    <!--</div>-->
                                 </div>
                             </div>
                         </div>

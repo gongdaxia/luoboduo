@@ -46,6 +46,7 @@
 /*轮播图样式*/
 .item {
     cursor: pointer;
+    max-height: 352px;
 }
 
 .carousel-indicators {
@@ -198,8 +199,8 @@
 }
 
 .homePage-newProfession-ctrl-listbox-img img {
-    width: 75%;
-    height: 160px;
+    width: 60%;
+    height: auto;
 }
 
 .homePage-newProfession-ctrl-font-box {
@@ -252,10 +253,11 @@
         /*最新职位轮播中单个公司中logo*/
         width: 100%;
         height: 280px;
+        line-height: 280px;
     }
 
     .homePage-newProfession-ctrl-listbox-img img {
-        width: 60%;
+        width: 45%;
         height: auto;
     }
 
@@ -285,14 +287,14 @@
 
 .homePage-newProfession-banner-left img {
     position: absolute;
-    top: 100px;
-    left: -40px;
+    top: 40%;
+    left: -30px;
 }
 
 .homePage-newProfession-banner-right img {
     position: absolute;
-    top: 100px;
-    right: -40px;
+    top: 40%;
+    right: -30px;
 }
 
 /*首页服务流程部分*/
