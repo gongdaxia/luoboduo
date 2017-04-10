@@ -8,10 +8,9 @@
                         <div class="prof-home-nav"
                              ng-repeat="li in vm.list track by $index">
                             <div class="prof-home-nav-tittle">
-                                <img src="../images/profession-home-img1.png" alt="">
+                                <i class="imgOne imgSelect"></i>
                                 <span>{{li.jobType|jobTypeFilter}}</span>
-                                <img class="img-left"
-                                     src="../images/profession-home-left.png">
+                                <i class="img-left"></i>
                             </div>
                             <div class="prof-home-nav-content">
                                 <span ng-repeat="item in li.jobTypeList track by $index"

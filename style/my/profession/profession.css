@@ -39,19 +39,69 @@
 .prof-home-nav .img-left {
     float: right;
     width: auto;
-    padding-right: 12.5%;
+    padding:10px;
+    margin-right: 15px;
+    background: url(../../../images/profession-home-left.png) no-repeat center center;
     vertical-align: middle;
 }
-
+.prof-home-nav:hover .img-left{
+    float: right;
+    width: auto;
+    padding:10px;
+    margin-right: 15px;
+    background: url(../../../images/findJobArrowRed.png) no-repeat center center;
+    vertical-align: middle;
+}
 .prof-home-nav span {
     font-size: 18px;
     display: inline-block;
     padding-left: 3.3%;
+    vertical-align: middle;
 }
 
 .prof-home-nav:hover {
     color: #f43851;
     background-color: #fff;
+}
+/*.prof-home-nav-tittle .imgOne{*/
+    /*display: inline-block;*/
+    /*padding: 10px;*/
+    /*vertical-align: middle;*/
+/*}*/
+.prof-home-nav:nth-child(1) .imgSelect{
+    background: url(../../../images/profession-home-img1.png) no-repeat center center;
+}
+.prof-home-nav:hover:nth-child(1) .imgSelect{
+    background: url(../../../images/productRed.png) no-repeat center center;
+}
+.prof-home-nav:nth-child(2) .imgSelect{
+    background: url(../../../images/research.png) no-repeat center center;
+}
+.prof-home-nav:hover:nth-child(2) .imgSelect{
+    background: url(../../../images/researchRed.png) no-repeat center center;
+}
+.prof-home-nav:nth-child(3) .imgSelect{
+    background: url(../../../images/bigData.png) no-repeat center center;
+}
+.prof-home-nav:hover:nth-child(3) .imgSelect{
+    background: url(../../../images/bigDataRed.png) no-repeat center center;
+}
+/*.profession-home-bg .imgSelect:nth-child(1){*/
+    /*background: url(../../../images/profession-home-img1.png) no-repeat center center;*/
+/*}*/
+/*.profession-home-bg .imgSelect:nth-child(2){*/
+    /*background: url(../../../images/research.png) no-repeat center center;*/
+/*}*/
+/*.profession-home-bg:hover .imgSelect:nth-child(2){*/
+    /*background: url(../../../images/researchRed.png) no-repeat center center;*/
+/*}*/
+/*.profession-home-bg:hover .imgSelect:nth-child(1){*/
+    /*background: url(../../../images/productRed.png) no-repeat center center;*/
+/*}*/
+.profession-home-bg .imgOne{
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
 }
 
 .prof-home-nav-content {
@@ -420,6 +470,7 @@
 }
 
 .great-company-list .company-info {
+    background-color: #fff;
     display: inline-block;
     width: 60%;
     padding-left: 10px;
