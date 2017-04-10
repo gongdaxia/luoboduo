@@ -40,6 +40,8 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
     }
     // 选出tag标签中选中的数据，将数据拼接成数组
     vm.data = searchUtil.dataConvert(vm.option);
+    // console.log(vm.option.industryList);
+    // vm.data.industryList=commonUtil.industryListCtrl(vm.option.industryList)
     // console.log(vm.data);
     // console.log(vm.option);
     // 将选出的数据存入本地

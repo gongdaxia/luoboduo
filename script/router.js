@@ -192,7 +192,7 @@ function projectRouteConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvi
         // })
         //公司列表页
         .state("companyList", {
-            url: "/companyList",
+            url: "/companyList?size&page",
             templateUrl: "view/companyList.html",
             controller: "companyCtrl",
             controllerAs: 'vm',

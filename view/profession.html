@@ -30,20 +30,22 @@
                     </div>
                 </div>
                 <!--banner-->
-                <div class="prof-banner"
-                     id="myCarousel">
-                    <div class="carousel-inner">
-                        <div  ng-repeat="num in  vm.bannerUrl.articleList track by $index"
+                <div class="prof-banner carousel slide"
+                     id="prof-Carousel"
+                     data-ride="carousel">
+                    <div class=" carousel-inner" role="listbox">
+                        <div class="item"  ng-repeat="num in  vm.bannerUrl.articleList track by $index"
                              ng-class="{'active':$first}">
                             {{num.img}}
                             <img ng-src="{{num.img}}" alt="" href="{{num.url}}">
                         </div>
                     </div>
                     <!-- 轮播（Carousel）项目-->
-                    <a class="" href="#myCarousel"
-                       data-slide="prev">&lsaquo;</a>
-                    <a class="" href="#myCarousel"
-                       data-slide="next">&rsaquo;</a>
+                    <ol class="carousel-indicators">
+                        <li data-target="#prof-Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#prof-Carousel" data-slide-to="1"></li>
+                        <li data-target="#prof-Carousel" data-slide-to="2"></li>
+                    </ol>
                     <div class="prof-input-search">
                         <div class="prof-search-content">
                             <span>公司名称</span>

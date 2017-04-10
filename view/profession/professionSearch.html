@@ -25,6 +25,12 @@
                       ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
         </div>
         <div class="search-prof-list">
+            <span class="tittle">所属行业：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.checkboxMulti($index,vm.option.industry)"
+                  ng-repeat="x in vm.option.industry track by $index">{{x.name}}</span>
+        </div>
+        <div class="search-prof-list">
             <span class="tittle">学历要求：</span>
             <span class="item" ng-class="{true:'search-btn'}[x.choose]"
                   ng-click="vm.checkboxMulti($index,vm.option.education)"

@@ -53,6 +53,18 @@ app.factory('commonUtil', function ($rootScope) {
                 return true;
             }
         },
+        //行业属性数据拼接
+        industryListCtrl:function (data) {
+            var industry=[];
+            var obj={};
+            if(data!==undefined){
+            data.forEach(function (item) {
+                obj={industry:item};
+                industry.push(obj);
+            })
+            }
+            return industry;
+        }
     }
 });
 app.factory('searchUtil', function () {
