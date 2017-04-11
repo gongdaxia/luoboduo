@@ -21,9 +21,9 @@
                     <!--切换按钮-->
                     <div class="company-info-btn">
                         <span class="active" ng-class="{'company-btn':!vm.isChoose}"
-                              ng-click="exchangeJob(!vm.isChoose)">公司详情</span>
+                              ng-click="vm.exchangeJob1(!vm.isChoose)">公司详情</span>
                         <span ng-class="{'company-btn':vm.isChoose}"
-                              ng-click="exchangeJob(vm.isChoose)"
+                              ng-click="vm.exchangeJob1(vm.isChoose)"
                               ui-sref="companyInfo.companyTxt">在招职位</span>
                         <p class="line-content"></p>
                     </div>

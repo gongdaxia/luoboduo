@@ -204,3 +204,7 @@
 .company-info-btn {
     font-size: 0;
 }
+.company-btn{
+    color: #fc2b47;
+    border-bottom: 2px solid #fc2b47;
+}

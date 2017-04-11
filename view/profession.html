@@ -110,7 +110,7 @@
                             </div>
                             <div class="job-box-content">
                                 <p class="cost">{{item.compensation|compensationFilter}}</p>
-                                <p class="name">{{item.category| subCategoryFilter}}</p>
+                                <p class="name">{{item.name}}</p>
                                 <p>{{item.companyName}}</p>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 prof-info">
                                             <h4>正在热招</h4>
                                             <div ng-repeat="jobItem in list.jobList track by $index">
-                                                <span>{{jobItem.category|subCategoryFilter}}</span>
+                                                <span>{{jobItem.name}}</span>
                                             </div>
                                         </div>
                                     <!--</div>-->

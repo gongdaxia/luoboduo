@@ -4,6 +4,7 @@
 app.controller("companyInfoCtrl",function ($scope, $rootScope, $state,$stateParams,commonUtil,professionService) {
     var vm = this;
     commonUtil.scrollTo(0, 0);
+    vm.isChoose=false;
     vm.id = $stateParams.id;
     vm.companyId = $stateParams.id;
     // console.log($stateParams);
@@ -25,7 +26,8 @@ app.controller("companyInfoCtrl",function ($scope, $rootScope, $state,$statePara
             });
         }
     });
-    $scope.exchangeJob = function(isChoose){
+
+    vm.exchangeJob1 = function(isChoose){
         if(isChoose==undefined||isChoose==false){
             vm.isChoose=!vm.isChoose;
         }
