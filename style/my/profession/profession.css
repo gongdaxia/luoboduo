@@ -205,18 +205,21 @@
 
 }
 
-.prof-banner .prof-carousel-btn1,.prof-banner .prof-carousel-btn2 {
+.prof-banner .prof-carousel-btn1, .prof-banner .prof-carousel-btn2 {
     position: absolute;
     width: 30px;
     height: 40px !important;
-    top:45%;
+    top: 45%;
 }
-.prof-banner .prof-carousel-btn1{
+
+.prof-banner .prof-carousel-btn1 {
     left: 15px;
 }
-.prof-banner .prof-carousel-btn2{
+
+.prof-banner .prof-carousel-btn2 {
     right: 15px;
 }
+
 .prof-banner img {
     width: 100%;
     height: 456px !important;
@@ -273,12 +276,15 @@
         height: auto !important;
     }
 }
-.prof-banner-ol li{
+
+.prof-banner-ol li {
     margin: 0 6px;
 }
-.prof-banner-ol .active{
+
+.prof-banner-ol .active {
     margin: 0 6px -1px 6px;
 }
+
 .prof-search-content span {
     display: inline-block;
     padding: 0 3%;
@@ -468,31 +474,75 @@
 }
 
 /*优质公司小图*/
-.great-company-logo{
+.great-company-logo {
     overflow: hidden;
     z-index: 999;
+    padding: 6px;
 }
-.company-logo-list{
-    width: 80%;
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .company-logo-list {
+        height: 82px !important;
+        line-height: 82px !important;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .great-company-logo {
+        padding: 10px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .company-logo-list {
+        height: 140px !important;
+        line-height: 140px !important;
+    }
+
+    .company-logo-list img {
+        width: 50% !important;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .great-company-logo-part {
+        width: 100% !important;
+    }
+
+    .company-logo-list img {
+        width: 50% !important;
+    }
+}
+
+.company-logo-list {
+    width: 100%;
     height: 100px;
+    line-height: 100px;
     margin: 5px auto;
-    padding: 2px;
+    /*padding: 2px;*/
     text-align: center;
     /*background-color: red;*/
     border: 1px solid #e8e8e8;
     z-index: 999999;
     box-sizing: border-box;
+    overflow: hidden;
 }
-.company-logo-list img{
-    width: 99%;
-    height: 99%;
+
+.company-logo-list img {
+    width: 75%;
+    max-height: 100%;
+    height: auto;
 }
+
 .great-company-info {
     position: relative;
     z-index: 999;
     cursor: pointer;
     overflow: hidden;
-    padding: 1rem;
+    padding: 10px;
 }
 
 .great-company-info img {
@@ -590,7 +640,8 @@
     font-size: 16px;
     font-weight: bold;
 }
-.company-info p{
+
+.company-info p {
     width: 100%;
     padding-right: 10px;
     white-space: nowrap;
@@ -598,6 +649,7 @@
     text-overflow: ellipsis;
     box-sizing: border-box;
 }
+
 .company-info p span {
     display: inline-block;
     padding: .2% 1%;
@@ -613,14 +665,16 @@
     /*line-height: 50px;*/
     padding: 1% 20px;
 }
-.jobNameContent{
-    padding:4% 0;
+
+.jobNameContent {
+    padding: 4% 0;
     /*width: 0%;*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.great-company-list .prof-info span{
+
+.great-company-list .prof-info span {
 
     padding: 0 15px;
     /*width: 60%;*/
@@ -629,6 +683,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 @media screen and (max-width: 665px) {
     .great-company-list .prof-info {
         margin-left: -5%;

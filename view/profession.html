@@ -4,7 +4,7 @@
         <div class="row">
             <div class="profession-home-header">
                 <div class="profession-home-bg ">
-                    <div class="">
+                    <div>
                         <div class="prof-home-nav"
                              ng-repeat="li in vm.list track by $index">
                             <div class="prof-home-nav-tittle">
@@ -14,12 +14,15 @@
                             </div>
                             <div class="prof-home-nav-content">
                                 <span ng-repeat="item in li.jobTypeList track by $index"
-                                      ui-sref="searchPage.professionSearch({type:item.secondType})">{{item.secondType|jobSecondFilter}}
+                                      ui-sref="searchPage.professionSearch({type:item.secondType})">
+                                    {{item.secondType|jobSecondFilter}}
                                 </span>
                             </div>
                             <div class="prof-nav-item" ng-repeat="item in li.jobTypeList track by $index">
                                 <div ng-repeat="item in li.jobTypeList track by $index">
-                                    <span class="tittle">{{item.secondType|jobSecondFilter}}</span>
+                                    <span class="tittle">
+                                        {{item.secondType|jobSecondFilter}}
+                                    </span>
                                     <span ui-sref="searchPage.professionSearch({type:item.secondType,subType:itemSecond.thirdType})"
                                           class="content"
                                           ng-repeat="itemSecond in item.secondTypeList track by $index">{{itemSecond.jobName}}
@@ -145,9 +148,9 @@
                 </div>
                 <div class="great-company-logo col-lg-8 col-md-8">
                     <div class="row">
-                        <div class="col-sm-3 col-md-3 col-xs-6" ng-repeat="n in vm.newJob track by $index">
+                        <div class="col-sm-3 col-md-3 col-xs-6 great-company-logo-part" ng-repeat="n in vm.newJob track by $index">
                             <div class="company-logo-list" >
-                                <img  ng-src="{{n.logo}}" alt="">
+                                <img  ng-src="{{n.logo}}">
                             </div>
                         </div>
                     </div>
