@@ -34,7 +34,7 @@
                      id="prof-Carousel"
                      data-ride="carousel">
                     <div class=" carousel-inner" role="listbox">
-                        <div class="item"  ng-repeat="num in  vm.bannerUrl.articleList track by $index"
+                        <div class="item cursor-p"  ng-repeat="num in  vm.bannerUrl.articleList track by $index"
                              ng-class="{'active':$first}">
                             {{num.img}}
                             <img ng-src="{{num.img}}" alt="" href="{{num.url}}">
