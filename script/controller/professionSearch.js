@@ -94,8 +94,9 @@ professionService.getProfession(vm.data).then(function (res) {
 });
     //清除
     vm.clear = function () {
-        sessionStorage.removeItem("searchJobOptions");
-        sessionStorage.searchJobOptions = JSON.stringify(searchInfo);
-        $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
+        // sessionStorage.removeItem("searchJobOptions");
+        // sessionStorage.searchJobOptions = JSON.stringify(searchInfo);
+        delete sessionStorage.searchJobOptions;
+        $state.go($state.current, {page: 1, size: 9, name: null,type:0,subType:0}, {reload: true});
     };
 });
