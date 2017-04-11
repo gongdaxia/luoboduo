@@ -53,6 +53,13 @@ app.filter("jobTypeFilter", function(jobType) {
             return arr.join(' ')
         }
     })
+        //另外一个行业
+    .filter("industry2Fliter",function (industryInfo) {
+        return function (input) {
+            return industryInfo[input];
+
+        }
+    })
     //融资规模
     .filter('financingFilter', function (financingInfo) {
         return function (input) {

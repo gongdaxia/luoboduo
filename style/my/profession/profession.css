@@ -437,6 +437,7 @@
 /*推荐公司*/
 .great-company {
     overflow: hidden;
+    background-color: #fff;
 }
 
 .great-job-tittle {
@@ -466,6 +467,26 @@
     box-shadow: 0 0 10px #999;
 }
 
+/*优质公司小图*/
+.great-company-logo{
+    overflow: hidden;
+    z-index: 999;
+}
+.company-logo-list{
+    width: 80%;
+    height: 100px;
+    margin: 5px auto;
+    padding: 2px;
+    text-align: center;
+    /*background-color: red;*/
+    border: 1px solid #e8e8e8;
+    z-index: 999999;
+    box-sizing: border-box;
+}
+.company-logo-list img{
+    width: 99%;
+    height: 99%;
+}
 .great-company-info {
     position: relative;
     z-index: 999;
@@ -492,8 +513,12 @@
 }
 
 .company-info-txt p {
+    width: 80%;
     font-size: 14px;
     z-index: 999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
 }
 
 .company-info-txt .tittle {
@@ -565,17 +590,45 @@
     font-size: 16px;
     font-weight: bold;
 }
-
+.company-info p{
+    width: 100%;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
 .company-info p span {
     display: inline-block;
     padding: .2% 1%;
+    margin: 0 2px;
     border: 1px solid #e8e8e8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
 }
 
 .great-company-list .prof-info {
-    line-height: 50px;
+    /*line-height: 50px;*/
+    padding: 1% 20px;
 }
+.jobNameContent{
+    padding:4% 0;
+    /*width: 0%;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.great-company-list .prof-info span{
 
+    padding: 0 15px;
+    /*width: 60%;*/
+    border-right: 1px solid #e8e8e8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 @media screen and (max-width: 665px) {
     .great-company-list .prof-info {
         margin-left: -5%;

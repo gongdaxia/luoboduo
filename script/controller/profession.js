@@ -103,19 +103,10 @@ app.controller("professionCtrl", function ($scope, $state, $rootScope, professio
         }
     })
     //优质公司
-    professionService.getCompany({size: 4, page: 2}).then(function (res) {
+    professionService.getCompany({size: 1, page: 1}).then(function (res) {
         if (res.data.code == 0) {
             vm.companyInfo = res.data.data;
-            console.log(vm.companyInfo)
-            angular.forEach(vm.companyInfo, function (value) {
-                professionService.getProfession({size: 2, companyId: value.id}).then(function (resp) {
-                    // console.log("sssssssssssssssss")
-                    value.jobList = resp.data.data
-                    // console.log(value.id)
-                    // console.log( value.jobList)
-                })
-            })
-            console.log(vm.companyInfo)
+            // console.log(vm.companyInfo)
         }
         else {
             bootbox.alert({
@@ -130,6 +121,43 @@ app.controller("professionCtrl", function ($scope, $state, $rootScope, professio
             });
         }
     })
+    professionService.getRecommend(0,{size:8,page:1}).then(function (res) {
+        if (res.data.code==0) {
+            vm.newJob = res.data.data;
+            // console.log(vm.newJob)
+            vm.newJob1=vm.newJob
+            vm.carouselJob = vm.newJob1.slice(0,4);
+            angular.forEach(vm.carouselJob, function (value) {
+                professionService.getCompanyInfo(value.companyId).then(function (mes) {
+                    if (mes.data.code == 0) {
+                        value.companySlogan = mes.data.data.company.slogan;
+                    }
+                })
+                professionService.getProfession({companyId:value.companyId}).then(function (num) {
+                    if(num.data.code==0){
+                        value.jobName = num.data.data;
+                    }
+                })
+            })
+            console.log( vm.carouselJob)
+            console.log( vm.newJob)
+            // for(var i=0;i<4;i++){
+            //     professionService.getCompanyInfo(vm.newJob[i].companyId).then(function (mes) {
+            //         if (mes.data.code==0){
+            //             vm.newCompany = mes.data.data;
+            //
+            //         }
+            //     })
+            //     setTimeout(function () {
+            //         professionService.getProfession({companyId:vm.newJob[i].companyId}).then(function (num) {
+            //             if (num.data.code==0){
+            //                 vm.newCompany.jobName = num.data.data;
+            //                 console.log(vm.newCompany)
+            //             }
+            //         })
+            //     },500)
+
+        }})
     $('.carousel').carousel({
         // 轮播图自动轮播定时器
         interval: 4000

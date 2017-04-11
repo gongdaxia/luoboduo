@@ -61,12 +61,7 @@ app.controller("searchJobCtrl", function ($scope, $rootScope, $state, profession
             page: 1, size: 10, name: vm.data.name, type: null, subType: null
         }, {reload: true});
     };
-    //清除
-    vm.clear = function () {
-        sessionStorage.removeItem("searchJobOptions");
-        sessionStorage.searchJobOptions = JSON.stringify(searchInfo);
-        $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
-    };
+
 
 professionService.getProfession(vm.data).then(function (res) {
     if (res.data.code == 0) {
@@ -97,4 +92,10 @@ professionService.getProfession(vm.data).then(function (res) {
     // 找不到内容时，是否推荐
     vm.isShowRecommend = "position"
 });
+    //清除
+    vm.clear = function () {
+        sessionStorage.removeItem("searchJobOptions");
+        sessionStorage.searchJobOptions = JSON.stringify(searchInfo);
+        $state.go($state.current, {page: 1, size: 9, name: null}, {reload: true});
+    };
 });
