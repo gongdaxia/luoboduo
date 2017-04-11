@@ -117,14 +117,14 @@
 
 .company-info-txt1 .txt {
     /*display: inline-block;*/
-    height: 160px;
+    min-height: 160px;
     padding: 4%;
     line-height: 30px;
     color: #999;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
-    overflow: hidden;
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-line-clamp: 5;*/
+    /*overflow: hidden;*/
 }
 
 /*公司信息部分*/

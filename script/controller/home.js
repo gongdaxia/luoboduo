@@ -5,7 +5,7 @@ app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professi
     var vm = this;
     commonUtil.scrollTo(0, 0);
     vm.params = $state.params;
-    vm.params.size = 10;
+    vm.params.size = 20;
     professionService.getBanner(0).then(function (res) {
         // 获取banner图
         if (res.data.code == 0) {
@@ -17,21 +17,22 @@ app.controller('homeCtrl', function ($scope, $state, $http, $rootScope, professi
         // 轮播图自动轮播定时器
         interval: 2500
     });
-    professionService.getProfession(1, vm.params).then(function (res) {
+    professionService.getRecommend(0, vm.params).then(function (res) {
         // 获取最新职位信息
         if (res.data.code == 0) {
             vm.professionInfo = res.data.data;
+            // console.log(vm.professionInfo);
             angular.forEach(vm.professionInfo,function (value) {
                 if(value.logo==""){
                     value.logo="../images/noInfo.gif"
                 }
-            })
+            });
             var bannerArr = [];
-            for (i = 0; i < 2; i++) {
+            for (i = 0; i < 5; i++) {
                 bannerArr[i] = vm.professionInfo.slice(0, 4);
                 vm.professionInfo.splice(0, 4)
             }
-            // console.log(bannerArr);
+            console.log(bannerArr);
             $scope.homeProsBanner = bannerArr;
             $('.carousel').carousel({
                 interval: 2500
