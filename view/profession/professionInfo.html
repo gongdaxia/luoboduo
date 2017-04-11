@@ -14,6 +14,9 @@
                         <span>{{vm.jobInfo.education|educationFilter}}</span>
                         <img src="../../images/description-1.png" alt="">
                         <span>{{vm.jobInfo.experience|experienceFilter}}</span>
+                        <div class="profession-info-content-welfare">
+                            <span ng-repeat="tag in vm.jobInfo.tags track by $index">{{tag.tag}}</span>
+                        </div>
                         <div class="first">
                             <img src="../../images/date.png" alt="">
                             <span>发布时间：{{vm.jobInfo.updateAt|updateAtFilter}}</span>

@@ -19,7 +19,7 @@
                   ng-repeat="x in vm.option.category track by $index">{{x.name}}</span>
         </div>
         <!--职位类别子栏-->
-        <div class="search-prof-list padding-l-10" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
+        <div class="search-prof-list search-prof-list-sub" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
                 <span class="item" ng-class="{true:'search-btn'}[x.choose]"
                       ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
                       ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
@@ -84,7 +84,9 @@
                                 <span>{{n.industryList|industryFilter1}}</span>
                             </div>
                             <div class="comp-info-right col-xs-6">
-                                <img ng-src="{{n.logo}}">
+                                <div class="comp-info-right-img">
+                                    <img ng-src="{{n.logo}}">
+                                </div>
                             </div>
                         </div>
                     </div>
