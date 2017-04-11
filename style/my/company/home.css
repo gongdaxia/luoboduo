@@ -1,17 +1,12 @@
 /*公司主页样式*/
 .homePage {
     width: 100%;
-    padding: 3px 0 0 0;
+    padding: 2px 0 0 0;
     /*margin: 0 ;*/
     overflow: hidden;
 
 }
 
-/*.homePage .container {*/
-/*padding: 0 !important;*/
-/*margin: 0 !important;*/
-/*width: 100%;*/
-/*}*/
 
 /*首页的公共样式*/
 .homePage-title {

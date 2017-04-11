@@ -116,11 +116,15 @@ div > ul.pagination > .active > a {
     margin: 0 10px 15px 20px;
     background: white;
     border-color: #fc2b47;
+    border-width: 2px;
+    cursor: default;
 }
+
 
 .header-nav-modalBtn2 {
     /*模态框全国站按钮*/
     margin: -20px 0 0 92px;
+    border-width:1px ;
 }
 
 .header-nav-modalText2 {
