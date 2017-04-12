@@ -141,6 +141,8 @@ app.controller("professionCtrl", function ($scope, $state, $rootScope, professio
             })
             console.log( vm.carouselJob)
             console.log( vm.newJob)
+        }
+    })
             // for(var i=0;i<4;i++){
             //     professionService.getCompanyInfo(vm.newJob[i].companyId).then(function (mes) {
             //         if (mes.data.code==0){
@@ -157,7 +159,7 @@ app.controller("professionCtrl", function ($scope, $state, $rootScope, professio
             //         })
             //     },500)
 
-        }})
+
     $('.carousel').carousel({
         // 轮播图自动轮播定时器
         interval: 4000

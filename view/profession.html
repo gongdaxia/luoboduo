@@ -151,7 +151,7 @@
                 <div class="great-company-logo col-lg-8 col-md-8">
                     <div class="row">
                         <div class="col-sm-3 col-md-3 col-xs-6 great-company-logo-part" ng-repeat="n in vm.newJob track by $index">
-                            <div class="company-logo-list" ui-sref="companyInfo({id:n.id})" >
+                            <div class="company-logo-list" ui-sref="companyInfo({id:n.companyId})" >
                                 <img  ng-src="{{n.logo}}">
                             </div>
                         </div>
@@ -164,7 +164,7 @@
                             <div class="carousel-inner carousel-innergai prof-carousel">
                                 <div class="item great-company-list " ng-class="{'active':$first}"
                                      ng-repeat="list in vm.carouselJob track by $index"
-                                     ui-sref="companyInfo({id: list.id})">
+                                     ui-sref="companyInfo({id: list.companyId})">
                                     <!--<div class="row">-->
                                         <div class="col-lg-7 col-md-7 col-sm-7 col-xs-10 great-company-list">
                                             <div class="img">
