@@ -64,9 +64,12 @@
                             公司标签
                             <span class="line"></span>
                         </div>
-                        <span class="margin-top-6" style="margin-left: 10%">
-                            {{vm.companyInfo.company.financing|financingFilter}}
-                        </span>
+                        <div class="content-right-main-welfare">
+                            <span ng-repeat="tags in vm.companyInfo.tagList track by $index">{{tags.tag}}</span>
+                        </div>
+                        <!--<span class="margin-top-6" style="margin-left: 10%">-->
+                            <!--{{vm.companyInfo.company.financing|financingFilter}}-->
+                        <!--</span>-->
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ app.controller("companyInfoCtrl",function ($scope, $rootScope, $state,$statePara
     professionService.getCompanyInfo(vm.id).then(function (res) {
         if(res.data.code===0){
             vm.companyInfo = res.data.data;
-            // console.log( vm.companyInfo)
+            console.log( vm.companyInfo)
         }
         else{
             bootbox.alert({
