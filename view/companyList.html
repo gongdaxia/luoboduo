@@ -28,7 +28,6 @@
                 </span>
             </div>
         </div>
-
         <div class="search-company-content" ng-if="vm.total">
             <!--搜索的结果展示部分-->
             <div class="row">
@@ -67,12 +66,15 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container">
 
-    </div>
-    <div class="row">
-        <div class="search-page col-xs-12">
-            <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
+        <div class="row">
+            <div class="search-page col-xs-12">
+                <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
+            </div>
+            <!--没有数据时，显示404页面-->
         </div>
-        <!--没有数据时，显示404页面-->
     </div>
+
 </div>
