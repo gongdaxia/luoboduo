@@ -529,6 +529,10 @@
     z-index: 999999;
     box-sizing: border-box;
     overflow: hidden;
+    cursor: pointer;
+}
+.company-logo-list:hover{
+    box-shadow: 0 0 10px #999;
 }
 
 .company-logo-list img {
@@ -664,6 +668,7 @@
 .great-company-list .prof-info {
     /*line-height: 50px;*/
     padding: 1% 20px;
+    border-right: none;
 }
 
 .jobNameContent {

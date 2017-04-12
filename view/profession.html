@@ -132,7 +132,9 @@
                     <img ng-src="{{vm.companyImgUrl.img}}">
                     <div class="company-info-txt">
                         <p class="tittle">{{vm.companyInfo[0].name}}</p>{{vm.newCompany[0].company.name}}
-                        <p>{{vm.companyInfo[0].slogan}}</p>
+                        <p style="display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                            {{vm.companyInfo[0].slogan}}
+                        </p>
                         <p>
                             <span class="info-part2-span1">
                                 <i class="iconfont">&#xe67c;</i>
@@ -149,7 +151,7 @@
                 <div class="great-company-logo col-lg-8 col-md-8">
                     <div class="row">
                         <div class="col-sm-3 col-md-3 col-xs-6 great-company-logo-part" ng-repeat="n in vm.newJob track by $index">
-                            <div class="company-logo-list" >
+                            <div class="company-logo-list" ui-sref="companyInfo({id:n.id})" >
                                 <img  ng-src="{{n.logo}}">
                             </div>
                         </div>

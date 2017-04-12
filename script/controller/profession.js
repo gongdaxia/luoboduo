@@ -124,7 +124,7 @@ app.controller("professionCtrl", function ($scope, $state, $rootScope, professio
     professionService.getRecommend(0,{size:8,page:1}).then(function (res) {
         if (res.data.code==0) {
             vm.newJob = res.data.data;
-            // console.log(vm.newJob)
+            console.log(vm.newJob)
             vm.newJob1=vm.newJob
             vm.carouselJob = vm.newJob1.slice(0,4);
             angular.forEach(vm.carouselJob, function (value) {
